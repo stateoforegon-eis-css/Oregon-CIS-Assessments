@@ -30,7 +30,7 @@ param (
 ### CIS Safgeguard 5.3: Disable Dormant Accounts
 
 **About:**
-Script to identify users collected from ArtifactCollector
+Script to identify Dormant Accounts from ArtifactCollector
 
 ```
 param (
