@@ -89,3 +89,73 @@ param (
 		} | Sort-Object -Descending -Property LastLogon |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv
 ---
+### CIS Safgeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
+
+**About:**
+Script to identify Administrative Group Members collected from ArtifactCollector
+
+```powershell
+# Ensure ImportExcel module is installed
+#If you receive an error "The term 'Export-Excel' is not recognized... You need to first install The ImportExcel Module (commented below)
+#Install-PSResource -Name ImportExcel
+
+# Get Agency Acronym
+$acy = Read-Host -Prompt "Agency Acronym: "
+
+# Function to load and parse XML serialized with Export-Clixml
+function Load-ClixmlFile {
+    param (
+        [string]$filePath
+    )
+    return Import-Clixml -Path $filePath
+}
+
+# Function to extract admin groups and their members from new XML format
+function Get-AdminGroups {
+    param (
+        [array]$groups,
+        [array]$users
+    )
+
+    $adminGroupMembers = @()
+
+    foreach ($group in $groups | Where-Object { 
+        ($_.SamAccountName -match "admin") -or ($_.Description -match "admin")
+    }) {
+        foreach ($memberDN in $group.Member) {
+            # Look up the member in users by DN for SAMAccountName
+            $memberSAM = ($users | Where-Object { $_.DistinguishedName -eq $memberDN }).SamAccountName
+
+            $adminGroupMembers += [PSCustomObject]@{
+                Group       = $group.SamAccountName
+                Type        = $group.GroupType
+                Description = $group.Description
+                DN          = $group.DistinguishedName
+                Member      = $memberDN
+                MemberSAM   = $memberSAM
+            }
+        }
+    }
+
+    # Ensure unique rows based on Group + Member
+    $adminGroupMembers = $adminGroupMembers |
+        Sort-Object Group, Member -Unique
+
+    return $adminGroupMembers
+}
+
+# Main
+$groupClixmlFile = ".\ActiveDirectory.xml"
+
+# Load serialized XML content
+$clixmlData = Load-ClixmlFile -filePath $groupClixmlFile
+
+# Extract admin groups from the .groups property and resolve member SAM names from .users
+$adminGroupMembers = Get-AdminGroups -groups $clixmlData.groups -users $clixmlData.users
+
+# Export to Excel
+$xlsxPath = ".\$acy-admin_groups_report.xlsx"
+$adminGroupMembers | Export-Excel -Path $xlsxPath -AutoSize -Title "Admin Groups Report"
+
+Write-Host "Report saved to $xlsxPath"
+---
