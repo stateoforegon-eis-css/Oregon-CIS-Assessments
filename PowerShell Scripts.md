@@ -88,7 +88,8 @@ param (
 		($_.LastLogon -lt (Get-Date).AddDays(-$DormantThreshold))
 		} | Sort-Object -Descending -Property LastLogon |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv
----
+```
+
 ### CIS Safgeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
 
 **About:**
