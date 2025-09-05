@@ -7,7 +7,7 @@
 **About:**
 Script to identify users collected from ArtifactCollector
 
-```
+```powershell
 param (
         [parameter(Mandatory=$true)]
         [string] $AgencyAcronym
@@ -32,7 +32,7 @@ param (
 **About:**
 Script to identify Dormant Accounts from ArtifactCollector
 
-```
+```powershell
 param (
 
 		[parameter(Mandatory=$true)]
