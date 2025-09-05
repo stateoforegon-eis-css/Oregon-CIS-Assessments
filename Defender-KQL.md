@@ -292,7 +292,7 @@ DeviceTvmSoftwareVulnerabilities
 | sort by Software asc // Sort software list
 ```
 
-### Safeguard 7.4 Perform Automated Application Patch Management (Numerator)
+### Safeguard 7.4 Perform Automated Application Patch Management
 
 **About:**
 Script to extract a list of applications (including patches more than 30 days old) and number of systems for each
