@@ -18,6 +18,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
+- Agency-provided policy defining the Timeframe for Removing Unauthorized Assets
 - Hardware Assets discovered during Internal Testing
 - Enterprise-defined timeframe for addressing Unauthorized Assets
 
@@ -29,6 +30,7 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 **Assessed Elements:**
 
 - Agency-provided Inventory of Authorized Software Assets
+- Agency-provided list of Software Inventory Tools
 - Software Assets discovered during Internal Testing
 
 
@@ -39,6 +41,7 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 **Assessed Elements:**
 
 - Agency-provided Inventory of Authorized Software Assets
+- Agency-provided Exception Documentation for Unsupported Software
 - Software Assets discovered during Internal Testing
 
 
@@ -61,6 +64,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - Agency-provided Inventory of Authorized Hardware Assets
+- Agency-provided policy defining the Timeframe between consecutive Software Discovery Scans
 - Visibility of Hardware Assets in Inventory Tools observed during Internal Testing
 
 
@@ -80,7 +84,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 **Assessed Elements:**
 
 - Agency-provided Data Management Process
-- Agency-provided Inventory of Authorized Hardware Assets
+- Agency-provided Inventory of Authorized Hardware Assets - specifically those storing sensitive data
 
 
 ## Safeguard 3.04	(IG1)	Enforce Data Retention
@@ -289,6 +293,7 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
+- Agency-provided list of Automated Patch Management Software
 - Agency-provided Configuration Standard for Automated Patch Management Software
 - Application Versions observed during Internal Testing
 
@@ -301,6 +306,7 @@ The implementation of Safeguard 7.05 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
+- Agency-provided list of Vulnerability Scanning Software
 - Agency-provided Configuration Standard for Internal Vulnerability Scanning Software
 - Vulnerability Scan Coverage observed during Internal Testing
 
@@ -431,6 +437,7 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
+- Agency-provided list of Authorized Anti-malware Software
 - Hardware Assets discovered during Internal Testing
 - Anti-malware Deployment observed during Internal Testing
 
@@ -441,6 +448,7 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
+- Agency-provided list of Authorized Anti-malware Software
 - Hardware Assets discovered during Internal Testing
 - Anti-malware Update Settings and Implementation observed during Internal Testing
 
@@ -533,6 +541,7 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 **Assessed Elements:**
 
 - Agency-provided Security Awareness (Training) Program
+- Agency-provided list of Workforce Members
 - Training Statistics observed during Internal Testing
 
 
@@ -543,6 +552,7 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - Agency-provided Security Awareness (Training) Program
+- Agency-provided list of Workforce Members
 - Training Statistics observed during Internal Testing
 
 
@@ -553,6 +563,7 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - Agency-provided Security Awareness (Training) Program
+- Agency-provided list of Workforce Members
 - Training Statistics observed during Internal Testing
 
 
@@ -563,6 +574,7 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - Agency-provided Security Awareness (Training) Program
+- Agency-provided list of Workforce Members
 - Training Statistics observed during Internal Testing
 
 
@@ -573,6 +585,7 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - Agency-provided Security Awareness (Training) Program
+- Agency-provided list of Workforce Members
 - Training Statistics observed during Internal Testing
 
 
@@ -583,6 +596,7 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - Agency-provided Security Awareness (Training) Program
+- Agency-provided list of Workforce Members
 - Training Statistics observed during Internal Testing
 
 
