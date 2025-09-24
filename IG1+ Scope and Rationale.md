@@ -412,7 +412,7 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Inventory of Authorized Software Assets
 
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
@@ -421,7 +421,8 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Inventory of Authorized Software Assets
+- Agency-provided Secure Configuration Standard for DNS Filtering
 
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
@@ -430,7 +431,8 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Hardware Assets discovered during Internal Testing
+- Anti-malware Deployment observed during Internal Testing
 
 
 ## Safeguard 10.02	(IG1)	Configure Automatic Anti-Malware Signature Updates
@@ -439,7 +441,8 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Hardware Assets discovered during Internal Testing
+- Anti-malware Update Settings and Implementation observed during Internal Testing
 
 
 ## Safeguard 10.03	(IG1)	Disable Autorun and Autoplay for Removable Media
@@ -448,7 +451,8 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Hardware Assets discovered during Internal Testing
+- Removable Media Settings observed during Internal Testing
 
 
 ## Safeguard 11.01	(IG1)	Establish and Maintain a Data Recovery Process 
@@ -457,7 +461,7 @@ The implementation of Safeguard 11.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Data Recovery Process
 
 
 ## Safeguard 11.02	(IG1)	Perform Automated Backups 
@@ -466,7 +470,8 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Hardware Assets discovered during Internal Testing
+- Automated Backup Implementation observed during Internal Testing
 
 
 ## Safeguard 11.03	(IG1)	Protect Recovery Data
@@ -475,7 +480,8 @@ The implementation of Safeguard 11.03 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Hardware Assets discovered during Internal Testing
+- Backup Data Protections observed during Internal Testing
 
 
 ## Safeguard 11.04	(IG1)	Establish and Maintain an Isolated Instance of Recovery Data 
@@ -484,7 +490,8 @@ The implementation of Safeguard 11.04 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- 
+- Hardware Assets discovered during Internal Testing
+- Backup Data Protections observed during Internal Testing
 
 
 ## Safeguard 13.01	**_(IG2)_**	Centralize Security Event Alerting
@@ -495,7 +502,7 @@ The implementation of Safeguard 13.01 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- 
+- Agency adoption of Defender/Sentinel SIEM Solution observed during Internal Testing
 
 
 ## Safeguard 13.07	**_(IG3)_**	Deploy a Host-Based Intrusion Prevention Solution
@@ -506,7 +513,7 @@ The implementation of Safeguard 13.07 is not directly related to the defensive m
 
 **Assessed Elements:**
 
-- 
+- Agency adoption of Defender/Sentinel SIEM Solution observed during Internal Testing
 
 
 ## Safeguard 14.01	(IG1)	Establish and Maintain a Security Awareness Program
