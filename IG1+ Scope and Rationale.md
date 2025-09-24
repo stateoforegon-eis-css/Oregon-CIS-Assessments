@@ -522,7 +522,8 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 14.02	(IG1)	Train Workforce Members to Recognize Social Engineering Attacks
@@ -531,7 +532,8 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 14.03	(IG1)	Train Workforce Members on Authentication Best Practices
@@ -540,7 +542,8 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 14.04	(IG1)	Train Workforce on Data Handling Best Practices
@@ -549,7 +552,8 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 14.05	(IG1)	Train Workforce Members on Causes of Unintentional Data Exposure
@@ -558,7 +562,8 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 14.06	(IG1)	Train Workforce Members on Recognizing and Reporting Security Incidents
@@ -567,7 +572,8 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 14.08	(IG1)	Train Workforce on the Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks
@@ -576,7 +582,8 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Security Awareness (Training) Program
+- Training Statistics observed during Internal Testing
 
 
 ## Safeguard 15.01	(IG1)	Establish and Maintain an Inventory of Service Providers
@@ -585,7 +592,8 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Inventory of Service Providers
+- Service Providers identified during Internal Testing
 
 
 ## Safeguard 17.01	(IG1)	Designate Personnel to Manage Incident Handling
@@ -594,7 +602,7 @@ The implementation of Safeguard 17.01 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Incident Response Documentation
 
 
 ## Safeguard 17.02	(IG1)	Establish and Maintain Contact Information for Reporting Security Incidents
@@ -603,7 +611,7 @@ The implementation of Safeguard 17.02 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Incident Response Documentation
 
 
 ## Safeguard 17.03	(IG1)	Establish and Maintain an Enterprise Process for Reporting Incidents
@@ -612,7 +620,7 @@ The implementation of Safeguard 17.03 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- 
+- Agency-provided Incident Response Documentation
 
 
 ## Safeguard 18.02	**_(IG2)_**	Perform Periodic External Penetration Tests
