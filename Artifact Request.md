@@ -99,19 +99,6 @@ Per the Information Technology (IT) Control Standards, CM-6(a), agencies must es
 -	Documented deviations from any industry standard configuration baselines in use
 -	Date of last review and update to the documented Configuration Standards
 
-#### GV03.b - Configuration Standards: Active Discovery Tool(s)
-
-The CIS Controls Assessment Specification for Safeguard 1.3 – Utilize an Active Discovery Tool – requires that assessors review the configuration standard for the organization’s active discovery tool(s) to validate breadth of coverage for the tool(s) as well as to confirm that any tools in use are configured to interface with the organization’s asset inventory to make automatic updates.
-
--	Active discovery scan policy
--	Scan target list(s)
--	Bash script(s), if used, to automate discovery scan(s)
--	Nmap syntax, if used, for discovery scan(s)
--	MASSCAN syntax, if used, for discovery scan(s)
--	Timestamp(s) showing Active Discovery scan execution time(s)
--	Any other applicable scan configuration artifacts to validate breadth and depth of scan coverage.
--	If using Tenable to perform Asset Discovery, please provide the job names configured in Tenable for the asset discovery scans.
-
 #### GV03.c - Configuration Standards: Encryption Software / Mechanisms for End-User Devices
 
 CIS CAS requires agencies to Encrypt data on end-user devices containing sensitive data. Example implementations can include, Windows BitLocker®, Apple FileVault®, Linux® dm-crypt.
@@ -338,10 +325,6 @@ IP address documentation for the organization that includes:
 ### _AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices_
 
 Approved, documented policy that defines the timeframe within which unauthorized devices must be removed from the organization’s network, or otherwise addressed, when discovered.
-
-### _AD03: List of Active Discovery Tool(s) Used by the Organization_
-
-A list of all active discovery tools that the organization uses to identify assets connected to its network. Will be a subset of GV05 – Authorized Software Inventory and GV03 – Configuration Standards.
 
 ### _AD04: Exception Documentation for Unsupported Software That is Necessary for the Fulfillment of the Organization's Mission_
 
