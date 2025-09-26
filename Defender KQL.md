@@ -1,4 +1,4 @@
-# **CIS v8.0 Controls Assessment Specification Defender Measurement Scripts (BETA)**
+# **CIS v8.0 Controls Assessment Specification Defender Measurement Scripts**
 
 ## CIS Control #1: Inventory and Control of Enterprise Assets
 
