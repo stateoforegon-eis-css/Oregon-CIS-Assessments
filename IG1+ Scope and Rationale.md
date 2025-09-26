@@ -18,7 +18,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided policy defining the Timeframe for Removing Unauthorized Assets
+- [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 - Hardware Assets discovered during Internal Testing
 - Enterprise-defined timeframe for addressing Unauthorized Assets
 
@@ -29,8 +29,8 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Software Assets
-- Agency-provided list of Software Inventory Tools
+- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
+- [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
 - Software Assets discovered during Internal Testing
 
 
@@ -40,8 +40,8 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Software Assets
-- Agency-provided Exception Documentation for Unsupported Software
+- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
+- [AD04: Exception Documentation for Unsupported Software That is Necessary for the Fulfillment of the Organization's Mission](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad04-exception-documentation-for-unsupported-software-that-is-necessary-for-the-fulfillment-of-the-organizations-mission)
 - Software Assets discovered during Internal Testing
 
 
@@ -135,7 +135,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Software Assets
+- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
 - Agency-provided Secure Configuration Standard for Operating Systems and Software
 
 
@@ -178,7 +178,7 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Software Assets
+- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
 - Software Assets discovered during Internal Testing
 - Default Account and Group Policy settings observed during Internal Testing
 
@@ -418,7 +418,7 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Software Assets
+- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
 
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
@@ -427,7 +427,7 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Software Assets
+- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
 - Agency-provided Secure Configuration Standard for DNS Filtering
 
 
