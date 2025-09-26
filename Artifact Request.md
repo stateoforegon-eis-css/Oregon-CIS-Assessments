@@ -81,7 +81,6 @@ The hardware asset inventory should include, at a minimum, the following types o
 -	Mobile devices (tablets, phones)
 -	Assets used for remote access (VPN)
 -	Assets used for administrative purposes (e.g. privileged-access workstations)
--	Discovery/Vulnerability Scanners (i.e. Tenable.sc)
 
 ### _GV03: Configuration Standards_
 
