@@ -8,7 +8,7 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Hardware Assets
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
 
 
@@ -63,7 +63,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Hardware Assets
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Agency-provided policy defining the Timeframe between consecutive Software Discovery Scans
 - Visibility of Hardware Assets in Inventory Tools observed during Internal Testing
 
@@ -84,7 +84,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 **Assessed Elements:**
 
 - Agency-provided Data Management Process
-- Agency-provided Inventory of Authorized Hardware Assets - specifically those storing sensitive data
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory) - specifically those storing sensitive data
 
 
 ## Safeguard 3.04	(IG1)	Enforce Data Retention
@@ -113,7 +113,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Hardware Assets
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Encryption settings observed during Internal Testing
 
 
@@ -145,7 +145,7 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Hardware Assets
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
 - Session Locking settings observed during Internal Testing
 
@@ -156,7 +156,7 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Hardware Assets
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
 - Firewall settings observed during Internal Testing
 
@@ -167,7 +167,7 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Authorized Hardware Assets
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
 - Firewall settings observed during Internal Testing
 
