@@ -1,6 +1,6 @@
 # Purpose
 
-This document serves as a high-level index of the CIS Safeguards included in the CSS Cybersecurity Assessment Team "IG1+" review baseline with brief explanations of how each included Safeguard aligns to the _2023 Satatewide Information Technology Control Standards_ and, where applicable, ratonale for included "IG2" and "IG3" Safeguards.
+This document serves as a high-level index of the CIS Safeguards included in the CSS Cybersecurity Assessment Team "IG1+" review baseline with brief explanations of how each included Safeguard aligns to the _2023 Satatewide Information Technology Control Standards_ and, where applicable, ratonale for included "IG2" and "IG3" Safeguards.  Included under each Safeguard are links to the relevant items from the Artifact Request and/or Internal Testing items.
 
 ## Safeguard 1.01	(IG1)	Establish and Maintain Detailed Enterprise Asset Inventory
 
@@ -264,7 +264,7 @@ The implementation of Safeguard 7.01 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Vulnerability Management Process
+- [AD09: Organization Vulnerability Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad09-organization-vulnerability-management-process)
 
 
 ## Safeguard 7.02	(IG1)	Establish and Maintain a Remediation Process
@@ -273,7 +273,7 @@ The implementation of Safeguard 7.02 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Vulnerability Remediation Process
+- [AD10: Organization Vulnerability Remediation Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad10-organization-vulnerability-remediation-process)
 
 
 ## Safeguard 7.03	(IG1)	Perform Automated Operating System Patch Management
@@ -282,7 +282,7 @@ The implementation of Safeguard 7.03 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Configuration Standard for Operating Systems
+- [GV03.a Configuration Standards: Operating Systems & Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03a-configuration-standards-operating-systems--software)
 - Operating System Versions observed during Internal Testing
 
 
@@ -292,8 +292,8 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided list of Automated Patch Management Software
-- Agency-provided Configuration Standard for Automated Patch Management Software
+- [GV24: Authorized Automated Patch Management Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv24-authorized-automated-patch-management-software)
+- [GV03.f - Configuration Standards: Automated Patch Management Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03f---configuration-standards-automated-patch-management-software)
 - Application Versions observed during Internal Testing
 
 
@@ -305,9 +305,9 @@ The implementation of Safeguard 7.05 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided list of Vulnerability Scanning Software
-- Agency-provided Configuration Standard for Internal Vulnerability Scanning Software
-- Vulnerability Scan Coverage observed during Internal Testing
+- [GV25: List of Vulnerability Scanning Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv25-list-of-vulnerability-scanning-software)
+- [GV03.g - Configuration Standards: Vulnerability Scanners / Scanning Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03g---configuration-standards-vulnerability-scanners--scanning-software)
+- Internal Vulnerability Scan Coverage observed during Internal Testing
 
 
 ## Safeguard 7.06	**_(IG2)_**	Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets
@@ -318,8 +318,8 @@ The implementation of Safeguard 7.06 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Configuration Standard for External Vulnerability Scanning Software
-- Vulnerability Scan Coverage observed during Internal Testing
+- [GV03.g - Configuration Standards: Vulnerability Scanners / Scanning Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03g---configuration-standards-vulnerability-scanners--scanning-software)
+- External Vulnerability Scan Coverage observed during Internal Testing
 
 
 ## Safeguard 8.01	(IG1)	Establish and Maintain an Audit Log Management Process
@@ -328,7 +328,7 @@ The implementation of Safeguard 8.01 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Audit Log Management Process
+- [GV26: Agency Audit Log Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv26-agency-audit-log-management-process)
 
 
 ## Safeguard 8.02	(IG1)	Collect Audit Logs
@@ -371,7 +371,7 @@ The implementation of Safeguard 8.05 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Audit Log Management Process
+- [GV26: Agency Audit Log Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv26-agency-audit-log-management-process)
 - Hardware Assets discovered during Internal Testing
 - Event Log Generation Settings (CIS L1 Benchmarks) observed during Internal Testing
 
@@ -426,8 +426,8 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
-- Agency-provided Secure Configuration Standard for DNS Filtering
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
+- [GV03.d - Configuration Standards: DNS Servers](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03d---configuration-standards-dns-servers)
 
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
@@ -436,7 +436,7 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided list of Authorized Anti-malware Software
+- [GV31: List of Authorized Anti‐malware Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv31-list-of-authorized-antimalware-software)
 - Hardware Assets discovered during Internal Testing
 - Anti-malware Deployment observed during Internal Testing
 
@@ -447,7 +447,7 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided list of Authorized Anti-malware Software
+- [GV31: List of Authorized Anti‐malware Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv31-list-of-authorized-antimalware-software)
 - Hardware Assets discovered during Internal Testing
 - Anti-malware Update Settings and Implementation observed during Internal Testing
 
@@ -468,7 +468,7 @@ The implementation of Safeguard 11.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Data Recovery Process
+- [AD11: Documented Data Recovery Process for the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad11-documented-data-recovery-process-for-the-organization)
 
 
 ## Safeguard 11.02	(IG1)	Perform Automated Backups 
@@ -529,7 +529,8 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [AD14: Security Awareness and Training metrics for the prior year](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad14-security-awareness-and-training-metrics-for-the-prior-year)
 - Training Statistics observed during Internal Testing
 
 
@@ -539,8 +540,8 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
-- Agency-provided list of Workforce Members
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
 
@@ -550,8 +551,8 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
-- Agency-provided list of Workforce Members
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
 
@@ -561,8 +562,8 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
-- Agency-provided list of Workforce Members
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
 
@@ -572,8 +573,8 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
-- Agency-provided list of Workforce Members
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
 
@@ -583,8 +584,8 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
-- Agency-provided list of Workforce Members
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
 
@@ -594,8 +595,8 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Security Awareness (Training) Program
-- Agency-provided list of Workforce Members
+- [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
+- [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
 
@@ -605,7 +606,7 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Service Providers
+- [GV44: Service Provider Inventory List](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv44-service-provider-inventory-list)
 - Service Providers identified during Internal Testing
 
 
@@ -615,7 +616,7 @@ The implementation of Safeguard 17.01 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- Agency-provided Incident Response Documentation
+- [GV51: Agency Incident Response Documentation](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv51-agency-incident-response-documentation)
 
 
 ## Safeguard 17.02	(IG1)	Establish and Maintain Contact Information for Reporting Security Incidents
@@ -624,7 +625,7 @@ The implementation of Safeguard 17.02 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- Agency-provided Incident Response Documentation
+- [GV51: Agency Incident Response Documentation](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv51-agency-incident-response-documentation)
 
 
 ## Safeguard 17.03	(IG1)	Establish and Maintain an Enterprise Process for Reporting Incidents
@@ -633,7 +634,7 @@ The implementation of Safeguard 17.03 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- Agency-provided Incident Response Documentation
+- [GV51: Agency Incident Response Documentation](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv51-agency-incident-response-documentation)
 
 
 ## Safeguard 18.02	**_(IG2)_**	Perform Periodic External Penetration Tests
@@ -644,6 +645,4 @@ The implementation of Safeguard 18.02 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Agency-provided Penetration Testing Results
-
-
+- [GV54: Most recent external penetration test report for the organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv54-most-recent-external-penetration-test-report-for-the-organization)
