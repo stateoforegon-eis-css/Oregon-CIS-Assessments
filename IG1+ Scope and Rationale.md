@@ -20,7 +20,6 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 - Hardware Assets discovered during Internal Testing
-- Enterprise-defined timeframe for addressing Unauthorized Assets
 
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
@@ -52,7 +51,7 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - Software Assets discovered during Internal Testing
-- Enterprise-defined timeframe for addressing Unauthorized Assets
+- [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 
 
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
@@ -64,7 +63,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
-- Agency-provided policy defining the Timeframe between consecutive Software Discovery Scans
+- [AD05: Policy Documentation That Defines the Timeframe Between Consecutive Active Software Discovery Scans](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad05-policy-documentation-that-defines-the-timeframe-between-consecutive-active-software-discovery-scans)
 - Visibility of Hardware Assets in Inventory Tools observed during Internal Testing
 
 
@@ -74,7 +73,7 @@ The implementation of Safeguard 3.01 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Data Management Process
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv10-organizations-data-management-process)
 
 
 ## Safeguard 3.02	(IG1)	Establish and Maintain a Data Inventory
@@ -83,7 +82,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Data Management Process
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv10-organizations-data-management-process)
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv01-detailed-hardware-asset-inventory) - specifically those storing sensitive data
 
 
@@ -93,8 +92,8 @@ The implementation of Safeguard 3.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Data Management Process
-- Agency-provided Sensitive Data Inventory
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv10-organizations-data-management-process)
+- [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv12-sensitive-data-inventory)
 
 
 ## Safeguard 3.05	(IG1)	Securely Dispose of Data
@@ -103,8 +102,8 @@ The implementation of Safeguard 3.05 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Data Management Process
-- Agency-provided Sensitive Data Inventory
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv10-organizations-data-management-process)
+- [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv12-sensitive-data-inventory)
 
 
 ## Safeguard 3.06	(IG1)	Encrypt Data on End-User Devices
@@ -126,7 +125,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - Agency-provided Data Classification Scheme
-- Agency-provided Sensitive Data Inventory
+- [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv12-sensitive-data-inventory)
 
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
@@ -136,7 +135,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv05-authorized-software-inventory)
-- Agency-provided Secure Configuration Standard for Operating Systems and Software
+- [GV03.a Configuration Standards: Operating Systems & Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03a-configuration-standards-operating-systems--software)
 
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
@@ -189,7 +188,7 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Accounts
+- [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain Accounts discovered during Internal Testing
 
 
@@ -199,7 +198,7 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Password Policy
+- [GV20: Unique Password Policy](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv20-unique-password-policy)
 - Password settings observed during Internal Testing
 
 
@@ -219,7 +218,7 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 
 **Assessed Elements:**
 
-- Agency-provided Inventory of Accounts
+- [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain and Local Administrator Accounts discovered during Internal Testing
 
 
@@ -229,7 +228,7 @@ The implementation of Safeguard 6.01 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Onboarding (Access Granting) Process
+- [AD07: Process for Granting Access to Organization Assets](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad07-process-for-granting-access-to-organization-assets)
 
 
 ## Safeguard 6.02	(IG1)	Establish an Access Revoking Process
@@ -238,7 +237,7 @@ The implementation of Safeguard 6.02 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Offboarding (Access Revoking) Process
+- [AD08: Process for Revoking Access to Organization Assets](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#ad08-process-for-revoking-access-to-organization-assets)
 
 
 ## Safeguard 6.04	(IG1)	Require MFA for Remote Network Access
@@ -247,7 +246,7 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Multifactor Authentication Configuration Standard
+- [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
 
 
 ## Safeguard 6.05	(IG1)	Require MFA for Administrative Access
@@ -256,7 +255,7 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Agency-provided Multifactor Authentication Configuration Standard
+- [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact%20Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
 
 
 ## Safeguard 7.01	(IG1)	Establish and Maintain a Vulnerability Management Process
