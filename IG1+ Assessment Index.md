@@ -360,7 +360,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - Hardware Assets discovered during Internal Testing
-- Agency-provided Network Time Protocol Settings
+- Network Time Protocol Settings observed during Internal Testing
 
 
 ## Safeguard 8.05	**_(IG2)_**	Collect Detailed Audit Logs
