@@ -175,6 +175,7 @@ Documented and approved process that describes how the organization ensures that
 
 The data management process must address, at a minimum:
 
+-	Data classification scheme
 -	Data sensitivity
 -	Data ownership
 -	Handling of data
