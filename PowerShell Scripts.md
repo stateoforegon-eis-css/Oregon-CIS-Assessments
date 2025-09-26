@@ -1,4 +1,4 @@
-# **CIS v8.0 Controls Assessment Specification PowerShell Scripts (BETA)**
+# **CIS v8.0 Controls Assessment Specification PowerShell Scripts**
 
 ## CIS Control #5: Account Management
 
