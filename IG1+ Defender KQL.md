@@ -41,7 +41,7 @@ Script to extract an inventory of 'discovered' software from Defender with "EOS"
 ```kql
 DeviceTvmSoftwareInventory
 | where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
-and isnotempty(EndOfSupportStatus)
+| where isnotempty(EndOfSupportStatus)
 | project DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
 | summarize DeviceId = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
