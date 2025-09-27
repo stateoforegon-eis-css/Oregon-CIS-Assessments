@@ -317,6 +317,26 @@ DeviceTvmSoftwareVulnerabilities
 | sort by Software asc // Sort software list
 ```
 
+## CIS Control #9: Email and Web Browser Protections
+
+### Safeguard 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients
+
+**About:**
+Script to summarize a count of systems with Browsers or Email Clients listed as "Unsupported"
+
+Un-comment line 7 to summarize by software version
+
+```kql
+DeviceTvmSoftwareInventory
+| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+| where isnotempty(EndOfSupportStatus)
+| where SoftwareName has_any ("Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Mozilla", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
+or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Office", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
+| project DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+//| summarize DeviceId = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
+| sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
+```
+
 ## CIS Control #10: Malware Defenses
 
 ### Safeguard 10.1 Deploy and Maintain Anti-Malware Software
