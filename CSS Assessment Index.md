@@ -268,6 +268,7 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain Accounts discovered during Internal Testing
+  - [Powershell Script to enumerate Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-51-establish-and-maintain-an-inventory-of-accounts)
 
 **Assessment Methodology**
 
@@ -298,6 +299,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 - Domain Accounts discovered during Internal Testing (See Safeguard 5.01)
 - Domain Account status observed during Internal Testing
+  - [Powershell Script to enumerate Dormant Accounts and Status from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-53-disable-dormant-accounts)
 
 **Assessment Methodology**
 
@@ -313,6 +315,7 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain and Local Administrator Accounts discovered during Internal Testing
   - [KQL Script to enumerate all Local Administrative logons using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
+  - [Powershell Script to enumerate Administrative Active Directory Groups and member Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
 
 **Assessment Methodology**
 
