@@ -31,7 +31,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 1.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls1/#12-address-unauthorized-assets)
-- Evaluate discovered Hardware Assets for those not included in Agency's Detailed Hardware Asset Inventory with a "First Seen" dates exceeding enterprise time frame to remove unauthorized assets.
+- Evaluate discovered Hardware Assets for those not included in Agency's Detailed Hardware Asset Inventory with a "First Seen" date exceeding enterprise time frame to remove unauthorized assets.
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
 
