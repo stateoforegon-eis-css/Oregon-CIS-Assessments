@@ -12,12 +12,12 @@ Script to extract Active Directory inventory of 'discovered' assets from Artifac
 $ad = Import-Clixml .\ActiveDirectory.xml
 $EnabledComputers = $ad.computers | Where-Object { $_.Enabled -eq $true }
 $DisabledComputers = $ad.computers | Where-Object { $_.Enabled -eq $false }
-Write-Host 'Enabled Computers found in AD' - $EnabledComputers.count
+Write-Host 'Safeguard 1.01, M3 = Enabled Computers found in AD' - $EnabledComputers.count
 Write-Host 'Disabled Computers found in AD' - $DisabledComputers.count
 Write-Host 'Total Computers found in AD' - $AD.Computers.count
 
 ```
-### Safeguard 1.2 Establish and Maintain a Detailed Asset Inventory
+### Safeguard 1.2 Address Unauthorized Assets
 
 **About:**
 Script to extract the Count of Assets in GV02 with a "First Seen" date greater than M3 days prior to the Assessment.  
@@ -33,7 +33,7 @@ $M4 = $ad.Computers | Where-Object {
     $_.Enabled -eq $true -and
     [datetime]$_.whenCreated -gt $CutoffDate
 } | Measure-Object | Select-Object -ExpandProperty Count
-Write-Output "Safeguard 1.2, M4 = Number of enabled assets with 'first seen' (whenCreated) after ${CutoffDate}: ${M4}"
+Write-Output "Safeguard 1.02, M4 = Number of enabled assets with 'first seen' (whenCreated) after ${CutoffDate}: ${M4}"
 ```
 ## CIS Control #2: Inventory and Control of Software Assets
 
