@@ -202,7 +202,6 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Session Locking settings observed during Internal Testing
   - [KQL Script to evaluate Automatic Session Locking on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-43-configure-automatic-session-locking-on-enterprise-assets)
@@ -219,7 +218,6 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Firewall settings observed during Internal Testing
   - [KQL Script to evaluate the FIrewall status for each server using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-44-implement-and-manage-a-firewall-on-servers)
@@ -235,7 +233,6 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Firewall settings observed during Internal Testing
   - [KQL Script to evaluate the Firewall status for each endpoint using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-45-implement-and-manage-a-firewall-on-end-user-devices)
@@ -252,8 +249,7 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
-- Software Assets discovered during Internal Testing (See Safeguard 2.03)
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Default Account and Group Policy settings observed during Internal Testing
   - [KQL Script to enumerate all enabled Default Accounts on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-47-manage-default-accounts-on-enterprise-assets-and-software)
   - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-407)
