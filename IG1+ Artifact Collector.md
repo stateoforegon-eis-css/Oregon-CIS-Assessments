@@ -35,12 +35,18 @@ $M4 = $ad.Computers | Where-Object {
 } | Measure-Object | Select-Object -ExpandProperty Count
 Write-Output "Safeguard 1.02, M4 = Number of enabled assets with 'first seen' (whenCreated) after ${CutoffDate}: ${M4}"
 ```
-## CIS Control #2: Inventory and Control of Software Assets
+## CIS Control #5: Account Management
 
-### Safeguard 2.2 Ensure Authorized Software is Currently Supported
+### Safeguard 5.1 Establish and Maintain an Inventory of Accounts
 
 **About:**
+Script to extract Active Directory inventory of 'discovered' Users from Artifact Collector.  
 
 ```Powershell
-$script
+$ad = Import-Clixml .\ActiveDirectory.xml
+$EnabledUsers = $ad.Users | Where-Object { $_.Enabled -eq $true }
+$DisabledUsers = $ad.Users | Where-Object { $_.Enabled -eq $false }
+Write-Host 'Safeguard 5.01, M6 = Enabled Users found in AD' - $EnabledUsers.count
+Write-Host 'Disabled Users found in AD' - $DisabledUsers.count
+Write-Host 'Total Users found in AD' - $AD.Users.count
 ```
