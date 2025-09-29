@@ -5,7 +5,7 @@
 ### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
 
 **About:**
-Script to extract an inventory of 'discovered' assets from Artifact Collector
+Script to extract an inventory of 'discovered' assets from Artifact Collector.  Note - You will need to run these commands in the same directory/folder where your artifacxt Collector result files are located.
 
 ```powershell
 $ad = Import-Clixml .\ActiveDirectory.xml
