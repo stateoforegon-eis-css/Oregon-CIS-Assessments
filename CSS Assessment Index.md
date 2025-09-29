@@ -26,12 +26,12 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 1.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls1/#12-address-unauthorized-assets)
-- 
+- Evaluate discovered Hardware Assets for those not included in Agency's Detailed Hardware Asset Inventory with a "First Seen" dates exceeding enterprise time frame to remove unauthorized assets.
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
 
