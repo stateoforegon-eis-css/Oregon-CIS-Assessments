@@ -1,6 +1,6 @@
 # Purpose
 
-This document serves as a high-level index of the CIS Safeguards included in the CSS Cybersecurity Assessment Team "IG1+" review baseline with brief explanations of how each included Safeguard aligns to the _2023 Satatewide Information Technology Control Standards_ and, where applicable, ratonale for included "IG2" and "IG3" Safeguards.  Included under each Safeguard are links to the relevant items from the Artifact Request and/or Internal Testing items.
+This document serves as a high-level index of the CIS Safeguards included in the CSS Cybersecurity Assessment Team "IG1+" review baseline with brief explanations of how each included Safeguard aligns to the _2023 Satatewide Information Technology Control Standards_ and, where applicable, ratonale for included "IG2" and "IG3" Safeguards.  Included under each Safeguard are links to the relevant items from the Artifact Request, Internal Testing, and Methodology.
 
 ## Safeguard 1.01	(IG1)	Establish and Maintain Detailed Enterprise Asset Inventory
 
