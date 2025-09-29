@@ -105,14 +105,4 @@ $GV22 = Import-Clixml .\ActiveDirectory.xml |
 		($_.LastLogon -lt (Get-Date).AddDays(-$M2))
 		} | Sort-Object -Descending -Property LastLogon |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv
-
-
-
-
-$ad = Import-Clixml .\ActiveDirectory.xml
-$EnabledUsers = $ad.Users | Where-Object { $_.Enabled -eq $true }
-$DisabledUsers = $ad.Users | Where-Object { $_.Enabled -eq $false }
-Write-Host 'Safeguard 5.01, M6 = Enabled Users found in AD' - $EnabledUsers.count
-Write-Host 'Disabled Users found in AD' - $DisabledUsers.count
-Write-Host 'Total Users found in AD' - $AD.Users.count
 ```
