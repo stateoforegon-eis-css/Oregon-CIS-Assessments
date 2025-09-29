@@ -268,7 +268,7 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain Accounts discovered during Internal Testing
-  - [Powershell Script to enumerate Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-51-establish-and-maintain-an-inventory-of-accounts)
+  - [Powershell Script to enumerate Domain Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-51-establish-and-maintain-an-inventory-of-accounts)
 
 **Assessment Methodology**
 
