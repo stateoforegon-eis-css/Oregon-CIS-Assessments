@@ -11,7 +11,7 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
   - [Powershell Script to enumerate Hardware Assets from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#cis-control-1-inventory-and-control-of-enterprise-assets)
-  - [KQL Script to enumerate Hardware Assets from Defender Advanced Hunting](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#cis-control-1-inventory-and-control-of-enterprise-assets)
+  - [KQL Script to enumerate Hardware Assets using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#cis-control-1-inventory-and-control-of-enterprise-assets)
   - Both [Defender](https://security.microsoft.com/machines) and [Tenable](https://cloud.tenable.com/tio/app.html#/assets-uw/all-assets/) have a pre-built report to list Agency Hardware Assets
 
 **Assessment Methodology**
@@ -61,6 +61,7 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#22-ensure-authorized-software-is-currently-supported)
+- [KQL Script to enumerate Unsupported Software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-22-ensure-authorized-software-is-currently-supported)
 - 
 
 ## Safeguard 2.03	(IG1)	Address Unauthorized Software
@@ -75,6 +76,7 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
+- [KQL Script to enumerate all Software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-23-software-present-on-enterprise-assets)
 - 
 
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
@@ -161,6 +163,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#36-encrypt-data-on-end-user-devices)
+- [KQL Script to evaluate BitLocker deployment on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-36-encrypt-data-on-end-user-devices)
 - 
 
 ## Safeguard 3.07	**_(IG2)_**	Establish and Maintain a Data Classification Scheme
@@ -206,6 +209,7 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#43-configure-automatic-session-locking-on-enterprise-assets)
+- [KQL Script to evaluate Automatic Session Locking on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-43-configure-automatic-session-locking-on-enterprise-assets)
 - 
 
 ## Safeguard 4.04	(IG1)	Implement and Manage a Firewall on Servers
@@ -221,6 +225,7 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#44-implement-and-manage-a-firewall-on-servers)
+- [KQL Script to evaluate the FIrewall status for each server using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-44-implement-and-manage-a-firewall-on-servers)
 - 
 
 ## Safeguard 4.05	(IG1)	Implement and Manage a Firewall on End-User Devices
@@ -236,6 +241,7 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#45-implement-and-manage-a-firewall-on-end-user-devices)
+- [KQL Script to evaluate the Firewall status for each endpoint using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-45-implement-and-manage-a-firewall-on-end-user-devices)
 - 
 
 ## Safeguard 4.07	(IG1)	Manage Default Accounts on Enterprise Assets and Software
@@ -251,6 +257,7 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#47-manage-default-accounts-on-enterprise-assets-and-software)
+- [KQL Script to enumerate all enabled Default Accounts on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-47-manage-default-accounts-on-enterprise-assets-and-software)
 - 
 
 ## Safeguard 5.01	(IG1)	Establish and Maintain an Inventory of Accounts
@@ -279,6 +286,7 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 5.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#52-use-unique-passwords)
+- [KQL Script to evaluate password complexity elements using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-52-use-unique-passwords)
 - 
 
 ## Safeguard 5.03	(IG1)	Disable Dormant Accounts
@@ -307,6 +315,7 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 5.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
+- [KQL Script to enumerate all Local Administrative logons using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
 - 
 
 ## Safeguard 6.01	(IG1)	Establish an Access Granting Process
@@ -399,6 +408,7 @@ The implementation of Safeguard 7.03 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 7.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#73-perform-automated-operating-system-patch-management)
+- [KQL Script to enumerate all Operating Systems with patches greater than 30 days using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-73-perform-automated-operating-system-patch-management)
 - 
 
 ## Safeguard 7.04	(IG1)	Perform Automated Application Patch Management
@@ -414,6 +424,7 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 7.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#74-perform-automated-application-patch-management)
+- [KQL Script to enumerate all Software with patches greater than 30 days using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-74-perform-automated-application-patch-management)
 - 
 
 ## Safeguard 7.05	**_(IG2)_**	Perform Automated Vulnerability Scans of Internal Enterprise Assets
@@ -581,6 +592,7 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 9.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
+- [KQL Script to enumerate unsupported Email Clients and Web Browsers using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
 - 
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
@@ -595,6 +607,7 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 9.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#92-use-dns-filtering-services)
+- [KQL Script to extract the DNS Filtering for each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-92-use-dns-filtering-services)
 - 
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
@@ -610,6 +623,7 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 10.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#101-deploy-and-maintain-anti-malware-software)
+- [KQL Script to enumerate all systems with anti-malware software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-101-deploy-and-maintain-anti-malware-software)
 - 
 
 ## Safeguard 10.02	(IG1)	Configure Automatic Anti-Malware Signature Updates
@@ -625,6 +639,7 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 10.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#102-configure-automatic-anti-malware-signature-updates)
+- [KQL Script to evaluate the anti-malware status of all systems using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-102-configure-automatic-anti-malware-signature-updates)
 - 
 
 ## Safeguard 10.03	(IG1)	Disable Autorun and Autoplay for Removable Media
@@ -639,6 +654,7 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 10.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#103-disable-autorun-and-autoplay-for-removable-media)
+- [KQL Script to evaluate the status of Autorun/Autoplay using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-103-disable-autorun-and-autoplay-for-removable-media)
 - 
 
 ## Safeguard 11.01	(IG1)	Establish and Maintain a Data Recovery Process 
@@ -666,6 +682,7 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 11.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#112-perform-automated-backups)
+- [KQL Script to enumerate all systems with CommVault Agent installed using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-112-perform-automated-backups)
 - 
 
 ## Safeguard 11.03	(IG1)	Protect Recovery Data
