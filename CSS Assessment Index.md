@@ -174,7 +174,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Agency-provided Data Classification Scheme
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv10-organizations-data-management-process) - Specifically the Data Classification Scheme
 - [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv12-sensitive-data-inventory)
 
 **Assessment Methodology**
