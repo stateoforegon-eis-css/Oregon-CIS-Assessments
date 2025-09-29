@@ -178,5 +178,4 @@ $xlsxPath = ".\$acy-admin_groups_report.xlsx"
 $adminGroupMembers | Export-Excel -Path $xlsxPath -AutoSize -Title "Admin Groups Report"
 
 Write-Host "Report saved to $xlsxPath"
----
----
+```
