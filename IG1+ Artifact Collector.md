@@ -1,7 +1,7 @@
 # **IG1+ Artifact Collector Powershell scripts**
 
 ## CIS Control #1: Inventory and Control of Enterprise Assets
-Note - You will need to each of these PowerShell scripts in the same directory/folder where your Artifact Collector result files are saved.
+Note - You will need to run each of these PowerShell scripts in the same directory/folder where your Artifact Collector result files are saved.
 
 ### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
 
