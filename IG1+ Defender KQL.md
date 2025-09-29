@@ -50,17 +50,7 @@ DeviceTvmSoftwareInventory
 ### Safeguard 2.3 Software Present on Enterprise Assets
 
 **About:**
-Script to extract a list of all installed software for comparison against the Authorized Inventory
-
-```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
-| distinct DeviceName, Software=strcat(SoftwareVendor, ': ',SoftwareName) // Select relevant fields for output
-| summarize DeviceName = count() by Software // Summarize by Software info
-| sort by Software asc // Sort software list
-```
-
-Alternate script to extract software list based on CPE data (takes longer, but is more concise)
+Script to extract software list based on CPE data
 
 ```kql
 DeviceTvmSoftwareInventory
