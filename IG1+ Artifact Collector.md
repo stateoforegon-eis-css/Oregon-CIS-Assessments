@@ -6,12 +6,14 @@ Note - You will need to run each of these PowerShell scripts in the same directo
 ### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
 
 **About:**
-Script to extract Active Directory inventory of 'discovered' assets from Artifact Collector. To see the list of Computers, remove the ".count" from the script. 
+Script to extract Active Directory inventory of 'discovered' assets from Artifact Collector. Script will output one file listing all enabled computers from A/D: [AgencyAcronym]-1-01-M2-enabled-AD-Computers.csv
 
 ```powershell
+$AgencyAcronym = Read-Host "What is the Agency Acronym?"
 $ad = Import-Clixml .\ActiveDirectory.xml
 $EnabledComputers = $ad.computers | Where-Object { $_.Enabled -eq $true }
 $DisabledComputers = $ad.computers | Where-Object { $_.Enabled -eq $false }
+$EnabledComputers | Export-Csv -NoTypeinformation .\$AgencyAcronym-1.01-M2-enabled-AD-Computers.csv
 Write-Host 'Safeguard 1.01, M3 = Enabled Computers found in AD' - $EnabledComputers.count
 Write-Host 'Disabled Computers found in AD' - $DisabledComputers.count
 Write-Host 'Total Computers found in AD' - $AD.Computers.count
@@ -20,7 +22,7 @@ Write-Host 'Total Computers found in AD' - $AD.Computers.count
 ### Safeguard 1.2 Address Unauthorized Assets
 
 **About:**
-Script to extract the Count of Assets in GV02 with a "First Seen" date greater than M3 days prior to the Assessment.  
+Script to extract the Count of Assets in GV02 with a "First Seen" date greater than M3 days prior to the Assessment.  Script will output one file listing all unauthorized Computers from A/D: [AgencyAcronym]-1.02-M4-Unauthorized-Computers.csv
 
 ```powershell
 $ad = Import-Clixml .\ActiveDirectory.xml
@@ -34,6 +36,7 @@ $M4 = $ad.Computers | Where-Object {
     [datetime]$_.whenCreated -gt $CutoffDate
 } | Measure-Object | Select-Object -ExpandProperty Count
 Write-Output "Safeguard 1.02, M4 = Number of enabled assets with 'first seen' (whenCreated) after ${CutoffDate}: ${M4}"
+$M4 |  Export-Csv -NoTypeinformation .\$AgencyAcronym-1.02-M4-Unauthorized-Computers.csv
 ```
 ## CIS Control #5: Account Management
 
@@ -50,7 +53,7 @@ Script to extract Active Directory inventory of 'discovered' Users from Artifact
         Select-Object SamAccountName |
         Export-Csv -Path $csvFile -NoTypeInformation -Encoding UTF8
     Write-Host "Export complete: $csvFile"
-
+	
 ```
 ### Safeguard 5.3 Disable Dormant Accounts
 
