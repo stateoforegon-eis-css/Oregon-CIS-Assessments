@@ -184,24 +184,6 @@ on DeviceName
 | project DeviceName, GuestAcct, AdminAcct, LAPS
 ```
 
-### Safeguard 4.9 Configure Trusted DNS Servers on Enterprise Assets
-
-**About:**
-Script to sample network events and extract most recent DNS information for each connected device
-
-Note that the results are sorted by Network Adapter by default
-
-```kql
-DeviceNetworkInfo
-| where Timestamp > ago(365d) // Filter for events within the last 365 days
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
-| where NetworkAdapterStatus == "Up"
-| where DnsAddresses != ""
-| summarize arg_max(Timestamp, *) by DeviceName, NetworkAdapterType // limit results to most recent event for each Device/Adapter
-| project DeviceName, Timestamp, MacAddress, NetworkAdapterType, DnsAddresses
-| sort by NetworkAdapterType asc, DeviceName asc
-```
-
 ## CIS Control #5: Account Management
 
 ### Safeguard 5.2 Use Unique Passwords
@@ -325,6 +307,24 @@ or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "
 | project DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
 //| summarize DeviceId = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
+```
+
+### Safeguard 9.2 Use DNS Filtering Services
+
+**About:**
+Script to sample network events and extract most recent DNS information for each connected device
+
+Note that the results are sorted by Network Adapter by default
+
+```kql
+DeviceNetworkInfo
+| where Timestamp > ago(365d) // Filter for events within the last 365 days
+| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+| where NetworkAdapterStatus == "Up"
+| where DnsAddresses != ""
+| summarize arg_max(Timestamp, *) by DeviceName, NetworkAdapterType // limit results to most recent event for each Device/Adapter
+| project DeviceName, Timestamp, MacAddress, NetworkAdapterType, DnsAddresses
+| sort by NetworkAdapterType asc, DeviceName asc
 ```
 
 ## CIS Control #10: Malware Defenses
