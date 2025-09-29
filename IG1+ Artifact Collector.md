@@ -1,4 +1,4 @@
-# **Artifact Collector Data Review**
+# **IG1+ Artifact Collector Powershell scripts**
 
 ## CIS Control #1: Inventory and Control of Enterprise Assets
 
