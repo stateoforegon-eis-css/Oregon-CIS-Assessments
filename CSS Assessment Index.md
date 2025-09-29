@@ -27,7 +27,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
-- [Powershell Script to enumerate Hardware Assets with a "First Seen" date exceeding enterprise time frame from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-12-address-unauthorized-assets)
+  - [Powershell Script to enumerate Hardware Assets with a "First Seen" date exceeding enterprise time frame from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#safeguard-12-address-unauthorized-assets)
 
 **Assessment Methodology**
 
