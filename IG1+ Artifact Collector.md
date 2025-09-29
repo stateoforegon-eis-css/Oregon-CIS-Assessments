@@ -109,7 +109,7 @@ $GV22 = Import-Clixml .\ActiveDirectory.xml |
 ### Safeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
 
 **About:**
-Save Script as a .ps1 file, then execute from the same directory/folder where your Artifact Collector result files are saved.  This Script will extract Active Directory Groups that are likely to contain or be configured with Administrative permissions and exports one files: [AgencyAcronym]-admin_groups_report.xlsx.
+Save Script as a .ps1 file, then execute from the same directory/folder where your Artifact Collector result files are saved.  This Script will extract Active Directory Groups that are likely to contain or be configured with Administrative permissions and exports one file: [AgencyAcronym]-admin_groups_report.xlsx.
 
 ```Powershell
 # Ensure ImportExcel module is installed
