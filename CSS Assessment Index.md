@@ -41,13 +41,11 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
-- [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
-- Software Assets discovered during Internal Testing
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#21-establish-and-maintain-a-software-inventory)
-- 
+- Evaluate Authorized Software Inventory for the presence of required elements.
 
 ## Safeguard 2.02	(IG1)	Ensure Authorized Software is Currently Supported 
 
@@ -58,12 +56,12 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
 - [AD04: Exception Documentation for Unsupported Software That is Necessary for the Fulfillment of the Organization's Mission](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad04-exception-documentation-for-unsupported-software-that-is-necessary-for-the-fulfillment-of-the-organizations-mission)
 - Software Assets discovered during Internal Testing
+  - [KQL Script to enumerate Unsupported Software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-22-ensure-authorized-software-is-currently-supported)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#22-ensure-authorized-software-is-currently-supported)
-- [KQL Script to enumerate Unsupported Software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-22-ensure-authorized-software-is-currently-supported)
-- 
+- Evaluate Agency's Authorized Software Inventory for the proper labeling of "unsupported" software through a comparison with discovered software.
 
 ## Safeguard 2.03	(IG1)	Address Unauthorized Software
 
@@ -71,13 +69,13 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Software Assets discovered during Internal Testing
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
+- Software Assets discovered during Internal Testing
+  - [KQL Script to enumerate all Software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-23-software-present-on-enterprise-assets)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
-- [KQL Script to enumerate all Software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-23-software-present-on-enterprise-assets)
 - 
 
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
@@ -90,6 +88,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - [AD05: Policy Documentation That Defines the Timeframe Between Consecutive Active Software Discovery Scans](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad05-policy-documentation-that-defines-the-timeframe-between-consecutive-active-software-discovery-scans)
+- [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
 - Visibility of Hardware Assets in Inventory Tools observed during Internal Testing
 
 **Assessment Methodology**
@@ -160,11 +159,11 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Encryption settings observed during Internal Testing
+  - [KQL Script to evaluate BitLocker deployment on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-36-encrypt-data-on-end-user-devices)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#36-encrypt-data-on-end-user-devices)
-- [KQL Script to evaluate BitLocker deployment on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-36-encrypt-data-on-end-user-devices)
 - 
 
 ## Safeguard 3.07	**_(IG2)_**	Establish and Maintain a Data Classification Scheme
@@ -204,13 +203,14 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 **Assessed Elements:**
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Session Locking settings observed during Internal Testing
+  - [KQL Script to evaluate Automatic Session Locking on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-43-configure-automatic-session-locking-on-enterprise-assets)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-403)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#43-configure-automatic-session-locking-on-enterprise-assets)
-- [KQL Script to evaluate Automatic Session Locking on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-43-configure-automatic-session-locking-on-enterprise-assets)
 - 
 
 ## Safeguard 4.04	(IG1)	Implement and Manage a Firewall on Servers
@@ -220,13 +220,13 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Firewall settings observed during Internal Testing
+  - [KQL Script to evaluate the FIrewall status for each server using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-44-implement-and-manage-a-firewall-on-servers)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#44-implement-and-manage-a-firewall-on-servers)
-- [KQL Script to evaluate the FIrewall status for each server using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-44-implement-and-manage-a-firewall-on-servers)
 - 
 
 ## Safeguard 4.05	(IG1)	Implement and Manage a Firewall on End-User Devices
@@ -236,13 +236,14 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Firewall settings observed during Internal Testing
+  - [KQL Script to evaluate the Firewall status for each endpoint using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-45-implement-and-manage-a-firewall-on-end-user-devices)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-405)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#45-implement-and-manage-a-firewall-on-end-user-devices)
-- [KQL Script to evaluate the Firewall status for each endpoint using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-45-implement-and-manage-a-firewall-on-end-user-devices)
 - 
 
 ## Safeguard 4.07	(IG1)	Manage Default Accounts on Enterprise Assets and Software
@@ -252,13 +253,15 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
-- Software Assets discovered during Internal Testing
+- Software Assets discovered during Internal Testing (See Safeguard 2.03)
 - Default Account and Group Policy settings observed during Internal Testing
+  - [KQL Script to enumerate all enabled Default Accounts on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-47-manage-default-accounts-on-enterprise-assets-and-software)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-407)
+  - [LAPS GPOs evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#laps-settings-related-to-safeguard-407)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 4.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#47-manage-default-accounts-on-enterprise-assets-and-software)
-- [KQL Script to enumerate all enabled Default Accounts on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-47-manage-default-accounts-on-enterprise-assets-and-software)
 - 
 
 ## Safeguard 5.01	(IG1)	Establish and Maintain an Inventory of Accounts
@@ -283,11 +286,12 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 
 - [GV20: Unique Password Policy](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv20-unique-password-policy)
 - Password settings observed during Internal Testing
+  - [KQL Script to evaluate password complexity elements using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-52-use-unique-passwords)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-502)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 5.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#52-use-unique-passwords)
-- [KQL Script to evaluate password complexity elements using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-52-use-unique-passwords)
 - 
 
 ## Safeguard 5.03	(IG1)	Disable Dormant Accounts
@@ -296,7 +300,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Domain Accounts discovered during Internal Testing
+- Domain Accounts discovered during Internal Testing (See Safeguard 5.01)
 - Domain Account status observed during Internal Testing
 
 **Assessment Methodology**
@@ -312,11 +316,11 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain and Local Administrator Accounts discovered during Internal Testing
+  - [KQL Script to enumerate all Local Administrative logons using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 5.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
-- [KQL Script to enumerate all Local Administrative logons using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
 - 
 
 ## Safeguard 6.01	(IG1)	Establish an Access Granting Process
@@ -405,11 +409,11 @@ The implementation of Safeguard 7.03 contributes to the defensive mitigation for
 
 - [GV03.a Configuration Standards: Operating Systems & Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03a-configuration-standards-operating-systems--software)
 - Operating System Versions observed during Internal Testing
+  - [KQL Script to enumerate all Operating Systems with patches greater than 30 days using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-73-perform-automated-operating-system-patch-management)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 7.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#73-perform-automated-operating-system-patch-management)
-- [KQL Script to enumerate all Operating Systems with patches greater than 30 days using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-73-perform-automated-operating-system-patch-management)
 - 
 
 ## Safeguard 7.04	(IG1)	Perform Automated Application Patch Management
@@ -421,11 +425,11 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 - [GV24: Authorized Automated Patch Management Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv24-authorized-automated-patch-management-software)
 - [GV03.f - Configuration Standards: Automated Patch Management Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03f---configuration-standards-automated-patch-management-software)
 - Application Versions observed during Internal Testing
+  - [KQL Script to enumerate all Software with patches greater than 30 days using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-74-perform-automated-application-patch-management)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 7.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#74-perform-automated-application-patch-management)
-- [KQL Script to enumerate all Software with patches greater than 30 days using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-74-perform-automated-application-patch-management)
 - 
 
 ## Safeguard 7.05	**_(IG2)_**	Perform Automated Vulnerability Scans of Internal Enterprise Assets
@@ -480,8 +484,9 @@ The implementation of Safeguard 8.02 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Event Log Storage Locations (CIS L1 Benchmarks) observed during Internal Testing
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-802)
 
 **Assessment Methodology**
 
@@ -494,8 +499,9 @@ The implementation of Safeguard 8.03 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Event Log Storage Space (CIS L1 Benchmarks) observed during Internal Testing
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-803)
 
 **Assessment Methodology**
 
@@ -510,7 +516,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Network Time Protocol Settings observed during Internal Testing
 
 **Assessment Methodology**
@@ -527,8 +533,9 @@ The implementation of Safeguard 8.05 is operationally equivalent to the defensiv
 **Assessed Elements:**
 
 - [GV26: Agency Audit Log Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv26-agency-audit-log-management-process)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Event Log Generation Settings (CIS L1 Benchmarks) observed during Internal Testing
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-805)
 
 **Assessment Methodology**
 
@@ -543,7 +550,7 @@ The implementation of Safeguard 8.09 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Log Aggregation Implementation observed during Internal Testing
 
 **Assessment Methodology**
@@ -559,7 +566,7 @@ The implementation of Safeguard 8.10 is operationally equivalent to the defensiv
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Audit Record Retention observed during Internal Testing
 
 **Assessment Methodology**
@@ -589,11 +596,12 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
+- Unsupported Browsers and Email Clients discovered during Internal Testing
+  - [KQL Script to enumerate unsupported Email Clients and Web Browsers using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 9.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
-- [KQL Script to enumerate unsupported Email Clients and Web Browsers using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
 - 
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
@@ -604,11 +612,12 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - [GV03.d - Configuration Standards: DNS Servers](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03d---configuration-standards-dns-servers)
+- DNS Filtering observed during Internal Testing
+  - [KQL Script to extract the DNS Filtering for each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-92-use-dns-filtering-services)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 9.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#92-use-dns-filtering-services)
-- [KQL Script to extract the DNS Filtering for each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-92-use-dns-filtering-services)
 - 
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
@@ -618,13 +627,13 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - [GV31: List of Authorized Anti‐malware Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv31-list-of-authorized-antimalware-software)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Anti-malware Deployment observed during Internal Testing
+  - [KQL Script to enumerate all systems with anti-malware software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-101-deploy-and-maintain-anti-malware-software)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 10.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#101-deploy-and-maintain-anti-malware-software)
-- [KQL Script to enumerate all systems with anti-malware software using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-101-deploy-and-maintain-anti-malware-software)
 - 
 
 ## Safeguard 10.02	(IG1)	Configure Automatic Anti-Malware Signature Updates
@@ -634,13 +643,13 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - [GV31: List of Authorized Anti‐malware Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv31-list-of-authorized-antimalware-software)
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Anti-malware Update Settings and Implementation observed during Internal Testing
+  - [KQL Script to evaluate the anti-malware status of all systems using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-102-configure-automatic-anti-malware-signature-updates)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 10.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#102-configure-automatic-anti-malware-signature-updates)
-- [KQL Script to evaluate the anti-malware status of all systems using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-102-configure-automatic-anti-malware-signature-updates)
 - 
 
 ## Safeguard 10.03	(IG1)	Disable Autorun and Autoplay for Removable Media
@@ -649,13 +658,14 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Removable Media Settings observed during Internal Testing
+  - [KQL Script to evaluate the status of Autorun/Autoplay using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-103-disable-autorun-and-autoplay-for-removable-media)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-1003)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 10.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#103-disable-autorun-and-autoplay-for-removable-media)
-- [KQL Script to evaluate the status of Autorun/Autoplay using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-103-disable-autorun-and-autoplay-for-removable-media)
 - 
 
 ## Safeguard 11.01	(IG1)	Establish and Maintain a Data Recovery Process 
@@ -677,13 +687,13 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Automated Backup Implementation observed during Internal Testing
+  - [KQL Script to enumerate all systems with CommVault Agent installed using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-112-perform-automated-backups)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 11.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#112-perform-automated-backups)
-- [KQL Script to enumerate all systems with CommVault Agent installed using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-112-perform-automated-backups)
 - 
 
 ## Safeguard 11.03	(IG1)	Protect Recovery Data
@@ -692,7 +702,7 @@ The implementation of Safeguard 11.03 contributes to the defensive mitigation fo
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Backup Data Protections observed during Internal Testing
 
 **Assessment Methodology**
@@ -706,7 +716,7 @@ The implementation of Safeguard 11.04 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
-- Hardware Assets discovered during Internal Testing
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Backup Data Protections observed during Internal Testing
 
 **Assessment Methodology**
@@ -722,7 +732,9 @@ The implementation of Safeguard 13.01 is a critical element in the defensive mit
 
 **Assessed Elements:**
 
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Agency adoption of Defender/Sentinel SIEM Solution observed during Internal Testing
+  - [Evaluate Defender's Device Inventory for 'onboarded' assets](https://security.microsoft.com/machines)
 
 **Assessment Methodology**
 
@@ -737,7 +749,9 @@ The implementation of Safeguard 13.07 is not directly related to the defensive m
 
 **Assessed Elements:**
 
+- Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Agency adoption of Defender/Sentinel SIEM Solution observed during Internal Testing
+  - [Evaluate Defender's Device Inventory for 'onboarded' assets](https://security.microsoft.com/machines)
 
 **Assessment Methodology**
 
@@ -753,6 +767,7 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [AD14: Security Awareness and Training metrics for the prior year](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad14-security-awareness-and-training-metrics-for-the-prior-year)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -768,6 +783,7 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -783,6 +799,7 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -798,6 +815,7 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -813,6 +831,7 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -828,6 +847,7 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -843,6 +863,7 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 - [AD12: Agency Security Awareness Training Program Plan](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad12-agency-security-awareness-training-program-plan)
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
+  - Report available through [Workday Learning](https://wd5.myworkday.com/oregon/d/task/1422$4944.htmld) or Enterprise Iformation Security & Awareness Program
 
 **Assessment Methodology**
 
@@ -857,6 +878,7 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 
 - [GV44: Service Provider Inventory List](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv44-service-provider-inventory-list)
 - Service Providers identified during Internal Testing
+  - [OregonBuys 'Active Blankets' Search](https://oregonbuys.gov/bso/view/search/external/advancedSearchContractBlanket.xhtml?view=activeContracts)
 
 **Assessment Methodology**
 
