@@ -11,6 +11,10 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 1.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls1/#11-establish-and-maintain-detailed-enterprise-asset-inventory)
+- Evaluate elements in Artifact GV01 and compare authorized assets to discovered assets
 
 ## Safeguard 1.02	(IG1)	Address Unauthorized Assets
 
@@ -21,6 +25,10 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 - Hardware Assets discovered during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 1.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls1/#12-address-unauthorized-assets)
+- 
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
 
@@ -32,6 +40,10 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 - [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
 - Software Assets discovered during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 2.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#21-establish-and-maintain-a-software-inventory)
+- 
 
 ## Safeguard 2.02	(IG1)	Ensure Authorized Software is Currently Supported 
 
@@ -43,6 +55,10 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 - [AD04: Exception Documentation for Unsupported Software That is Necessary for the Fulfillment of the Organization's Mission](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad04-exception-documentation-for-unsupported-software-that-is-necessary-for-the-fulfillment-of-the-organizations-mission)
 - Software Assets discovered during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 2.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#22-ensure-authorized-software-is-currently-supported)
+- 
 
 ## Safeguard 2.03	(IG1)	Address Unauthorized Software
 
@@ -53,6 +69,10 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 - Software Assets discovered during Internal Testing
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
+- 
 
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
 
@@ -66,6 +86,10 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 - [AD05: Policy Documentation That Defines the Timeframe Between Consecutive Active Software Discovery Scans](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad05-policy-documentation-that-defines-the-timeframe-between-consecutive-active-software-discovery-scans)
 - Visibility of Hardware Assets in Inventory Tools observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 2.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#24-utilize-automated-software-inventory-tools)
+- 
 
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
 
@@ -75,6 +99,10 @@ The implementation of Safeguard 3.01 is operationally equivalent to the defensiv
 
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv10-organizations-data-management-process)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 3.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#31-establish-and-maintain-a-data-management-process)
+- 
 
 ## Safeguard 3.02	(IG1)	Establish and Maintain a Data Inventory
 
@@ -85,6 +113,10 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv10-organizations-data-management-process)
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory) - specifically those storing sensitive data
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 3.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#32-establish-and-maintain-a-data-inventory)
+- 
 
 ## Safeguard 3.04	(IG1)	Enforce Data Retention
 
@@ -95,6 +127,10 @@ The implementation of Safeguard 3.04 contributes to the defensive mitigation for
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv10-organizations-data-management-process)
 - [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv12-sensitive-data-inventory)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 3.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#34-enforce-data-retention)
+- 
 
 ## Safeguard 3.05	(IG1)	Securely Dispose of Data
 
@@ -105,6 +141,10 @@ The implementation of Safeguard 3.05 contributes to the defensive mitigation for
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv10-organizations-data-management-process)
 - [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv12-sensitive-data-inventory)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 3.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#35-securely-dispose-of-data)
+- 
 
 ## Safeguard 3.06	(IG1)	Encrypt Data on End-User Devices
 
@@ -115,6 +155,10 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - Encryption settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 3.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#36-encrypt-data-on-end-user-devices)
+- 
 
 ## Safeguard 3.07	**_(IG2)_**	Establish and Maintain a Data Classification Scheme
 
@@ -127,6 +171,10 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 - Agency-provided Data Classification Scheme
 - [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv12-sensitive-data-inventory)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 3.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#37-establish-and-maintain-a-data-classification-scheme)
+- 
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
 
@@ -137,6 +185,10 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
 - [GV03.a Configuration Standards: Operating Systems & Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03a-configuration-standards-operating-systems--software)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 4.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#41-establish-and-maintain-a-secure-configuration-process)
+- 
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
 
@@ -148,6 +200,10 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 - Hardware Assets discovered during Internal Testing
 - Session Locking settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 4.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#43-configure-automatic-session-locking-on-enterprise-assets)
+- 
 
 ## Safeguard 4.04	(IG1)	Implement and Manage a Firewall on Servers
 
@@ -159,6 +215,10 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 - Hardware Assets discovered during Internal Testing
 - Firewall settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 4.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#44-implement-and-manage-a-firewall-on-servers)
+- 
 
 ## Safeguard 4.05	(IG1)	Implement and Manage a Firewall on End-User Devices
 
@@ -170,6 +230,10 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 - Hardware Assets discovered during Internal Testing
 - Firewall settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 4.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#45-implement-and-manage-a-firewall-on-end-user-devices)
+- 
 
 ## Safeguard 4.07	(IG1)	Manage Default Accounts on Enterprise Assets and Software
 
@@ -181,6 +245,10 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 - Software Assets discovered during Internal Testing
 - Default Account and Group Policy settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 4.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#47-manage-default-accounts-on-enterprise-assets-and-software)
+- 
 
 ## Safeguard 5.01	(IG1)	Establish and Maintain an Inventory of Accounts
 
@@ -191,6 +259,10 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain Accounts discovered during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 5.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#51-establish-and-maintain-an-inventory-of-accounts)
+- 
 
 ## Safeguard 5.02	(IG1)	Use Unique Passwords
 
@@ -201,6 +273,10 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 - [GV20: Unique Password Policy](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv20-unique-password-policy)
 - Password settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 5.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#52-use-unique-passwords)
+- 
 
 ## Safeguard 5.03	(IG1)	Disable Dormant Accounts
 
@@ -211,6 +287,10 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 - Domain Accounts discovered during Internal Testing
 - Domain Account status observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 5.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#53-disable-dormant-accounts)
+- 
 
 ## Safeguard 5.04	(IG1)	Restrict Administrator Privileges to Dedicated Administrator Accounts
 
@@ -221,6 +301,10 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv22-inventory-of-accounts)
 - Domain and Local Administrator Accounts discovered during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 5.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
+- 
 
 ## Safeguard 6.01	(IG1)	Establish an Access Granting Process
 
@@ -230,6 +314,10 @@ The implementation of Safeguard 6.01 contributes to the defensive mitigation for
 
 - [AD07: Process for Granting Access to Organization Assets](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad07-process-for-granting-access-to-organization-assets)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 6.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#61-establish-an-access-granting-process)
+- 
 
 ## Safeguard 6.02	(IG1)	Establish an Access Revoking Process
 
@@ -239,6 +327,10 @@ The implementation of Safeguard 6.02 contributes to the defensive mitigation for
 
 - [AD08: Process for Revoking Access to Organization Assets](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad08-process-for-revoking-access-to-organization-assets)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 6.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#62-establish-an-access-revoking-process)
+- 
 
 ## Safeguard 6.04	(IG1)	Require MFA for Remote Network Access
 
@@ -248,6 +340,10 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 
 - [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 6.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#64-require-mfa-for-remote-network-access)
+- 
 
 ## Safeguard 6.05	(IG1)	Require MFA for Administrative Access
 
@@ -257,6 +353,10 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 
 - [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 6.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#65-require-mfa-for-administrative-access)
+- 
 
 ## Safeguard 7.01	(IG1)	Establish and Maintain a Vulnerability Management Process
 
@@ -266,6 +366,10 @@ The implementation of Safeguard 7.01 is a critical element in the defensive miti
 
 - [AD09: Organization Vulnerability Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad09-organization-vulnerability-management-process)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 7.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#71-establish-and-maintain-a-vulnerability-management-process)
+- 
 
 ## Safeguard 7.02	(IG1)	Establish and Maintain a Remediation Process
 
@@ -275,6 +379,10 @@ The implementation of Safeguard 7.02 is a critical element in the defensive miti
 
 - [AD10: Organization Vulnerability Remediation Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad10-organization-vulnerability-remediation-process)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 7.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#72-establish-and-maintain-a-remediation-process)
+- 
 
 ## Safeguard 7.03	(IG1)	Perform Automated Operating System Patch Management
 
@@ -285,6 +393,10 @@ The implementation of Safeguard 7.03 contributes to the defensive mitigation for
 - [GV03.a Configuration Standards: Operating Systems & Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03a-configuration-standards-operating-systems--software)
 - Operating System Versions observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 7.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#73-perform-automated-operating-system-patch-management)
+- 
 
 ## Safeguard 7.04	(IG1)	Perform Automated Application Patch Management
 
@@ -296,6 +408,10 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 - [GV03.f - Configuration Standards: Automated Patch Management Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03f---configuration-standards-automated-patch-management-software)
 - Application Versions observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 7.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#74-perform-automated-application-patch-management)
+- 
 
 ## Safeguard 7.05	**_(IG2)_**	Perform Automated Vulnerability Scans of Internal Enterprise Assets
 
@@ -309,6 +425,10 @@ The implementation of Safeguard 7.05 contributes to the defensive mitigation for
 - [GV03.g - Configuration Standards: Vulnerability Scanners / Scanning Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03g---configuration-standards-vulnerability-scanners--scanning-software)
 - Internal Vulnerability Scan Coverage observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 7.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#75-perform-automated-vulnerability-scans-of-internal-enterprise-assets)
+- 
 
 ## Safeguard 7.06	**_(IG2)_**	Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets
 
@@ -321,6 +441,10 @@ The implementation of Safeguard 7.06 contributes to the defensive mitigation for
 - [GV03.g - Configuration Standards: Vulnerability Scanners / Scanning Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03g---configuration-standards-vulnerability-scanners--scanning-software)
 - External Vulnerability Scan Coverage observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 7.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#76-perform-automated-vulnerability-scans-of-externally-exposed-enterprise-assets)
+- 
 
 ## Safeguard 8.01	(IG1)	Establish and Maintain an Audit Log Management Process
 
@@ -330,6 +454,10 @@ The implementation of Safeguard 8.01 is operationally equivalent to the defensiv
 
 - [GV26: Agency Audit Log Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv26-agency-audit-log-management-process)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#81-establish-and-maintain-an-audit-log-management-process)
+- 
 
 ## Safeguard 8.02	(IG1)	Collect Audit Logs
 
@@ -340,6 +468,10 @@ The implementation of Safeguard 8.02 is operationally equivalent to the defensiv
 - Hardware Assets discovered during Internal Testing
 - Event Log Storage Locations (CIS L1 Benchmarks) observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard (8.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#82-collect-audit-logs)
+- 
 
 ## Safeguard 8.03	(IG1)	Ensure Adequate Audit Log Storage
 
@@ -350,6 +482,10 @@ The implementation of Safeguard 8.03 is operationally equivalent to the defensiv
 - Hardware Assets discovered during Internal Testing
 - Event Log Storage Space (CIS L1 Benchmarks) observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#83-ensure-adequate-audit-log-storage)
+- 
 
 ## Safeguard 8.04	**_(IG2)_**	Standardize Time Synchronization
 
@@ -362,6 +498,10 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 - Hardware Assets discovered during Internal Testing
 - Network Time Protocol Settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#84-standardize-time-synchronization)
+- 
 
 ## Safeguard 8.05	**_(IG2)_**	Collect Detailed Audit Logs
 
@@ -375,6 +515,10 @@ The implementation of Safeguard 8.05 is operationally equivalent to the defensiv
 - Hardware Assets discovered during Internal Testing
 - Event Log Generation Settings (CIS L1 Benchmarks) observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#85-collect-detailed-audit-logs)
+- 
 
 ## Safeguard 8.09	**_(IG2)_**	Centralize Audit Logs
 
@@ -387,6 +531,10 @@ The implementation of Safeguard 8.09 contributes to the defensive mitigation for
 - Hardware Assets discovered during Internal Testing
 - Log Aggregation Implementation observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.09](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#89-centralize-audit-logs)
+- 
 
 ## Safeguard 8.10	**_(IG2)_**	Retain Audit Logs
 
@@ -399,6 +547,10 @@ The implementation of Safeguard 8.10 is operationally equivalent to the defensiv
 - Hardware Assets discovered during Internal Testing
 - Audit Record Retention observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.10](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#810-retain-audit-logs)
+- 
 
 ## Safeguard 8.11	**_(IG2)_**	Conduct Audit Log Reviews
 
@@ -410,6 +562,10 @@ The implementation of Safeguard 8.11 is operationally equivalent to the defensiv
 
 - Audit Record Review Schedule observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 8.11](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#811-conduct-audit-log-reviews)
+- 
 
 ## Safeguard 9.01	(IG1)	Ensure Use of Only Fully Supported Browsers and Email Clients
 
@@ -419,6 +575,10 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv05-authorized-software-inventory)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 9.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
+- 
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
 
@@ -429,6 +589,10 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - [GV03.d - Configuration Standards: DNS Servers](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv03d---configuration-standards-dns-servers)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 9.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#92-use-dns-filtering-services)
+- 
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
 
@@ -440,6 +604,10 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing
 - Anti-malware Deployment observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 10.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#101-deploy-and-maintain-anti-malware-software)
+- 
 
 ## Safeguard 10.02	(IG1)	Configure Automatic Anti-Malware Signature Updates
 
@@ -451,6 +619,10 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing
 - Anti-malware Update Settings and Implementation observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 10.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#102-configure-automatic-anti-malware-signature-updates)
+- 
 
 ## Safeguard 10.03	(IG1)	Disable Autorun and Autoplay for Removable Media
 
@@ -461,6 +633,10 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing
 - Removable Media Settings observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 10.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#103-disable-autorun-and-autoplay-for-removable-media)
+- 
 
 ## Safeguard 11.01	(IG1)	Establish and Maintain a Data Recovery Process 
 
@@ -470,6 +646,10 @@ The implementation of Safeguard 11.01 contributes to the defensive mitigation fo
 
 - [AD11: Documented Data Recovery Process for the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad11-documented-data-recovery-process-for-the-organization)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 11.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#111-establish-and-maintain-a-data-recovery-process)
+- 
 
 ## Safeguard 11.02	(IG1)	Perform Automated Backups 
 
@@ -480,6 +660,10 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing
 - Automated Backup Implementation observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 11.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#112-perform-automated-backups)
+- 
 
 ## Safeguard 11.03	(IG1)	Protect Recovery Data
 
@@ -490,6 +674,10 @@ The implementation of Safeguard 11.03 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing
 - Backup Data Protections observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 11.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#113-protect-recovery-data)
+- 
 
 ## Safeguard 11.04	(IG1)	Establish and Maintain an Isolated Instance of Recovery Data 
 
@@ -500,6 +688,10 @@ The implementation of Safeguard 11.04 is a critical element in the defensive mit
 - Hardware Assets discovered during Internal Testing
 - Backup Data Protections observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 11.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#114-establish-and-maintain-an-isolated-instance-of-recovery-data)
+- 
 
 ## Safeguard 13.01	**_(IG2)_**	Centralize Security Event Alerting
 
@@ -511,6 +703,10 @@ The implementation of Safeguard 13.01 is a critical element in the defensive mit
 
 - Agency adoption of Defender/Sentinel SIEM Solution observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 13.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls13/#131-centralize-security-event-alerting)
+- 
 
 ## Safeguard 13.07	**_(IG3)_**	Deploy a Host-Based Intrusion Prevention Solution
 
@@ -522,6 +718,10 @@ The implementation of Safeguard 13.07 is not directly related to the defensive m
 
 - Agency adoption of Defender/Sentinel SIEM Solution observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 13.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls13/#137-deploy-a-host-based-intrusion-prevention-solution)
+- 
 
 ## Safeguard 14.01	(IG1)	Establish and Maintain a Security Awareness Program
 
@@ -533,6 +733,10 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 - [AD14: Security Awareness and Training metrics for the prior year](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad14-security-awareness-and-training-metrics-for-the-prior-year)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#141-establish-and-maintain-a-security-awareness-program)
+- 
 
 ## Safeguard 14.02	(IG1)	Train Workforce Members to Recognize Social Engineering Attacks
 
@@ -544,6 +748,10 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#142-train-workforce-members-to-recognize-social-engineering-attacks)
+- 
 
 ## Safeguard 14.03	(IG1)	Train Workforce Members on Authentication Best Practices
 
@@ -555,6 +763,10 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#143-train-workforce-members-on-authentication-best-practices)
+- 
 
 ## Safeguard 14.04	(IG1)	Train Workforce on Data Handling Best Practices
 
@@ -566,6 +778,10 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#144-train-workforce-on-data-handling-best-practices)
+- 
 
 ## Safeguard 14.05	(IG1)	Train Workforce Members on Causes of Unintentional Data Exposure
 
@@ -577,6 +793,10 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#145-train-workforce-members-on-causes-of-unintentional-data-exposure)
+- 
 
 ## Safeguard 14.06	(IG1)	Train Workforce Members on Recognizing and Reporting Security Incidents
 
@@ -588,6 +808,10 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#146-train-workforce-members-on-recognizing-and-reporting-security-incidents)
+- 
 
 ## Safeguard 14.08	(IG1)	Train Workforce on the Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks
 
@@ -599,6 +823,10 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 - [GV43: List of workforce members](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv43-list-of-workforce-members)
 - Training Statistics observed during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 14.08](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#148-train-workforce-on-the-dangers-of-connecting-to-and-transmitting-enterprise-data-over-insecure-networks)
+- 
 
 ## Safeguard 15.01	(IG1)	Establish and Maintain an Inventory of Service Providers
 
@@ -609,6 +837,10 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 - [GV44: Service Provider Inventory List](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv44-service-provider-inventory-list)
 - Service Providers identified during Internal Testing
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 15.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls15/#151-establish-and-maintain-an-inventory-of-service-providers)
+- 
 
 ## Safeguard 17.01	(IG1)	Designate Personnel to Manage Incident Handling
 
@@ -618,6 +850,10 @@ The implementation of Safeguard 17.01 is a critical element in the defensive mit
 
 - [GV51: Agency Incident Response Documentation](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv51-agency-incident-response-documentation)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 17.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls17/#171-designate-personnel-to-manage-incident-handling)
+- 
 
 ## Safeguard 17.02	(IG1)	Establish and Maintain Contact Information for Reporting Security Incidents
 
@@ -627,6 +863,10 @@ The implementation of Safeguard 17.02 is a critical element in the defensive mit
 
 - [GV51: Agency Incident Response Documentation](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv51-agency-incident-response-documentation)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 17.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls17/#172-establish-and-maintain-contact-information-for-reporting-security-incidents)
+- 
 
 ## Safeguard 17.03	(IG1)	Establish and Maintain an Enterprise Process for Reporting Incidents
 
@@ -636,6 +876,10 @@ The implementation of Safeguard 17.03 is a critical element in the defensive mit
 
 - [GV51: Agency Incident Response Documentation](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv51-agency-incident-response-documentation)
 
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 17.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls17/#173-establish-and-maintain-an-enterprise-process-for-reporting-incidents)
+- 
 
 ## Safeguard 18.02	**_(IG2)_**	Perform Periodic External Penetration Tests
 
@@ -646,3 +890,8 @@ The implementation of Safeguard 18.02 contributes to the defensive mitigation fo
 **Assessed Elements:**
 
 - [GV54: Most recent external penetration test report for the organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv54-most-recent-external-penetration-test-report-for-the-organization)
+
+**Assessment Methodology**
+
+- [CIS Controls Assessment Specification for CIS Safeguard 18.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls18/#182-perform-periodic-external-penetration-tests)
+- 
