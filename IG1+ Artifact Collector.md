@@ -14,6 +14,7 @@ $ad = Import-Clixml .\ActiveDirectory.xml
 $EnabledComputers = $ad.computers | Where-Object { $_.Enabled -eq $true }
 $DisabledComputers = $ad.computers | Where-Object { $_.Enabled -eq $false }
 $EnabledComputers | Export-Csv -NoTypeinformation .\$AgencyAcronym-1.01-M2-enabled-AD-Computers.csv
+Write-Host "Report saved to $AgencyAcronym-1.01-M2-enabled-AD-Computers.csv"
 Write-Host 'Safeguard 1.01, M3 = Enabled Computers found in AD' - $EnabledComputers.count
 Write-Host 'Disabled Computers found in AD' - $DisabledComputers.count
 Write-Host 'Total Computers found in AD' - $AD.Computers.count
@@ -37,6 +38,7 @@ $M4 = $ad.Computers | Where-Object {
 } | Measure-Object | Select-Object -ExpandProperty Count
 Write-Output "Safeguard 1.02, M4 = Number of enabled assets with 'first seen' (whenCreated) after ${CutoffDate}: ${M4}"
 $M4 |  Export-Csv -NoTypeinformation .\$AgencyAcronym-1.02-M4-Unauthorized-Computers.csv
+Write-Host "Report saved to $AgencyAcronym-1.02-M4-Unauthorized-Computers.csv"
 ```
 ## CIS Control #5: Account Management
 
@@ -52,8 +54,7 @@ Script to extract Active Directory inventory of 'discovered' Users from Artifact
     $GV22M7.users |
         Select-Object SamAccountName |
         Export-Csv -Path $csvFile -NoTypeInformation -Encoding UTF8
-    Write-Host "Export complete: $csvFile"
-	
+    Write-Host "Export complete: $csvFile"	
 ```
 ### Safeguard 5.3 Disable Dormant Accounts
 
@@ -108,6 +109,7 @@ $GV22 = Import-Clixml .\ActiveDirectory.xml |
 		($_.LastLogon -lt (Get-Date).AddDays(-$M2))
 		} | Sort-Object -Descending -Property LastLogon |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv
+	Write-Host "Report saved to $AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv"
 ```
 ### Safeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
 
@@ -115,10 +117,6 @@ $GV22 = Import-Clixml .\ActiveDirectory.xml |
 Save Script as a .ps1 file, then execute from the same directory/folder where your Artifact Collector result files are saved.  This Script will extract Active Directory Groups that are likely to contain or be configured with Administrative permissions and exports one file: [AgencyAcronym]-admin_groups_report.xlsx.
 
 ```Powershell
-# Ensure ImportExcel module is installed
-#If you receive an error "The term 'Export-Excel' is not recognized... You need to first install The ImportExcel Module (commented below)
-#Install-PSResource -Name ImportExcel
-
 # Get Agency Acronym
 $acy = Read-Host -Prompt "Agency Acronym: "
 
@@ -173,9 +171,7 @@ $clixmlData = Load-ClixmlFile -filePath $groupClixmlFile
 # Extract admin groups from the .groups property and resolve member SAM names from .users
 $adminGroupMembers = Get-AdminGroups -groups $clixmlData.groups -users $clixmlData.users
 
-# Export to Excel
-$xlsxPath = ".\$acy-admin_groups_report.xlsx"
-$adminGroupMembers | Export-Excel -Path $xlsxPath -AutoSize -Title "Admin Groups Report"
-
-Write-Host "Report saved to $xlsxPath"
+# Export to CSV
+$adminGroupMembers | Export-Csv -NoTypeinformation .\$Acy-admin-groups-report.csv
+Write-Host "Report saved to $Acy-admin-groups-report.csv"
 ```
