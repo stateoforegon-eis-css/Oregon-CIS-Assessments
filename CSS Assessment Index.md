@@ -4,7 +4,7 @@ This document serves as a high-level index of the CIS Safeguards included in the
 
 ## Safeguard 1.01	(IG1)	Establish and Maintain Detailed Enterprise Asset Inventory
 
-The implementation of Safeguard 1.01 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard CM-8(1); and contributes to the defensive mitigation for Standards CM-8 and PM-5.
+The implementation of Safeguard 1.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ CM-8(1); and contributes to the defensive mitigation for _Standards_ CM-8 and PM-5.
 
 **Assessed Elements:**
 
@@ -21,7 +21,7 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 
 ## Safeguard 1.02	(IG1)	Address Unauthorized Assets
 
-The implementation of Safeguard 1.02 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard CM-8(3).
+The implementation of Safeguard 1.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CM-8(3).
 
 **Assessed Elements:**
 
@@ -36,7 +36,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
 
-The implementation of Safeguard 2.01 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard MA-3; and contributes to the defensive mitigation for Standards CM-7(1) and CM-8.
+The implementation of Safeguard 2.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ MA-3; and contributes to the defensive mitigation for _Standards_ CM-7(1) and CM-8.
 
 **Assessed Elements:**
 
@@ -49,7 +49,7 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 
 ## Safeguard 2.02	(IG1)	Ensure Authorized Software is Currently Supported 
 
-The implementation of Safeguard 2.02 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard SA-22.
+The implementation of Safeguard 2.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SA-22.
 
 **Assessed Elements:**
 
@@ -65,7 +65,7 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 
 ## Safeguard 2.03	(IG1)	Address Unauthorized Software
 
-The implementation of Safeguard 2.03 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards CM-7(2), CM-8(3), CM-10, and CM-11.
+The implementation of Safeguard 2.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-7(2), CM-8(3), CM-10, and CM-11.
 
 **Assessed Elements:**
 
@@ -82,7 +82,7 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 
 _Included in the Assessment as Enterprise Solutions (Tenable/Defender) enable subscribers to automate software discovery._
 
-The implementation of Safeguard 2.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard CM-8(3).
+The implementation of Safeguard 2.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CM-8(3).
 
 **Assessed Elements:**
 
@@ -98,7 +98,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
 
-The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard SI-12; a critical element in the defensive mitigations for Standard AU-11; and contributes to the defensive mitigation for Standard CM-12.
+The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-12; a critical element in the defensive mitigations for _Standard_ AU-11; and contributes to the defensive mitigation for _Standard_ CM-12.
 
 **Assessed Elements:**
 
@@ -111,7 +111,7 @@ The implementation of Safeguard 3.01 is operationally equivalent to the defensiv
 
 ## Safeguard 3.02	(IG1)	Establish and Maintain a Data Inventory
 
-The implementation of Safeguard 3.02 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standards CM-12 and PM-5(1); and contributes to the defensive mitigation for Standard RA-2.
+The implementation of Safeguard 3.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ CM-12 and PM-5(1); and contributes to the defensive mitigation for _Standard_ RA-2.
 
 **Assessed Elements:**
 
@@ -125,7 +125,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 
 ## Safeguard 3.04	(IG1)	Enforce Data Retention
 
-The implementation of Safeguard 3.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards AU-11 and SI-12.
+The implementation of Safeguard 3.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AU-11 and SI-12.
 
 **Assessed Elements:**
 
@@ -139,7 +139,7 @@ The implementation of Safeguard 3.04 contributes to the defensive mitigation for
 
 ## Safeguard 3.05	(IG1)	Securely Dispose of Data
 
-The implementation of Safeguard 3.05 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards MP-6 and SR-12.
+The implementation of Safeguard 3.05 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ MP-6 and SR-12.
 
 **Assessed Elements:**
 
@@ -153,7 +153,7 @@ The implementation of Safeguard 3.05 contributes to the defensive mitigation for
 
 ## Safeguard 3.06	(IG1)	Encrypt Data on End-User Devices
 
-The implementation of Safeguard 3.06 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard SC-28.
+The implementation of Safeguard 3.06 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SC-28.
 
 **Assessed Elements:**
 
@@ -170,7 +170,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 
 _Included in the Assessment in accordance with Statewide Policy 107-004-050._
 
-The implementation of Safeguard 3.07 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard RA-2.
+The implementation of Safeguard 3.07 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ RA-2.
 
 **Assessed Elements:**
 
@@ -184,7 +184,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
 
-The implementation of Safeguard 4.01 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standards CM-1 and CM-9; a critical element in the defensive mitigations for Standards CM-2, CM-6, CM-7(1), SA-3, SA-8, and SA-10; and contributes to the defensive mitigation for Standard CM-7.
+The implementation of Safeguard 4.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-1 and CM-9; a critical element in the defensive mitigations for _Standards_ CM-2, CM-6, CM-7(1), SA-3, SA-8, and SA-10; and contributes to the defensive mitigation for _Standard_ CM-7.
 
 **Assessed Elements:**
 
@@ -198,7 +198,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
 
-The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AC-11; a critical element in the defensive mitigations for Standards AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for Standards CM-7 and CM-7(1).
+The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for _Standards_ CM-7 and CM-7(1).
 
 **Assessed Elements:**
 
@@ -214,7 +214,7 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 
 ## Safeguard 4.04	(IG1)	Implement and Manage a Firewall on Servers
 
-The implementation of Safeguard 4.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards CA-9, SC-7, and SC-7(5).
+The implementation of Safeguard 4.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CA-9, SC-7, and SC-7(5).
 
 **Assessed Elements:**
 
@@ -229,7 +229,7 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 
 ## Safeguard 4.05	(IG1)	Implement and Manage a Firewall on End-User Devices
 
-The implementation of Safeguard 4.05 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards SC-7 and SC-7(5).
+The implementation of Safeguard 4.05 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ SC-7 and SC-7(5).
 
 **Assessed Elements:**
 
@@ -245,7 +245,7 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 
 ## Safeguard 4.07	(IG1)	Manage Default Accounts on Enterprise Assets and Software
 
-The implementation of Safeguard 4.07 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard IA-5.
+The implementation of Safeguard 4.07 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-5.
 
 **Assessed Elements:**
 
@@ -262,7 +262,7 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 
 ## Safeguard 5.01	(IG1)	Establish and Maintain an Inventory of Accounts
 
-The implementation of Safeguard 5.01 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AC-2.
+The implementation of Safeguard 5.01 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-2.
 
 **Assessed Elements:**
 
@@ -277,7 +277,7 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 
 ## Safeguard 5.02	(IG1)	Use Unique Passwords
 
-The implementation of Safeguard 5.02 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard IA-5(1).
+The implementation of Safeguard 5.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-5(1).
 
 **Assessed Elements:**
 
@@ -293,7 +293,7 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 
 ## Safeguard 5.03	(IG1)	Disable Dormant Accounts
 
-The implementation of Safeguard 5.03 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AC-2(3).
+The implementation of Safeguard 5.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-2(3).
 
 **Assessed Elements:**
 
@@ -308,7 +308,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 ## Safeguard 5.04	(IG1)	Restrict Administrator Privileges to Dedicated Administrator Accounts
 
-The implementation of Safeguard 5.04 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standards AC-6(2) and AC-6(5).
+The implementation of Safeguard 5.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ AC-6(2) and AC-6(5).
 
 **Assessed Elements:**
 
@@ -324,7 +324,7 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 
 ## Safeguard 6.01	(IG1)	Establish an Access Granting Process
 
-The implementation of Safeguard 6.01 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards AC-1, AC-2, AC-2(1), IA-4, and IA-5.
+The implementation of Safeguard 6.01 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-1, AC-2, AC-2(1), IA-4, and IA-5.
 
 **Assessed Elements:**
 
@@ -337,7 +337,7 @@ The implementation of Safeguard 6.01 contributes to the defensive mitigation for
 
 ## Safeguard 6.02	(IG1)	Establish an Access Revoking Process
 
-The implementation of Safeguard 6.02 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards AC-1, AC-2, and AC-2(1).
+The implementation of Safeguard 6.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-1, AC-2, and AC-2(1).
 
 **Assessed Elements:**
 
@@ -350,7 +350,7 @@ The implementation of Safeguard 6.02 contributes to the defensive mitigation for
 
 ## Safeguard 6.04	(IG1)	Require MFA for Remote Network Access
 
-The implementation of Safeguard 6.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards AC-19, IA-2(1), and IA-2(2).
+The implementation of Safeguard 6.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-19, IA-2(1), and IA-2(2).
 
 **Assessed Elements:**
 
@@ -363,7 +363,7 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 
 ## Safeguard 6.05	(IG1)	Require MFA for Administrative Access
 
-The implementation of Safeguard 6.05 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard IA-2(1).
+The implementation of Safeguard 6.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-2(1).
 
 **Assessed Elements:**
 
@@ -376,7 +376,7 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 
 ## Safeguard 7.01	(IG1)	Establish and Maintain a Vulnerability Management Process
 
-The implementation of Safeguard 7.01 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard RA-5.
+The implementation of Safeguard 7.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ RA-5.
 
 **Assessed Elements:**
 
@@ -389,7 +389,7 @@ The implementation of Safeguard 7.01 is a critical element in the defensive miti
 
 ## Safeguard 7.02	(IG1)	Establish and Maintain a Remediation Process
 
-The implementation of Safeguard 7.02 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard RA-5.
+The implementation of Safeguard 7.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ RA-5.
 
 **Assessed Elements:**
 
@@ -402,7 +402,7 @@ The implementation of Safeguard 7.02 is a critical element in the defensive miti
 
 ## Safeguard 7.03	(IG1)	Perform Automated Operating System Patch Management
 
-The implementation of Safeguard 7.03 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards RA-5, RA-7, SI-2, and SI-2(2).
+The implementation of Safeguard 7.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ RA-5, RA-7, SI-2, and SI-2(2).
 
 **Assessed Elements:**
 
@@ -417,7 +417,7 @@ The implementation of Safeguard 7.03 contributes to the defensive mitigation for
 
 ## Safeguard 7.04	(IG1)	Perform Automated Application Patch Management
 
-The implementation of Safeguard 7.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards RA-5, RA-7, SI-2, and SI-2(2).
+The implementation of Safeguard 7.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ RA-5, RA-7, SI-2, and SI-2(2).
 
 **Assessed Elements:**
 
@@ -435,7 +435,7 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 
 _Included in the Assessment as Enterprise Solution (Tenable) enables subscribers to automate vulnerability scanning._
 
-The implementation of Safeguard 7.05 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard RA-5.
+The implementation of Safeguard 7.05 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ RA-5.
 
 **Assessed Elements:**
 
@@ -452,7 +452,7 @@ The implementation of Safeguard 7.05 contributes to the defensive mitigation for
 
 _Included in the Assessment as an Enterprise Solution (CISA Cyber Hygiene) enables subscribers to automate external vulnerability scanning._
 
-The implementation of Safeguard 7.06 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard RA-5.
+The implementation of Safeguard 7.06 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ RA-5.
 
 **Assessed Elements:**
 
@@ -466,7 +466,7 @@ The implementation of Safeguard 7.06 contributes to the defensive mitigation for
 
 ## Safeguard 8.01	(IG1)	Establish and Maintain an Audit Log Management Process
 
-The implementation of Safeguard 8.01 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-1; and a critical element in the defensive mitigations for Standard AU-2.
+The implementation of Safeguard 8.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-1; and a critical element in the defensive mitigations for _Standard_ AU-2.
 
 **Assessed Elements:**
 
@@ -479,7 +479,7 @@ The implementation of Safeguard 8.01 is operationally equivalent to the defensiv
 
 ## Safeguard 8.02	(IG1)	Collect Audit Logs
 
-The implementation of Safeguard 8.02 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standards AU-2 and AU-12; and contributes to the defensive mitigation for Standards AU-7.
+The implementation of Safeguard 8.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AU-2 and AU-12; and contributes to the defensive mitigation for _Standards_ AU-7.
 
 **Assessed Elements:**
 
@@ -494,7 +494,7 @@ The implementation of Safeguard 8.02 is operationally equivalent to the defensiv
 
 ## Safeguard 8.03	(IG1)	Ensure Adequate Audit Log Storage
 
-The implementation of Safeguard 8.03 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-4.
+The implementation of Safeguard 8.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-4.
 
 **Assessed Elements:**
 
@@ -511,7 +511,7 @@ The implementation of Safeguard 8.03 is operationally equivalent to the defensiv
 
 _Included in the Assessment as an Enterprise Solution (NTP Servers) enables time synchronization._
 
-The implementation of Safeguard 8.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-8.
+The implementation of Safeguard 8.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-8.
 
 **Assessed Elements:**
 
@@ -527,7 +527,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) enables subscribers to collect audit logs._
 
-The implementation of Safeguard 8.05 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-3; and contributes to the defensive mitigation for Standards AU-3(1), AU-7, and AU-12.
+The implementation of Safeguard 8.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-3; and contributes to the defensive mitigation for _Standards_ AU-3(1), AU-7, and AU-12.
 
 **Assessed Elements:**
 
@@ -545,7 +545,7 @@ The implementation of Safeguard 8.05 is operationally equivalent to the defensiv
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) enables subscribers to centralize audit logs._
 
-The implementation of Safeguard 8.09 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-6(3).
+The implementation of Safeguard 8.09 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-6(3).
 
 **Assessed Elements:**
 
@@ -561,7 +561,7 @@ The implementation of Safeguard 8.09 contributes to the defensive mitigation for
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) enables subscribers to retain audit logs._
 
-The implementation of Safeguard 8.10 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-11.
+The implementation of Safeguard 8.10 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-11.
 
 **Assessed Elements:**
 
@@ -577,7 +577,7 @@ The implementation of Safeguard 8.10 is operationally equivalent to the defensiv
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) provides subscribers with triage services and review capabilities._
 
-The implementation of Safeguard 8.11 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AU-6; and contributes to the defensive mitigation for Standard AU-6(1).
+The implementation of Safeguard 8.11 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-6; and contributes to the defensive mitigation for _Standard_ AU-6(1).
 
 **Assessed Elements:**
 
@@ -590,7 +590,7 @@ The implementation of Safeguard 8.11 is operationally equivalent to the defensiv
 
 ## Safeguard 9.01	(IG1)	Ensure Use of Only Fully Supported Browsers and Email Clients
 
-The implementation of Safeguard 9.01 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards CM-10 and SC-18.
+The implementation of Safeguard 9.01 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-10 and SC-18.
 
 **Assessed Elements:**
 
@@ -605,7 +605,7 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
 
-The implementation of Safeguard 9.02 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard SI-8.
+The implementation of Safeguard 9.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ SI-8.
 
 **Assessed Elements:**
 
@@ -621,7 +621,7 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
 
-The implementation of Safeguard 10.01 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard SI-3.
+The implementation of Safeguard 10.01 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-3.
 
 **Assessed Elements:**
 
@@ -637,7 +637,7 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 
 ## Safeguard 10.02	(IG1)	Configure Automatic Anti-Malware Signature Updates
 
-The implementation of Safeguard 10.02 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard SI-3.
+The implementation of Safeguard 10.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-3.
 
 **Assessed Elements:**
 
@@ -653,7 +653,7 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 
 ## Safeguard 10.03	(IG1)	Disable Autorun and Autoplay for Removable Media
 
-The implementation of Safeguard 10.03 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard MP-7.
+The implementation of Safeguard 10.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ MP-7.
 
 **Assessed Elements:**
 
@@ -669,7 +669,7 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 
 ## Safeguard 11.01	(IG1)	Establish and Maintain a Data Recovery Process 
 
-The implementation of Safeguard 11.01 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards CP-2 and CP-10.
+The implementation of Safeguard 11.01 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CP-2 and CP-10.
 
 **Assessed Elements:**
 
@@ -682,7 +682,7 @@ The implementation of Safeguard 11.01 contributes to the defensive mitigation fo
 
 ## Safeguard 11.02	(IG1)	Perform Automated Backups 
 
-The implementation of Safeguard 11.02 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards CP-9 and CP-10.
+The implementation of Safeguard 11.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CP-9 and CP-10.
 
 **Assessed Elements:**
 
@@ -697,7 +697,7 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 
 ## Safeguard 11.03	(IG1)	Protect Recovery Data
 
-The implementation of Safeguard 11.03 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards CP-9, CP-9(8) and SC-28.
+The implementation of Safeguard 11.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CP-9, CP-9(8) and SC-28.
 
 **Assessed Elements:**
 
@@ -711,7 +711,7 @@ The implementation of Safeguard 11.03 contributes to the defensive mitigation fo
 
 ## Safeguard 11.04	(IG1)	Establish and Maintain an Isolated Instance of Recovery Data 
 
-The implementation of Safeguard 11.04 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standards CP-6 and CP-6(1).
+The implementation of Safeguard 11.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ CP-6 and CP-6(1).
 
 **Assessed Elements:**
 
@@ -727,7 +727,7 @@ The implementation of Safeguard 11.04 is a critical element in the defensive mit
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) provides subscribers with triage services and review capabilities._
 
-The implementation of Safeguard 13.01 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standards IR-4(1) and SI-4(2); and contributes to the defensive mitigation for Standards AU-6(1), AU-7, and SI-4(5).
+The implementation of Safeguard 13.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ IR-4(1) and SI-4(2); and contributes to the defensive mitigation for _Standards_ AU-6(1), AU-7, and SI-4(5).
 
 **Assessed Elements:**
 
@@ -744,7 +744,7 @@ The implementation of Safeguard 13.01 is a critical element in the defensive mit
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) provides subscribers with Endpoint Detection and Response (EDR)._
 
-The implementation of Safeguard 13.07 is not directly related to the defensive mitigation of a 2023 Statewide Information Technology Control Standard; rather, it contributes to the organization's overall security posture.
+The implementation of Safeguard 13.07 is not directly related to the defensive mitigation of a _2023 Statewide Information Technology Control Standard_; rather, it contributes to the organization's overall security posture.
 
 **Assessed Elements:**
 
@@ -759,7 +759,7 @@ The implementation of Safeguard 13.07 is not directly related to the defensive m
 
 ## Safeguard 14.01	(IG1)	Establish and Maintain a Security Awareness Program
 
-The implementation of Safeguard 14.01 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standards AT-1, AT-2, and PM-13.
+The implementation of Safeguard 14.01 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AT-1, AT-2, and PM-13.
 
 **Assessed Elements:**
 
@@ -775,7 +775,7 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 
 ## Safeguard 14.02	(IG1)	Train Workforce Members to Recognize Social Engineering Attacks
 
-The implementation of Safeguard 14.02 is operationally equivalent to the defensive mitigation for 2023 Statewide Information Technology Control Standard AT-2(3).
+The implementation of Safeguard 14.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2(3).
 
 **Assessed Elements:**
 
@@ -791,7 +791,7 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 
 ## Safeguard 14.03	(IG1)	Train Workforce Members on Authentication Best Practices
 
-The implementation of Safeguard 14.03 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AT-2.
+The implementation of Safeguard 14.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2.
 
 **Assessed Elements:**
 
@@ -807,7 +807,7 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 
 ## Safeguard 14.04	(IG1)	Train Workforce on Data Handling Best Practices
 
-The implementation of Safeguard 14.04 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AT-2.
+The implementation of Safeguard 14.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2.
 
 **Assessed Elements:**
 
@@ -823,7 +823,7 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 
 ## Safeguard 14.05	(IG1)	Train Workforce Members on Causes of Unintentional Data Exposure
 
-The implementation of Safeguard 14.05 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AC-22.
+The implementation of Safeguard 14.05 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-22.
 
 **Assessed Elements:**
 
@@ -839,7 +839,7 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 
 ## Safeguard 14.06	(IG1)	Train Workforce Members on Recognizing and Reporting Security Incidents
 
-The implementation of Safeguard 14.06 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AT-2.
+The implementation of Safeguard 14.06 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2.
 
 **Assessed Elements:**
 
@@ -855,7 +855,7 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 
 ## Safeguard 14.08	(IG1)	Train Workforce on the Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks
 
-The implementation of Safeguard 14.08 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard AT-2.
+The implementation of Safeguard 14.08 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2.
 
 **Assessed Elements:**
 
@@ -871,7 +871,7 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 
 ## Safeguard 15.01	(IG1)	Establish and Maintain an Inventory of Service Providers
 
-The implementation of Safeguard 15.01 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard PM-30(1).
+The implementation of Safeguard 15.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ PM-30(1).
 
 **Assessed Elements:**
 
@@ -886,7 +886,7 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 
 ## Safeguard 17.01	(IG1)	Designate Personnel to Manage Incident Handling
 
-The implementation of Safeguard 17.01 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard IR-7; and contributes to the defensive mitigation for Standards IR-1 and IR-8.
+The implementation of Safeguard 17.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-7; and contributes to the defensive mitigation for _Standards_ IR-1 and IR-8.
 
 **Assessed Elements:**
 
@@ -899,7 +899,7 @@ The implementation of Safeguard 17.01 is a critical element in the defensive mit
 
 ## Safeguard 17.02	(IG1)	Establish and Maintain Contact Information for Reporting Security Incidents
 
-The implementation of Safeguard 17.02 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard IR-6(3); and contributes to the defensive mitigation for Standard IR-6.
+The implementation of Safeguard 17.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-6(3); and contributes to the defensive mitigation for _Standard_ IR-6.
 
 **Assessed Elements:**
 
@@ -912,7 +912,7 @@ The implementation of Safeguard 17.02 is a critical element in the defensive mit
 
 ## Safeguard 17.03	(IG1)	Establish and Maintain an Enterprise Process for Reporting Incidents
 
-The implementation of Safeguard 17.03 is a critical element in the defensive mitigations for 2023 Statewide Information Technology Control Standard IR-6(1); and contributes to the defensive mitigation for Standards IR-5, IR-6, and IR-8.
+The implementation of Safeguard 17.03 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-6(1); and contributes to the defensive mitigation for _Standards_ IR-5, IR-6, and IR-8.
 
 **Assessed Elements:**
 
@@ -927,7 +927,7 @@ The implementation of Safeguard 17.03 is a critical element in the defensive mit
 
 _Included in the Assessment as an Enterprise Solution (CISA RVA) provides subscribers with external penetration testing._
 
-The implementation of Safeguard 18.02 contributes to the defensive mitigation for 2023 Statewide Information Technology Control Standard CA-8.
+The implementation of Safeguard 18.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CA-8.
 
 **Assessed Elements:**
 
