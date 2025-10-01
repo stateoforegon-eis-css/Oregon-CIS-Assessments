@@ -2,6 +2,8 @@
 
 The purpose of this document is to establish a standardized list of artifacts for evaluating the implementation of the Center for Internet Security’s (CIS) Critical Security Controls, in accordance with the CIS Controls Assessment Specification (CIS CAS). Derived directly from the CIS CAS, this list is provided to the assessment point of contact by Assessors prior to an assessment to allow sufficient time for the gathering of required artifacts.
 
+Browser Notes: To open the any of the hyperlinks found on this page in a new tab, Ctrl+Click or right-click and select ‘Open link in new tab.’”
+
 # Scope
 
 Agency-owned information and systems, whether on-premises, in the cloud, or administered through a managed service provider. The CIS Safeguards assessed are selected from Implementation Groups 1 and 2 of Version 8 of the CIS Controls.
