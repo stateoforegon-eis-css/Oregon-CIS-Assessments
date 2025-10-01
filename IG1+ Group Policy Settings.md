@@ -1,3 +1,5 @@
+Browser Notes: To open the any of the hyperlinks found on this page in a new tab, Ctrl+Click or right-click and select ‘Open link in new tab.’”
+
 # Applicability
 
 The Group Policy settings below can be assessed using a number of methods; however, we find PolicyAnalyzer tool from the [Microsoft Security Compliance Toolkit](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10) to be the most efficient.  Each is formatted as follows:
