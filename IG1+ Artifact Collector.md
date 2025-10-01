@@ -175,3 +175,23 @@ $adminGroupMembers = Get-AdminGroups -groups $clixmlData.groups -users $clixmlDa
 $adminGroupMembers | Export-Csv -NoTypeinformation .\$Acy-admin-groups-report.csv
 Write-Host "Report saved to $Acy-admin-groups-report.csv"
 ```
+## CIS Control #8: Audit Log Management
+
+### Safeguard 8.4 Standardize Time Synchronization
+
+**About:**
+Script to extract NTP configuration from Artifact Collector.  The NTP configuration is exported to [AgencyAcronym]-8.04-M2-NTP-Config.txt.
+
+```Powershell
+$AgencyAcronym = Read-Host "What is the Agency Acronym?"
+$ntp = import-Clixml .\NTP\NtpConfig.xml
+$Pattern1 = [regex]::Escape('Getting AD DC list for default domain...')
+$Pattern2 = [regex]::Escape('Analyzing:')
+$filteredOutput = $ntp.W32tmMonitorOutput | Where-Object {
+    -not [string]::IsNullOrWhiteSpace($_) -and $_ -notmatch "$Pattern1|$Pattern2"
+}
+$regNtpServerLine = "RegNtpServer: $($ntp.RegNtpServer)"
+$finalOutput = $filteredOutput + $regNtpServerLine
+$finalOutput | Out-File -FilePath ".\$AgencyAcronym-8.04-M2-NTP-Config.txt"
+Write-Host "Report saved to $AgencyAcronym-8.04-M2-NTP-Config.txt"
+```
