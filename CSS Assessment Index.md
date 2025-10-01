@@ -89,7 +89,8 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
 - [AD05: Policy Documentation That Defines the Timeframe Between Consecutive Active Software Discovery Scans](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad05-policy-documentation-that-defines-the-timeframe-between-consecutive-active-software-discovery-scans)
 - [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
-- Visibility of Hardware Assets in Inventory Tools observed during Internal Testing
+- Visibility of Hardware Assets in Software Inventory Tools observed during Internal Testing
+  - See Safeguard 1.01
 
 **Assessment Methodology**
 
@@ -517,6 +518,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Network Time Protocol Settings observed during Internal Testing
+  - [Powershell Script to extract NTP settings from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Collector.md#cis-control-8-audit-log-management)
 
 **Assessment Methodology**
 
