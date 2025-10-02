@@ -24,7 +24,7 @@ ArtifactCollector is an internally developed, monolithic PowerShell script that 
 
 Artifact Collector is hosted on GitHub. URL: https://github.com/stateoforegon-eis-css/ArtifactCollector
 
-To run ArtifactCollector, open a PowerShell session (command line, or ISE environment) using an account with domain administrative privileges, and run the following:
+To run ArtifactCollector, open a PowerShell session (run as administrator) (command line, or ISE environment) using an account with domain administrative privileges, and run the following:
 
 ```powershell
 iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/stateoforegon-eis-css/ArtifactCollector/refs/heads/master/ArtifactCollector.ps1')
