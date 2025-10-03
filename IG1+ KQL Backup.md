@@ -2,20 +2,21 @@
 
 ## CIS Control #1: Inventory and Control of Enterprise Assets
 
-### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
-
-**About:**
-Script to extract an inventory of 'discovered' assets from Defender
+### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory (Updated)
 
 ```kql
-DeviceNetworkInfo
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
 | summarize
     FirstSeen = min(Timestamp), // Get the first event timestamp
     LastSeen = max(Timestamp)   // Get the last event timestamp
-by DeviceId, DeviceName, MacAddress // Group by DeviceId and DeviceName
-| project DeviceId, DeviceName, MacAddress, FirstSeen, LastSeen // Select relevant fields for output
-| summarize take_any(*) by DeviceId // De-duplicate results to a single row for each DeviceId
+by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceName
+| project DeviceName, MachineGroup, RegistryDeviceTag, FirstSeen, LastSeen // Select relevant fields for output
+| summarize arg_max(LastSeen, *) by DeviceName // De-duplicate results to a single row for each DeviceId
 ```
 
 ## CIS Control #2: Inventory and Control of Software Assets
