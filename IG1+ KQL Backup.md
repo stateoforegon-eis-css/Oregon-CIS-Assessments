@@ -21,16 +21,20 @@ by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceNa
 
 ## CIS Control #2: Inventory and Control of Software Assets
 
-### Covered Vendor Compliance
-
-**About:**
-Script to extract "Covered Vendors" from an Agency's software inventory
+### Covered Vendor Compliance (Updated)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where SoftwareVendor has_any ("Ant Group", "ByteDance", "DeepSeek", "Huawei", "Kaspersky", "Tencent", "ZTE", "Hytera", "Hangzhou", "Hikvision", "Dahua", "China", "ComNet") // Covered Vendors
-| project DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
+| project DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
