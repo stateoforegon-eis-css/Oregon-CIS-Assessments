@@ -250,16 +250,20 @@ or LogonType == "RemoteInteractive"
 
 ## CIS Control #7: Continuous Vulnerability Management
 
-### Safeguard 7.3 Perform Automated Operating System Patch Management
-
-**About:**
-Script to extract a list of installed Windows operating systems (including patches over 30 days) and number of systems for each
+### Safeguard 7.3 Perform Automated Operating System Patch Management (Updated)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
-| where SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016", "windows_server_2019", "windows_server_2022", "windows_server_2025") // limit results to Windows operating systems
-| distinct DeviceName, Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025") // limit results to Windows operating systems
+| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
 DeviceTvmSoftwareVulnerabilities
 | join kind = leftouter (
@@ -270,21 +274,25 @@ DeviceTvmSoftwareVulnerabilities
 | summarize CVEPatchList=make_set(CveId) by Software) // Summarize all CVE records to a single field
  on Software
 | summarize
-    DeviceCount=dcount(DeviceName)
+    DeviceCount=dcount(Device)
     by Software, tostring(CVEPatchList)
 | sort by Software asc // Sort software list
 ```
 
-### Safeguard 7.4 Perform Automated Application Patch Management
-
-**About:**
-Script to extract a list of applications (including patches more than 30 days old) and number of systems for each
+### Safeguard 7.4 Perform Automated Application Patch Management (Updated)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
-| where not (SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025")) // remove Windows operating systems from results
-| distinct DeviceName, Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where not (SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025")) // limit results to Windows operating systems
+| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
 DeviceTvmSoftwareVulnerabilities
 | join kind = leftouter (
@@ -295,7 +303,7 @@ DeviceTvmSoftwareVulnerabilities
 | summarize CVEPatchList=make_set(CveId) by Software) // Summarize all CVE records to a single field
  on Software
 | summarize
-    DeviceCount=dcount(DeviceName)
+    DeviceCount=dcount(Device)
     by Software, tostring(CVEPatchList)
 | sort by Software asc // Sort software list
 ```
