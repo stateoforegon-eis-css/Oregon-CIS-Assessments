@@ -94,7 +94,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
-| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
 ```
 
 ### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity (Updated)
