@@ -73,7 +73,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | extend firstDelimiterPos = indexof(ProductCodeCpe, ":")
 | extend secondDelimiterPos = indexof(ProductCodeCpe, ":", firstDelimiterPos + 1)
 | extend Product = iif(secondDelimiterPos != -1, substring(ProductCodeCpe, 0, secondDelimiterPos), ProductCodeCpe)
-| summarize DeviceName = count() by Product // Summarize by Software info
+| summarize DeviceName = count() by MachineGroup, RegistryDeviceTag, Product // Summarize by Software info
 | sort by Product asc // Sort software list
 ```
 
