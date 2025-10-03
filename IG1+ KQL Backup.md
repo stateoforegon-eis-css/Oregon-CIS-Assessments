@@ -200,41 +200,38 @@ on DeviceName
 
 ## CIS Control #5: Account Management
 
-### Safeguard 5.2 Use Unique Passwords
-
-**About:**
-Script to summarize a count of systems with the following password settings:
-- Minimum password length = 14 characters (SCID 32)
-- Password history = 24 passwords (SCID 33)
-- Maximum password age = 60 days (SCID 34)
-- Minimum password age = 1 day (SCID 35)
-
-Un-comment lines 11-12 or 14 to summarize by setting or device
+### Safeguard 5.2 Use Unique Passwords (Updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where ConfigurationId == 'scid-32' // Limit results to Configuration ID "Set 'Minimum password length' to '14 or more characters'"
 or ConfigurationId == 'scid-33' // Limit results to Configuration ID "Set 'Enforce password history' to '24 or more password(s)'"
 or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maximum password age' to '60 or fewer days, but not 0'"
 or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minimum password age' to '1 or more day(s)'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceId, DeviceName, ConfigurationId, IsCompliant // Select relevant fields for output
-//Summary Data
-//| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0) by ConfigurationId
-//| sort by ConfigurationId asc
-//Detailed Device Info
-//| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName
+| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
 ```
 
-### Safeguard 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts
-
-**About:**
-Script to list local administrator logons and summarize the systems accessed
+### Safeguard 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts (Updated)
 
 ```kql
-DeviceLogonEvents
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceLogonEvents) on DeviceName
 | where LogonType == "Interactive"
 or LogonType == "RemoteInteractive"
 | where AccountName !contains "lenovo" // Filter to remove local administrators created during OS setup
@@ -242,12 +239,12 @@ or LogonType == "RemoteInteractive"
 | join kind = leftouter (
     IdentityInfo
     | project AccountName, AccountDisplayName) on AccountName // Extract display name from Idenity Info and link to Account Name
-| project DeviceName, AccountName, AccountDisplayName, IsLocalAdmin // Select relevant fields for output
+| project DeviceName, MachineGroup, RegistryDeviceTag, AccountName, AccountDisplayName, IsLocalAdmin // Select relevant fields for output
+| extend Device = strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag)
 | summarize
     ['Local Admin Distinct Device Count']=dcountif(DeviceName, IsLocalAdmin == "true"),
-    ['Local Admin Device List']=make_set_if(DeviceName, IsLocalAdmin == "true") // Consolidate list of devices into a single field
-    by AccountName, AccountDisplayName
-//| sort by ['Local Admin Distinct Device Count'] desc // Sort by Device Count
+    ['Local Admin Device List']=make_set_if(Device, IsLocalAdmin == "true") // Consolidate list of devices into a single field
+    by AccountName, AccountDisplayName // Admin User List
 | sort by AccountName asc // Sort by Account Name
 ```
 
