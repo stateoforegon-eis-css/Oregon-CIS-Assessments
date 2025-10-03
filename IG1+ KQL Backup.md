@@ -38,28 +38,36 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
-### Safeguard 2.2 Ensure Authorized Software is Currently Supported
-
-**About:**
-Script to extract an inventory of 'discovered' software from Defender with "EOS" tags
+### Safeguard 2.2 Ensure Authorized Software is Currently Supported (Updated)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (AgencyAcronym1:string = "ABCD", AgencyAcronym2:string = "ZYXW");
+DeviceInfo
+| where MachineGroup has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+or RegistryDeviceTag has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+or DeviceDynamicTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+or DeviceManualTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where isnotempty(EndOfSupportStatus)
-| project DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
-| summarize DeviceId = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
+| project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+| summarize DeviceName = count() by MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
-### Safeguard 2.3 Software Present on Enterprise Assets
-
-**About:**
-Script to extract software list based on CPE data
+### Safeguard 2.3 Software Present on Enterprise Assets (Updated)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (AgencyAcronym1:string = "ABCD", AgencyAcronym2:string = "ZYXW");
+DeviceInfo
+| where MachineGroup has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+or RegistryDeviceTag has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+or DeviceDynamicTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+or DeviceManualTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where ProductCodeCpe !contains "Not Available"
 | project ProductCodeCpe, DeviceName
 | extend firstDelimiterPos = indexof(ProductCodeCpe, ":")
