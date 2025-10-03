@@ -79,32 +79,40 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 
 ## CIS Control #3: Data Protection
 
-### Safeguard 3.6 Encrypt Data on End-User Devices
-
-**About:**
-Script to summarize a count of devices where supported drives are Bitlocker encrypted (SCID 2090)
+### Safeguard 3.6 Encrypt Data on End-User Devices (updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceId, DeviceName, ConfigurationId, IsCompliant // Select relevant fields for output
-| summarize DeviceId = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
+| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
 ```
 
-### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity
-
-**About:**
-Script to identify the storage or modification of PII on enterprise devices
+### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity (Updated)
 
 ```kql
-DeviceFileEvents
-| where DeviceName has_any ("domain.01", "domain.02")
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceFileEvents) on DeviceName
 | where FileName has_any ("social security", "ssn", "passport", "birth")
 | where ActionType != "FileDeleted"
 | where FileName !endswith ".lnk"
-| project DeviceId, DeviceName, ActionType, FolderPath, FileName
+| project DeviceName, MachineGroup, RegistryDeviceTag, ActionType, FolderPath, FileName
 ```
 
 ## CIS Control #4: Secure Configuration of Enterprise Assets and Software
