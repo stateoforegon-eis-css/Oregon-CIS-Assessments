@@ -41,12 +41,12 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 2.2 Ensure Authorized Software is Currently Supported (Updated)
 
 ```kql
-declare query_parameters (AgencyAcronym1:string = "ABCD", AgencyAcronym2:string = "ZYXW");
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
-| where MachineGroup has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
-or RegistryDeviceTag has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
-or DeviceDynamicTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
-or DeviceManualTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
@@ -59,12 +59,12 @@ or DeviceManualTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcr
 ### Safeguard 2.3 Software Present on Enterprise Assets (Updated)
 
 ```kql
-declare query_parameters (AgencyAcronym1:string = "ABCD", AgencyAcronym2:string = "ZYXW");
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
-| where MachineGroup has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
-or RegistryDeviceTag has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
-or DeviceDynamicTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
-or DeviceManualTags has_any (AgencyAcronym1, AgencyAcronym2)//contains AgencyAcronym
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
