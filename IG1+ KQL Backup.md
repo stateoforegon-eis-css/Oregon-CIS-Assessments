@@ -117,92 +117,85 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 
 ## CIS Control #4: Secure Configuration of Enterprise Assets and Software
 
-### Safeguard 4.3 Configure Automatic Session Locking on Enterprise Assets
-
-**About:**
-Script to summarize a count of devices where session locks after 15 minutes of inactivity (SCID 28)
+### Safeguard 4.3 Configure Automatic Session Locking on Enterprise Assets (Updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceId, DeviceName, ConfigurationId, IsCompliant // Select relevant fields for output
-| summarize DeviceId = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
+//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
 ```
 
-### Safeguard 4.4 Implement and Manage a Firewall on Servers
-
-**About:**
-Script to summarize a count of server devices where Defender Firewall is turned on (SCID 2070) and properly secured (SCID 2071, 2072, 2073)
-
-Un-comment lines 14-15 or 17 to summarize by setting or device
+### Safeguard 4.4 Implement and Manage a Firewall on Servers (Updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where Timestamp > ago(365d) // Filter for events within the last 365 days
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
-| where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| join kind = leftouter (
-    DeviceInfo)
-        on DeviceId
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
 | where OSPlatform contains "server"
-| project DeviceId, DeviceName, OSPlatform, ConfigurationId, IsCompliant // Select relevant fields for output
-| distinct DeviceId, DeviceName, OSPlatform, ConfigurationId, IsCompliant
-//Summary Data
-//| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0) by ConfigurationId
-//| sort by ConfigurationId asc
-//Detailed Device Info
-//| summarize DefenderFirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName
-```
-
-### Safeguard 4.5 Implement and Manage a Firewall on End-User Devices
-
-**About:**
-Script to summarize a count of end-user devices where Defender Firewall is turned on (SCID 2070) and properly secured (SCID 2071, 2072, 2073)
-
-Un-comment lines 14-15 or 17 to summarize by setting or device
-
-```kql
-DeviceTvmSecureConfigurationAssessment
-| where Timestamp > ago(365d) // Filter for events within the last 365 days
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| join kind = leftouter (
-    DeviceInfo)
-        on DeviceId
-| where OSPlatform !contains "server"
-| project DeviceId, DeviceName, OSPlatform, ConfigurationId, IsCompliant // Select relevant fields for output
-| distinct DeviceId, DeviceName, OSPlatform, ConfigurationId, IsCompliant
-//Summary Data
-//| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0) by ConfigurationId
-//| sort by ConfigurationId asc
-//Detailed Device Info
-//| summarize DefenderFirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName
+| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
+//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
 ```
 
-### Safeguard 4.7 Manage Default Accounts on Enterprise Assets and Software
-
-**About:**
-Script to list all devices and whether the default administrator (SCID 3010) or guest (SCID 3011) accounts are disabled (indicated by "1").  Also indicates whether the LAPS is being utilized during login (indicated by "1").
+### Safeguard 4.5 Implement and Manage a Firewall on End-User Devices (Updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where Timestamp > ago(365d) // Filter for events within the last 365 days
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where OSPlatform !contains "server"
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
+| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
+| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
+//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+```
+
+### Safeguard 4.7 Manage Default Accounts on Enterprise Assets and Software (Updated)
+
+```kql
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where ConfigurationId == 'scid-3010' // Limit results to Configuration ID "Disable the built-in Administrator account"
 or ConfigurationId == 'scid-3011' // Limit results to Configuration ID "Disable the built-in Guest account" 
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize AdminAcct = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), GuestAcct = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1) by DeviceName
+| summarize AdminAcct = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), GuestAcct = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
 | join kind = leftouter (
 DeviceEvents
 | where InitiatingProcessFileName contains "lsass.exe" and AdditionalFields has "LAPS"
 | extend LAPS = iff(AdditionalFields has "LAPS", 1, 0)
 | summarize arg_max(Timestamp, LAPS) by DeviceName)
 on DeviceName
-| project DeviceName, GuestAcct, AdminAcct, LAPS
+| project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcct, AdminAcct, LAPS
 ```
 
 ## CIS Control #5: Account Management
