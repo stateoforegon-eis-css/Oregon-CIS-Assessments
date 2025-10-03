@@ -16,7 +16,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
     LastSeen = max(Timestamp)   // Get the last event timestamp
 by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceName
 | project DeviceName, MachineGroup, RegistryDeviceTag, FirstSeen, LastSeen // Select relevant fields for output
-| summarize arg_max(LastSeen, *) by DeviceName // De-duplicate results to a single row for each DeviceId
+| summarize arg_max(LastSeen, *) by DeviceName // De-duplicate results to a single row for each DeviceName based on the most recent record
 ```
 
 ## CIS Control #2: Inventory and Control of Software Assets
