@@ -310,39 +310,41 @@ DeviceTvmSoftwareVulnerabilities
 
 ## CIS Control #9: Email and Web Browser Protections
 
-### Safeguard 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients
-
-**About:**
-Script to summarize a count of systems with Browsers or Email Clients listed as "Unsupported"
-
-Un-comment line 7 to summarize by software version
+### Safeguard 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients (Updated)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where isnotempty(EndOfSupportStatus)
 | where SoftwareName has_any ("Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Mozilla", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
 or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Office", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
-| project DeviceId, DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+| project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
 //| summarize DeviceId = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
-| sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
-### Safeguard 9.2 Use DNS Filtering Services
-
-**About:**
-Script to sample network events and extract most recent DNS information for each connected device
-
-Note that the results are sorted by Network Adapter by default
+### Safeguard 9.2 Use DNS Filtering Services (Updated)
 
 ```kql
-DeviceNetworkInfo
-| where Timestamp > ago(365d) // Filter for events within the last 365 days
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceNetworkInfo) on DeviceName
 | where NetworkAdapterStatus == "Up"
 | where DnsAddresses != ""
 | summarize arg_max(Timestamp, *) by DeviceName, NetworkAdapterType // limit results to most recent event for each Device/Adapter
-| project DeviceName, Timestamp, MacAddress, NetworkAdapterType, DnsAddresses
+| distinct DeviceName, MachineGroup, RegistryDeviceTag, NetworkAdapterType, DnsAddresses
 | sort by NetworkAdapterType asc, DeviceName asc
 ```
 
