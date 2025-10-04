@@ -7,6 +7,7 @@
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -82,8 +83,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 3.6 Encrypt Data on End-User Devices (updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "DOR", Acronym2:string = "DOR");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -91,10 +93,10 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
-//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
 ```
 
 ### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity (Updated)
@@ -122,6 +124,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -129,10 +132,10 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
-//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
 ```
 
 ### Safeguard 4.4 Implement and Manage a Firewall on Servers (Updated)
@@ -140,6 +143,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where OSPlatform contains "server"
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
@@ -148,10 +152,10 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
-//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
 ```
 
 ### Safeguard 4.5 Implement and Manage a Firewall on End-User Devices (Updated)
@@ -159,6 +163,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where OSPlatform !contains "server"
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
@@ -167,10 +172,10 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceName, MachineGroup, RegistryDeviceTag, ConfigurationId, IsCompliant // Select relevant fields for output
-//| summarize DeviceName = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
 ```
 
 ### Safeguard 4.7 Manage Default Accounts on Enterprise Assets and Software (Updated)
@@ -178,6 +183,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -185,12 +191,14 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-3010' // Limit results to Configuration ID "Disable the built-in Administrator account"
 or ConfigurationId == 'scid-3011' // Limit results to Configuration ID "Disable the built-in Guest account" 
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize AdminAcct = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), GuestAcct = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
 | join kind = leftouter (
 DeviceEvents
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where InitiatingProcessFileName contains "lsass.exe" and AdditionalFields has "LAPS"
 | extend LAPS = iff(AdditionalFields has "LAPS", 1, 0)
 | summarize arg_max(Timestamp, LAPS) by DeviceName)
@@ -205,6 +213,7 @@ on DeviceName
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -212,6 +221,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-32' // Limit results to Configuration ID "Set 'Minimum password length' to '14 or more characters'"
 or ConfigurationId == 'scid-33' // Limit results to Configuration ID "Set 'Enforce password history' to '24 or more password(s)'"
 or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maximum password age' to '60 or fewer days, but not 0'"
@@ -225,6 +235,7 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -232,6 +243,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceLogonEvents) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where LogonType == "Interactive"
 or LogonType == "RemoteInteractive"
 | where AccountName !contains "lenovo" // Filter to remove local administrators created during OS setup
@@ -255,6 +267,7 @@ or LogonType == "RemoteInteractive"
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -262,6 +275,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025") // limit results to Windows operating systems
 | distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
@@ -284,6 +298,7 @@ DeviceTvmSoftwareVulnerabilities
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -291,6 +306,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where not (SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025")) // limit results to Windows operating systems
 | distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
@@ -315,6 +331,7 @@ DeviceTvmSoftwareVulnerabilities
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -322,6 +339,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where isnotempty(EndOfSupportStatus)
 | where SoftwareName has_any ("Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Mozilla", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
 or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Office", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
@@ -334,6 +352,7 @@ or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -341,79 +360,94 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceNetworkInfo) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where NetworkAdapterStatus == "Up"
 | where DnsAddresses != ""
-| summarize arg_max(Timestamp, *) by DeviceName, NetworkAdapterType // limit results to most recent event for each Device/Adapter
-| distinct DeviceName, MachineGroup, RegistryDeviceTag, NetworkAdapterType, DnsAddresses
-| sort by NetworkAdapterType asc, DeviceName asc
+| summarize AllDns = make_set(DnsAddresses) by DeviceName, MachineGroup, RegistryDeviceTag
+| project DeviceName, MachineGroup, RegistryDeviceTag, AllDns
+| sort by DeviceName asc
 ```
 
 ## CIS Control #10: Malware Defenses
 
-### Safeguard 10.1 Deploy and Maintain Anti-Malware Software
-
-**About:**
-Script to summarize a count of systems with Defender installed (SCID 2010) and updates are enabled (SCID 2011)
-
-Un-comment lines 9-10 or 12 to summarize by setting or device
+### Safeguard 10.1 Deploy and Maintain Anti-Malware Software (Updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceId, DeviceName, ConfigurationId, IsCompliant // Select relevant fields for output
-//Summary Data
-//| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0) by ConfigurationId
-//| sort by ConfigurationId asc
-//Detailed Device Info
-//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), Updates = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceId
+| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
 ```
 
-### Safeguard 10.2 Configure Automatic Anti-Malware Signature Updates
-
-**About:**
-Script to summarize a count of current and 'out of date' systems from Defender
+### Safeguard 10.2 Configure Automatic Anti-Malware Signature Updates (Updated)
 
 ```kql
-DeviceTvmInfoGathering
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmInfoGathering) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | extend DataRefreshTimestamp = Timestamp,    
 AvIsPlatformUpToDateTemp = tostring(AdditionalFields.AvIsPlatformUptodate),
 AvSignatureDataRefreshTime = todatetime(AdditionalFields.AvSignatureDataRefreshTime), 
 AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
 AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion) 
 | extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
-| project DeviceId, DeviceName, OSPlatform, AvPlatformVersion, DataRefreshTimestamp, AvSignaturePublishTime, AvSignatureDataRefreshTime
-| summarize DeviceCount = count(), DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDateDeviceCount = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24),  PlatformNotUpToDateDeviceCount = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) > 24), NoData = countif(isnull(AvSignaturePublishTime)) by OSPlatform,AvPlatformVersion
+| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag
 ```
 
-### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media
-
-**About:**
-Script to summarize a count of systems with autoplay disabled for non-volume devices (SCID 67)
+### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media (Updated)
 
 ```kql
-DeviceTvmSecureConfigurationAssessment
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| project DeviceId, DeviceName, ConfigurationId, IsCompliant // Select relevant fields for output
-| summarize DeviceId = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0)
+| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
 ```
 
 ## CIS Control #11: Data Recovery
 
-### Safeguard 11.2 Perform Automated Backups
-
-**About:**
-Script to summarize a count of systems with CommVault Agent installed
+### Safeguard 11.2 Perform Automated Backups (Updaed)
 
 ```kql
-DeviceTvmSoftwareInventory
-| where DeviceName has_any ("domain.01", "domain.02") // Target Domains - comment out for agencies in their own tenant
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareVendor contains "commvault" // Evaluate for the presence of CommVault software
-| project DeviceId, DeviceName, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
-| sort by OSPlatform asc, SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
+| distinct DeviceName, MachineGroup, RegistryDeviceTag, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
 ```
