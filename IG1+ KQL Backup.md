@@ -434,7 +434,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 
 ## CIS Control #11: Data Recovery
 
-### Safeguard 11.2 Perform Automated Backups (Updaed)
+### Safeguard 11.2 Perform Automated Backups (Updated)
 
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
