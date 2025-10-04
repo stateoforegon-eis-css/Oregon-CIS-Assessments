@@ -27,6 +27,7 @@ by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceNa
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -34,6 +35,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareVendor has_any ("Ant Group", "ByteDance", "DeepSeek", "Huawei", "Kaspersky", "Tencent", "ZTE", "Hytera", "Hangzhou", "Hikvision", "Dahua", "China", "ComNet") // Covered Vendors
 | project DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
@@ -44,6 +46,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -51,6 +54,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where isnotempty(EndOfSupportStatus)
 | project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
 | summarize DeviceName = count() by MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
@@ -62,6 +66,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -69,6 +74,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ProductCodeCpe !contains "Not Available"
 | project ProductCodeCpe, DeviceName
 | extend firstDelimiterPos = indexof(ProductCodeCpe, ":")
@@ -104,6 +110,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
@@ -111,6 +118,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter (DeviceFileEvents) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where FileName has_any ("social security", "ssn", "passport", "birth")
 | where ActionType != "FileDeleted"
 | where FileName !endswith ".lnk"
