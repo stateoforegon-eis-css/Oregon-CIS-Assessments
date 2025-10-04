@@ -18,6 +18,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceName
 | project DeviceName, MachineGroup, RegistryDeviceTag, FirstSeen, LastSeen // Select relevant fields for output
 | summarize arg_max(LastSeen, *) by DeviceName // De-duplicate results to a single row for each DeviceName based on the most recent record
+| sort by DeviceName asc // Sort device list
 ```
 
 ## CIS Control #2: Inventory and Control of Software Assets
@@ -103,6 +104,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity (Updated)
@@ -123,6 +125,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ActionType != "FileDeleted"
 | where FileName !endswith ".lnk"
 | project DeviceName, MachineGroup, RegistryDeviceTag, ActionType, FolderPath, FileName
+| sort by DeviceName asc, FileName asc, ActionType asc // Multi-column sort
 ```
 
 ## CIS Control #4: Secure Configuration of Enterprise Assets and Software
@@ -144,6 +147,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 4.4 Implement and Manage a Firewall on Servers (Updated)
@@ -164,6 +168,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 4.5 Implement and Manage a Firewall on End-User Devices (Updated)
@@ -184,6 +189,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 4.7 Manage Default Accounts on Enterprise Assets and Software (Updated)
@@ -212,6 +218,7 @@ DeviceEvents
 | summarize arg_max(Timestamp, LAPS) by DeviceName)
 on DeviceName
 | project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcct, AdminAcct, LAPS
+| sort by DeviceName asc // Sort device list
 ```
 
 ## CIS Control #5: Account Management
@@ -236,6 +243,7 @@ or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maxim
 or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minimum password age' to '1 or more day(s)'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts (Updated)
@@ -352,7 +360,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where SoftwareName has_any ("Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Mozilla", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
 or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Office", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
 | project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
-| summarize DeviceId = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
+| summarize DeviceName = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
+| sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
 ### Safeguard 9.2 Use DNS Filtering Services (Updated)
@@ -373,7 +382,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where DnsAddresses != ""
 | summarize AllDns = make_set(DnsAddresses) by DeviceName, MachineGroup, RegistryDeviceTag
 | project DeviceName, MachineGroup, RegistryDeviceTag, AllDns
-| sort by DeviceName asc
+| sort by DeviceName asc // Sort device list
 ```
 
 ## CIS Control #10: Malware Defenses
@@ -396,6 +405,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 10.2 Configure Automatic Anti-Malware Signature Updates (Updated)
@@ -420,6 +430,7 @@ AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion)
 | extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
 | summarize arg_max (Timestamp, *) by DeviceName
 | summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
+| sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media (Updated)
@@ -439,6 +450,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
 | summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| sort by DeviceName asc // Sort device list
 ```
 
 ## CIS Control #11: Data Recovery
@@ -459,4 +471,5 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareVendor contains "commvault" // Evaluate for the presence of CommVault software
 | distinct DeviceName, MachineGroup, RegistryDeviceTag, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
+| sort by DeviceName asc // Sort device list
 ```
