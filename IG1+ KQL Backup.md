@@ -418,7 +418,8 @@ AvSignatureDataRefreshTime = todatetime(AdditionalFields.AvSignatureDataRefreshT
 AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
 AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion) 
 | extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
-| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max (Timestamp, *) by DeviceName
+| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
 ```
 
 ### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media (Updated)
