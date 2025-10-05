@@ -476,7 +476,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 
 ## Configuration Compliance Statistics
 
-### Safeguards 3.6, 4.3, 4.7, 5.2, 10.1, 10.3 (Updated)
+### Safeguards 3.6, 4.3, 4.4, 4.5, 4.7, 5.2, 10.1, 10.3 (Updated)
 
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
@@ -492,6 +492,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 or ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
+or ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 or ConfigurationId == 'scid-3010' // Limit results to Configuration ID "Disable the built-in Administrator account"
 or ConfigurationId == 'scid-3011' // Limit results to Configuration ID "Disable the built-in Guest account" 
 or ConfigurationId == 'scid-32' // Limit results to Configuration ID "Set 'Minimum password length' to '14 or more characters'"
@@ -505,6 +506,8 @@ or ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'A
 | extend ConfigurationId = case(
 ConfigurationId == "scid-2090", "03.06 - Bitlocker Encryption Enabled",
 ConfigurationId == "scid-28", "04.03 - Machine Inactivity Limit 1-900 seconds",
+ConfigurationId == "scid-2070" and OSPlatform contains "server", "04.04 - Microsoft Defender Server Firewall Enabled",
+ConfigurationId == "scid-2070" and OSPlatform !contains "server", "04.05 - Microsoft Defender Endpoint Firewall Enabled",
 ConfigurationId == "scid-3010", "04.07a - Built In Administrator Account Disabled",
 ConfigurationId == "scid-3011", "04.07b - Built In Guest Account Disabled", 
 ConfigurationId == "scid-32", "05.02a - Minimum Password Length 14 or More Characters",
