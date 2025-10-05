@@ -58,7 +58,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where isnotempty(EndOfSupportStatus)
 | project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
-| summarize DeviceName = count() by MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
+//| summarize DeviceName = count() by MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
+| summarize DeviceName = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
@@ -81,7 +82,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | extend firstDelimiterPos = indexof(ProductCodeCpe, ":")
 | extend secondDelimiterPos = indexof(ProductCodeCpe, ":", firstDelimiterPos + 1)
 | extend Product = iif(secondDelimiterPos != -1, substring(ProductCodeCpe, 0, secondDelimiterPos), ProductCodeCpe)
-| summarize DeviceName = count() by MachineGroup, RegistryDeviceTag, Product // Summarize by Software info
+//| summarize DeviceName = count() by Product, MachineGroup, RegistryDeviceTag // Summarize by Software info
+| summarize DeviceName = count() by Product // Summarize by Software info
 | sort by Product asc // Sort software list
 ```
 
@@ -103,8 +105,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| sort by DeviceName asc // Sort device list
+//| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName // Select relevant fields for output
+| sort by DeviceName asc
 ```
 
 ### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity (Updated)
@@ -124,7 +127,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where FileName has_any ("social security", "ssn", "passport", "birth")
 | where ActionType != "FileDeleted"
 | where FileName !endswith ".lnk"
-| project DeviceName, MachineGroup, RegistryDeviceTag, ActionType, FolderPath, FileName
+//| project DeviceName, MachineGroup, RegistryDeviceTag, ActionType, FolderPath, FileName
+| project DeviceName, ActionType, FolderPath, FileName
 | sort by DeviceName asc, FileName asc, ActionType asc // Multi-column sort
 ```
 
@@ -146,7 +150,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+//| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -167,7 +172,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+//| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -188,7 +194,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+//| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -217,7 +224,8 @@ DeviceEvents
 | extend LAPS = iff(AdditionalFields has "LAPS", 1, 0)
 | summarize arg_max(Timestamp, LAPS) by DeviceName)
 on DeviceName
-| project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcct, AdminAcct, LAPS
+//| project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcct, AdminAcct, LAPS
+| project DeviceName, GuestAcct, AdminAcct, LAPS
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -242,7 +250,8 @@ or ConfigurationId == 'scid-33' // Limit results to Configuration ID "Set 'Enfor
 or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maximum password age' to '60 or fewer days, but not 0'"
 or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minimum password age' to '1 or more day(s)'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+//| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -268,9 +277,10 @@ or LogonType == "RemoteInteractive"
     IdentityInfo
     | project AccountName, AccountDisplayName) on AccountName // Extract display name from Idenity Info and link to Account Name
 | project DeviceName, MachineGroup, RegistryDeviceTag, AccountName, AccountDisplayName, IsLocalAdmin // Select relevant fields for output
-| extend Device = strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag)
+//| extend Device = strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag)
+| extend Device = strcat(DeviceName,"|",MachineGroup)
 | summarize
-    ['Local Admin Distinct Device Count']=dcountif(DeviceName, IsLocalAdmin == "true"),
+    ['Local Admin Distinct Device Count']=dcountif(Device, IsLocalAdmin == "true"),
     ['Local Admin Device List']=make_set_if(Device, IsLocalAdmin == "true") // Consolidate list of devices into a single field
     by AccountName, AccountDisplayName // Admin User List
 | sort by AccountName asc // Sort by Account Name
@@ -293,7 +303,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025") // limit results to Windows operating systems
-| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+//| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+| distinct Device=DeviceName, Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
 DeviceTvmSoftwareVulnerabilities
 | join kind = leftouter (
@@ -324,7 +335,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where not (SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025")) // limit results to Windows operating systems
-| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+//| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+| distinct Device=DeviceName, Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
 DeviceTvmSoftwareVulnerabilities
 | join kind = leftouter (
@@ -344,6 +356,8 @@ DeviceTvmSoftwareVulnerabilities
 
 ### Safeguard 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients (Updated)
 
+By Device
+
 ```kql
 declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
@@ -359,7 +373,30 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where isnotempty(EndOfSupportStatus)
 | where SoftwareName has_any ("Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Mozilla", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
 or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Office", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
-| project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+//| project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+| project DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+| sort by DeviceName asc // Multi-column sort
+```
+
+By Software
+
+```kql
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where isnotempty(EndOfSupportStatus)
+| where SoftwareName has_any ("Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Mozilla", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
+or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Office", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
+//| project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
+| project DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Select relevant fields for output
 | summarize DeviceName = count() by SoftwareVendor, SoftwareName, SoftwareVersion, EndOfSupportStatus, EndOfSupportDate // Summarize by Software info
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
@@ -380,9 +417,11 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where NetworkAdapterStatus == "Up"
 | where DnsAddresses != ""
-| summarize AllDns = make_set(DnsAddresses) by DeviceName, MachineGroup, RegistryDeviceTag
-| project DeviceName, MachineGroup, RegistryDeviceTag, AllDns
-| sort by DeviceName asc // Sort device list
+//| summarize AllDns = make_set(DnsAddresses) by DeviceName, MachineGroup, RegistryDeviceTag
+//| project DeviceName, MachineGroup, RegistryDeviceTag, AllDns
+| summarize AllDns = make_set(DnsAddresses) by DeviceName
+| project DeviceName, AllDns
+| sort by DeviceName asc
 ```
 
 ## CIS Control #10: Malware Defenses
@@ -404,7 +443,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -429,7 +469,8 @@ AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
 AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion) 
 | extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
 | summarize arg_max (Timestamp, *) by DeviceName
-| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
+//| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
+| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, AvPlatformVersion
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -449,7 +490,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -470,7 +512,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareVendor contains "commvault" // Evaluate for the presence of CommVault software
-| distinct DeviceName, MachineGroup, RegistryDeviceTag, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
+| summarize arg_max(Timestamp, *) by DeviceName
+//| distinct DeviceName, MachineGroup, RegistryDeviceTag, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
+| distinct DeviceName, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
