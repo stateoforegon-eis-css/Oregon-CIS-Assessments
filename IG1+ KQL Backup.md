@@ -473,3 +473,47 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | distinct DeviceName, MachineGroup, RegistryDeviceTag, OSPlatform, OSVersion, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
+
+## Configuration Compliance Statistics
+
+### Safeguards 3.6, 4.3, 4.7, 5.2, 10.1, 10.3 (Updated)
+
+```kql
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter(DeviceTvmSecureConfigurationAssessment) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
+or ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
+or ConfigurationId == 'scid-3010' // Limit results to Configuration ID "Disable the built-in Administrator account"
+or ConfigurationId == 'scid-3011' // Limit results to Configuration ID "Disable the built-in Guest account" 
+or ConfigurationId == 'scid-32' // Limit results to Configuration ID "Set 'Minimum password length' to '14 or more characters'"
+or ConfigurationId == 'scid-33' // Limit results to Configuration ID "Set 'Enforce password history' to '24 or more password(s)'"
+or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maximum password age' to '60 or fewer days, but not 0'"
+or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minimum password age' to '1 or more day(s)'"
+or ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
+or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
+or ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
+| where IsApplicable == 1
+| extend ConfigurationId = case(
+ConfigurationId == "scid-2090", "03.06 - Bitlocker Encryption Enabled",
+ConfigurationId == "scid-28", "04.03 - Machine Inactivity Limit 1-900 seconds",
+ConfigurationId == "scid-3010", "04.07a - Built In Administrator Account Disabled",
+ConfigurationId == "scid-3011", "04.07b - Built In Guest Account Disabled", 
+ConfigurationId == "scid-32", "05.02a - Minimum Password Length 14 or More Characters",
+ConfigurationId == "scid-33", "05.02b - Password History 24 or More Passwords",
+ConfigurationId == "scid-34", "05.02c - Maximum Password Age 60 or Fewer Days, but Not 0",
+ConfigurationId == "scid-35", "05.02d - Minimum Password Age 1 or More Days",
+ConfigurationId == "scid-2010", "10.01a - Microsoft Defender Antivirus On",
+ConfigurationId == "scid-2011", "10.01b - Microsoft Defender Antivirus Definition Updates On",
+"10.03 - Disable Autoplay for Non-Volume Devices")
+| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0) by ConfigurationId
+| sort by ConfigurationId asc
+```
