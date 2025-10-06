@@ -303,21 +303,21 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025") // limit results to Windows operating systems
-//| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
-| distinct Device=DeviceName, Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+//| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), OperatingSystem=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+| distinct Device=DeviceName, OperatingSystem=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
 | join kind = leftouter (
 DeviceTvmSoftwareVulnerabilities
 | join kind = leftouter (
     DeviceTvmSoftwareVulnerabilitiesKB)
       on CveId // Extract published date from KB and link to Software Name
 | where PublishedDate < ago(30d)
-| project CveId, Software=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion)
-| summarize CVEPatchList=make_set(CveId) by Software) // Summarize all CVE records to a single field
- on Software
+| project CveId, OperatingSystem=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion)
+| summarize CVEPatchList=make_set(CveId) by OperatingSystem) // Summarize all CVE records to a single field
+ on OperatingSystem
 | summarize
     DeviceCount=dcount(Device)
-    by Software, tostring(CVEPatchList)
-| sort by Software asc // Sort software list
+    by OperatingSystem, tostring(CVEPatchList)
+| sort by OperatingSystem asc // Sort OperatingSystem list
 ```
 
 ### Safeguard 7.4 Perform Automated Application Patch Management (Updated)
