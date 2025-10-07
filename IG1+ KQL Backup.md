@@ -461,12 +461,17 @@ or DeviceDynamicTags has_any (Acronym1, Acronym2)
 or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
-| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
+| join kind = leftouter (DeviceTvmInfoGathering) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
-| where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+| extend DataRefreshTimestamp = Timestamp, 
+AvIsPlatformUpToDateTemp = tostring(AdditionalFields.AvIsPlatformUptodate),
+AvSignatureDataRefreshTime = todatetime(AdditionalFields.AvSignatureDataRefreshTime), 
+AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
+AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion) 
+| extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
+| summarize arg_max (Timestamp, *) by DeviceName
+//| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
+| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, AvPlatformVersion
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -486,8 +491,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1) by DeviceName // Select relevant fields for output
+//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
