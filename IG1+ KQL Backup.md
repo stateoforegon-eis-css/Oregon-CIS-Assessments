@@ -251,8 +251,8 @@ or ConfigurationId == 'scid-33' // Limit results to Configuration ID "Set 'Enfor
 or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maximum password age' to '60 or fewer days, but not 0'"
 or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minimum password age' to '1 or more day(s)'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
-| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1) by DeviceName
+//| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 0), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 0), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 0), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 0), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 0), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 0), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 0) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -444,8 +444,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
-| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1) by DeviceName
+//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == 0), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == 0), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == 0) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -461,17 +461,12 @@ or DeviceDynamicTags has_any (Acronym1, Acronym2)
 or DeviceManualTags has_any (Acronym1, Acronym2)
 | project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
-| join kind = leftouter (DeviceTvmInfoGathering) on DeviceName
+| join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
-| extend DataRefreshTimestamp = Timestamp,    
-AvIsPlatformUpToDateTemp = tostring(AdditionalFields.AvIsPlatformUptodate),
-AvSignatureDataRefreshTime = todatetime(AdditionalFields.AvSignatureDataRefreshTime), 
-AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
-AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion) 
-| extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
-| summarize arg_max (Timestamp, *) by DeviceName
-//| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
-| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, AvPlatformVersion
+| where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
+| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
+//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
