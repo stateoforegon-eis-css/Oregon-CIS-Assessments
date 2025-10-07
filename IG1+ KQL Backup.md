@@ -287,6 +287,39 @@ or LogonType == "RemoteInteractive"
 | sort by AccountName asc // Sort by Account Name
 ```
 
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceLogonEvents) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where LogonType == "Interactive"
+or LogonType == "RemoteInteractive"
+| where AccountName !contains "lenovo" // Filter to remove local administrators created during OS setup
+| where IsLocalAdmin == 1 
+//| join kind = leftouter (
+//   IdentityInfo
+//    | project AccountName, AccountDisplayName) on AccountName // Extract display name from Idenity Info and link to Account Name
+//| project DeviceName, MachineGroup, RegistryDeviceTag, AccountName, AccountDisplayName, IsLocalAdmin // Select relevant fields for output
+| project DeviceName, MachineGroup, RegistryDeviceTag, AccountName, IsLocalAdmin // Select relevant fields for output
+//| extend Device = strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag)
+| extend Device = strcat(DeviceName,"|",MachineGroup)
+| summarize
+    ['Local Admin Distinct Device Count']=dcountif(Device, IsLocalAdmin == "true"),
+    ['Local Admin Device List']=make_set_if(Device, IsLocalAdmin == "true") // Consolidate list of devices into a single field
+//    by AccountName, AccountDisplayName // Admin User List
+    by AccountName // Admin User List
+| sort by AccountName asc // Sort by Account Name
+```
+
+
 ## CIS Control #7: Continuous Vulnerability Management
 
 ### Safeguard 7.3 Perform Automated Operating System Patch Management (Updated)
