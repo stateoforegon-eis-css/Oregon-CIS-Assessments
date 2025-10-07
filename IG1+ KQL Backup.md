@@ -216,7 +216,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-3010' // Limit results to Configuration ID "Disable the built-in Administrator account"
 or ConfigurationId == 'scid-3011' // Limit results to Configuration ID "Disable the built-in Guest account" 
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-| summarize AdminAcct = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), GuestAcct = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag
+//| summarize AdminAcctOff = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), AdminAcctOn = countif(ConfigurationId == 'scid-3010' and IsCompliant == 0), GuestAcctOff = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1), GuestAcctOn = countif(ConfigurationId == 'scid-3011' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize AdminAcctOff = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), AdminAcctOn = countif(ConfigurationId == 'scid-3010' and IsCompliant == 0), GuestAcctOff = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1), GuestAcctOn = countif(ConfigurationId == 'scid-3011' and IsCompliant == 0) by DeviceName
 | join kind = leftouter (
 DeviceEvents
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
@@ -224,8 +225,8 @@ DeviceEvents
 | extend LAPS = iff(AdditionalFields has "LAPS", 1, 0)
 | summarize arg_max(Timestamp, LAPS) by DeviceName)
 on DeviceName
-//| project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcct, AdminAcct, LAPS
-| project DeviceName, GuestAcct, AdminAcct, LAPS
+//| project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcctOff, GuestAcctOn, AdminAcctOff, AdminAcctOn, LAPS
+| project DeviceName, GuestAcctOff, GuestAcctOn, AdminAcctOff, AdminAcctOn, LAPS
 | sort by DeviceName asc // Sort device list
 ```
 
