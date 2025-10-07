@@ -105,8 +105,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1) by DeviceName // Select relevant fields for output
+//| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1), BitlockerOff = countif(ConfigurationId == 'scid-2090' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1), BitlockerOff = countif(ConfigurationId == 'scid-2090' and IsCompliant == 0) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc
 ```
 
@@ -150,8 +150,8 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1) by DeviceName // Select relevant fields for output
+//| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize 15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
