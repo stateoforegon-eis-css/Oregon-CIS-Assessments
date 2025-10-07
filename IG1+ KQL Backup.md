@@ -128,7 +128,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ActionType != "FileDeleted"
 | where FileName !endswith ".lnk"
 //| project DeviceName, MachineGroup, RegistryDeviceTag, ActionType, FolderPath, FileName
-| project DeviceName, ActionType, FolderPath, FileName
+| project DeviceName, ActionType, FolderPath, FileName, Timestamp1
 | sort by DeviceName asc, FileName asc, ActionType asc // Multi-column sort
 ```
 
