@@ -5,7 +5,7 @@
 ### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -26,7 +26,7 @@ by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceNa
 ### Covered Vendor Compliance (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -45,7 +45,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 2.2 Ensure Authorized Software is Currently Supported (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -66,7 +66,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 2.3 Software Present on Enterprise Assets (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -92,7 +92,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 3.6 Encrypt Data on End-User Devices (updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "DOR", Acronym2:string = "DOR");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -113,7 +113,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 3.12 Segment Data Processing and Storage Based on Sensitivity (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -137,7 +137,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 4.3 Configure Automatic Session Locking on Enterprise Assets (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -150,15 +150,15 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), MinLockNot15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), MinLockNot15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+//| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 4.4 Implement and Manage a Firewall on Servers (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where OSPlatform contains "server"
@@ -180,7 +180,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 4.5 Implement and Manage a Firewall on End-User Devices (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where OSPlatform !contains "server"
@@ -202,7 +202,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 4.7 Manage Default Accounts on Enterprise Assets and Software (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -235,7 +235,7 @@ on DeviceName
 ### Safeguard 5.2 Use Unique Passwords (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -259,7 +259,7 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 ### Safeguard 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -292,7 +292,7 @@ or LogonType == "RemoteInteractive"
 ### Safeguard 7.3 Perform Automated Operating System Patch Management (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -324,7 +324,7 @@ DeviceTvmSoftwareVulnerabilities
 ### Safeguard 7.4 Perform Automated Application Patch Management (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -360,7 +360,7 @@ DeviceTvmSoftwareVulnerabilities
 By Device
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -382,7 +382,7 @@ or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "
 By Software
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -405,7 +405,7 @@ or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "
 ### Safeguard 9.2 Use DNS Filtering Services (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -430,7 +430,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 10.1 Deploy and Maintain Anti-Malware Software (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -452,7 +452,7 @@ or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update M
 ### Safeguard 10.2 Configure Automatic Anti-Malware Signature Updates (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -478,7 +478,7 @@ AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion)
 ### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -501,7 +501,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguard 11.2 Perform Automated Backups (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -524,7 +524,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Safeguards 3.6, 4.3, 4.4, 4.5, 4.7, 5.2, 10.1, 10.3 (Updated)
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
