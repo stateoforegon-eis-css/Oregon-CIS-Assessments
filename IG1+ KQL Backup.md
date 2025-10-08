@@ -564,7 +564,7 @@ DeviceInfo
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
 or DeviceDynamicTags has_any (Acronym1, Acronym2)
 or DeviceManualTags has_any (Acronym1, Acronym2)
-| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| project Timestamp, DeviceId, DeviceName, OSPlatform, MachineGroup, RegistryDeviceTag
 | summarize arg_max(Timestamp, *) by DeviceName
 | join kind = leftouter(DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
