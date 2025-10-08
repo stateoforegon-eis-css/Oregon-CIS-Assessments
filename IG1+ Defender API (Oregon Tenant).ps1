@@ -19,7 +19,7 @@ $DefenderAccessToken = $tokenResp.access_token
 $HuntingUri = "https://api-gcc.securitycenter.microsoft.us/api/advancedqueries/run"
 
 $Acronym1 = Read-Host "What is the agencies acronym?"
-$Acronym2 = Read-Host "What is the agencies alternate acronym? (If none, enter Agency Acronym again)"
+$Acronym2 = Read-Host "What is the agencies alternate acronym? (If none, type three dashes, ---.)"
 
 New-Item -ItemType Directory -Force -Path $PWD/Defender |Out-Null
 
