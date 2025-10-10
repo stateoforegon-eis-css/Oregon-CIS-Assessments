@@ -693,6 +693,7 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Automated Backup Implementation observed during Internal Testing
   - [KQL Script to enumerate all systems with CommVault Agent installed using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-112-perform-automated-backups)
+  - CommVault backup reporting (statistical data obtained from DCS Backup Team)
 
 **Assessment Methodology**
 
