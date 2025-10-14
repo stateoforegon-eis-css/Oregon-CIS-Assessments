@@ -324,9 +324,9 @@ IP address documentation for the organization that includes:
 -	Any relevant metadata (e.g. devices assignment, location, or purpose.)
 -	Be sure to include both internal and external address ranges in use by the agency.
 
-### _AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices_
+### _AD02: Agency policy documentation that defines the timeframe for removing unauthorized assets_
 
-Approved, documented policy that defines the timeframe within which unauthorized devices must be removed from the organization’s network, or otherwise addressed, when discovered.
+Approved, documented policy that defines the timeframe within which unauthorized assets (hardware or software) must be removed from the organization’s network, or otherwise addressed, when discovered.
 
 ### _AD04: Exception Documentation for Unsupported Software That is Necessary for the Fulfillment of the Organization's Mission_
 
