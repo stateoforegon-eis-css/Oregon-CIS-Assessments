@@ -7,6 +7,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_Benchmark Description_**
 - Registry Key | Policy Setting | Benchmark
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 3.06_
 
 **_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered' is set to 'Enabled'_**
@@ -57,6 +58,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for operating system drives' is set to 'Enabled: True'_**
 - SOFTWARE\Policies\Microsoft\FVE | OSRequireActiveDirectoryBackup | 1
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 3.09_
 
 **_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered' is set to 'Enabled'_**
@@ -89,6 +91,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(BL) Ensure 'Deny write access to removable drives not protected by BitLocker: Do not allow write access to devices configured in another organization' is set to 'Enabled: False'_**
 - SOFTWARE\Policies\Microsoft\FVE | RDVDenyCrossOrg | 0
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 4.03_
 
 **_(L1) Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0'_**
@@ -112,6 +115,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'_**
 - Software\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51 | ACSettingIndex | 1
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 4.05_
 
 **_(L1) Ensure 'Windows Firewall: Domain: Firewall state' is set to 'On (recommended)'_**
@@ -138,6 +142,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No'_**
 - SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile | AllowLocalIPsecPolicyMerge | 0
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 4.07_
 
 **_(L1) Ensure 'Accounts: Guest account status' is set to 'Disabled'_**
@@ -176,6 +181,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Post-authentication actions: Actions' is set to 'Enabled: Reset the password and logoff the managed account' or higher_**
 - SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\LAPS | PostAuthenticationResetDelay | 8
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 5.02_
 
 **_(L1) Ensure 'Minimum password length' is set to '14 or more character(s)'_**
@@ -193,6 +199,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Password must meet complexity requirements' is set to 'Enabled'_**
 - System Access | PasswordComplexity | 1
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 8.02_
 
 **_(L1) Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SystemRoot%\System32\logfiles\firewall\domainfw.log'_**
@@ -204,6 +211,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Windows Firewall: Public: Logging: Name' is set to '%SystemRoot%\System32\logfiles\firewall\publicfw.log'_**
 - SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\publicfw.log
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 8.03_
 
 **_(L1) Ensure 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater'_**
@@ -227,6 +235,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'_**
 - SOFTWARE\Policies\Microsoft\Windows\EventLog\System | MaxSize | 32768
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 8.05_
 
 **_(L1) Ensure 'Audit Credential Validation' is set to 'Success and Failure'_**
@@ -301,6 +310,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Audit System Integrity' is set to 'Success and Failure'_**
 - System | System Integrity | Success and Failure
 
+------
 ### _Benchmark Group Policy Settings for Safeguard 10.03_
 
 **_(L1) Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'_**
