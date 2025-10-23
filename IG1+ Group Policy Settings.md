@@ -311,5 +311,3 @@ The Group Policy settings below can be assessed using a number of methods; howev
 
 **_(L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'_**
 - Software\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoDriveTypeAutoRun | 255
-**_(L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'_**
-- Software\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoDriveTypeAutoRun | 255
