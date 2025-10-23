@@ -78,7 +78,7 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
-- 
+- Compare Agency's Authorized Software Inventory with software assets discovered.
 
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
 
@@ -97,7 +97,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#24-utilize-automated-software-inventory-tools)
-- 
+- Enumerate Agency hardware assets monitored by inventory tools.
 
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
 
@@ -110,7 +110,7 @@ The implementation of Safeguard 3.01 is operationally equivalent to the defensiv
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#31-establish-and-maintain-a-data-management-process)
-- 
+- Evaluate Agency's Data Management Process for the presence of required elements.
 
 ## Safeguard 3.02	(IG1)	Establish and Maintain a Data Inventory
 
@@ -124,7 +124,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#32-establish-and-maintain-a-data-inventory)
-- 
+- Evaluate Agency's Sensitive Data Inventory (a subset of the Authorized Software Inventory) for mappings to Sensitivity Designations and Assets.
 
 ## Safeguard 3.04	(IG1)	Enforce Data Retention
 
@@ -138,7 +138,7 @@ The implementation of Safeguard 3.04 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#34-enforce-data-retention)
-- 
+- Evaluate Agency's Data Management Process and Sensitive Data Inventory for mappings to defined Retention Periods.
 
 ## Safeguard 3.05	(IG1)	Securely Dispose of Data
 
@@ -152,7 +152,7 @@ The implementation of Safeguard 3.05 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#35-securely-dispose-of-data)
-- 
+- Evaluate Agency's Data Management Process and Sensitive Data Inventory for mappings to defined Disposal Methods.
 
 ## Safeguard 3.06	(IG1)	Encrypt Data on End-User Devices
 
@@ -167,7 +167,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#36-encrypt-data-on-end-user-devices)
-- 
+- Evaluate and enumerate BitLocker implementation on Agency Hardware devices.
 
 ## Safeguard 3.07	**_(IG2)_**	Establish and Maintain a Data Classification Scheme
 
@@ -183,7 +183,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#37-establish-and-maintain-a-data-classification-scheme)
-- 
+- Evaluate Agency's implementation of _Statewide Policy 107-004-050_ across Sensitive Data.
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
 
