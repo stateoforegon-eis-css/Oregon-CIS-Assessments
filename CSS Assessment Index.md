@@ -161,6 +161,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Artifact%20Request.md#gv01-detailed-hardware-asset-inventory)
+- [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Group%20Policy%20Settings.md#benchmark-group-policy-settings-for-safeguard-306)
 - Encryption settings observed during Internal Testing
   - [KQL Script to evaluate BitLocker deployment on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/IG1%2B%20Defender%20KQL.md#safeguard-36-encrypt-data-on-end-user-devices)
 
