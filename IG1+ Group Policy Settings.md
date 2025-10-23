@@ -7,6 +7,88 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_Benchmark Description_**
 - Registry Key | Policy Setting | Benchmark
 
+### _Benchmark Group Policy Settings for Safeguard 3.06_
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered' is set to 'Enabled'_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVRecovery | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVManageDRA | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Password' is set to 'Enabled: Allow 48-digit recovery password' or higher_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVRecoveryPassword | 2
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Key' is set to 'Enabled: Allow 256-bit recovery key' or higher_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVRecoveryKey | 2
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVHideRecoveryPage | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Save BitLocker recovery information to AD DS for fixed data drives' is set to 'Enabled: False'_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVActiveDirectoryBackup | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Configure storage of BitLocker recovery information to AD DS' is set to 'Enabled: Backup recovery passwords and key packages'_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVActiveDirectoryInfoToStore | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives' is set to 'Enabled: False'_**
+- SOFTWARE\Policies\Microsoft\FVE | FDVRequireActiveDirectoryBackup | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered' is set to 'Enabled'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSRecovery | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Allow data recovery agent' is set to 'Enabled: False'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSManageDRA | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Password' is set to 'Enabled: Require 48-digit recovery password'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSRecoveryPassword | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSRecoveryKey | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSHideRecoveryPage | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Save BitLocker recovery information to AD DS for operating system drives' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSActiveDirectoryBackup | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Store recovery passwords and key packages'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSActiveDirectoryInfoToStore | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for operating system drives' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | OSRequireActiveDirectoryBackup | 1
+
+### _Benchmark Group Policy Settings for Safeguard 3.09_
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered' is set to 'Enabled'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVRecovery | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVManageDRA | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Password' is set to 'Enabled: Do not allow 48-digit recovery password'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVRecoveryPassword | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVRecoveryKey | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVHideRecoveryPage | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Save BitLocker recovery information to AD DS for removable data drives' is set to 'Enabled: False'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVActiveDirectoryBackup | 0
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Backup recovery passwords and key packages'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVActiveDirectoryInfoToStore | 1
+
+**_(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for removable data drives' is set to 'Enabled: False'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVRequireActiveDirectoryBackup | 0
+
+**_(BL) Ensure 'Deny write access to removable drives not protected by BitLocker' is set to 'Enabled'_**
+- SYSTEM\CurrentControlSet\Policies\Microsoft\FVE | RDVDenyWriteAccess | 1
+
+**_(BL) Ensure 'Deny write access to removable drives not protected by BitLocker: Do not allow write access to devices configured in another organization' is set to 'Enabled: False'_**
+- SOFTWARE\Policies\Microsoft\FVE | RDVDenyCrossOrg | 0
+
 ### _Benchmark Group Policy Settings for Safeguard 4.03_
 
 **_(L1) Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0'_**
@@ -18,16 +100,14 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires' is set to 'Enabled: 5 or fewer seconds'_**
 - SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon | ScreenSaverGracePeriod | 5
 
-### _Alternate Settings related to Safeguard 4.03_
-
 **_Time (in seconds) before a computer sleeps (on battery)_**
-- Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364 | DCSettingIndex | 900
+- Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364 | DCSettingIndex | 900 (alternative to "Machine inactivity limit", above)
 
 **_(L1) Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'_**
 - Software\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51 | DCSettingIndex | 1
 
 **_Time (in seconds) before a computer sleeps (plugged in)_**
-- Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364 | ACSettingIndex | 900
+- Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364 | ACSettingIndex | 900 (alternative to "Machine inactivity limit", above)
 
 **_(L1) Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'_**
 - Software\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51 | ACSettingIndex | 1
@@ -64,20 +144,18 @@ The Group Policy settings below can be assessed using a number of methods; howev
 - System Access | EnableGuestAccount | 0
 
 **_Ensure 'Accounts: Admin account status' is set to 'Disabled'_**
-- System Access | EnableAdminAccount | 0
+- System Access | EnableAdminAccount | 0 (alternative to LAPS settings, below)
 
 **_(L1) Configure 'Accounts: Rename guest account'_**
-- System Access | NewGuestName | something other than "Guest"
+- System Access | NewGuestName | "CISGUEST"
 
 **_(L1) Configure 'Accounts: Rename administrator account'_**
-- System Access | NewAdministratorName | something other than "Admin"
-
-### _LAPS Settings related to Safeguard 4.07_
+- System Access | NewAdministratorName | "CISADMIN"
 
 **_(L1) Ensure 'Configure password backup directory' is set to 'Enabled: Active Directory' or 'Enabled: Azure Active Directory'_**
 - SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\LAPS | BackupDirectory | 2
 
-**_(L1) Ensure 'Do not allow password expiration time longer than required by Policy' is set to 'Enabled'_**
+**_(L1) Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'_**
 - SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\LAPS | PasswordExpirationProtectionEnabled | 1
 
 **_(L1) Ensure 'Enable password encryption' is set to 'Enabled'_**
@@ -231,5 +309,7 @@ The Group Policy settings below can be assessed using a number of methods; howev
 **_(L1) Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'_**
 - SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoAutorun | 1
 
+**_(L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'_**
+- Software\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoDriveTypeAutoRun | 255
 **_(L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'_**
 - Software\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoDriveTypeAutoRun | 255
