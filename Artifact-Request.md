@@ -247,16 +247,6 @@ A list of all automated patch management software that the organization uses to 
 ### _GV25: List of Vulnerability Scanning Software_
 
 A list of all vulnerability scanning software that the organization uses to perform automated vulnerability scans of internal and external assets. Will be a subset of GV05 – Authorized Software Inventory and GV03 – Configuration Standards.
-     
-
-### _GV26: Agency Audit Log Management Process_
-
-Documented and approved process that defines the enterprise’s logging requirements. The audit log management process must address, at a minimum:
-
--	Instructions for the collection of audit logs
--	Instructions for review of audit logs
--	Instructions for retention of audit logs
--	The date of last review and update to the audit log management process
 
 ### _GV31: List of Authorized Anti‐malware Software_
 
