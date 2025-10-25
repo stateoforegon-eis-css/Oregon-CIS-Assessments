@@ -188,7 +188,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
 
-The implementation of Safeguard 4.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-1 and CM-9; a critical element in the defensive mitigations for _Standards_ CM-2, CM-6, CM-7(1), SA-3, SA-8, and SA-10; and contributes to the defensive mitigation for _Standard_ CM-7.
+The implementation of Safeguard 4.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-1 and CM-9; a critical element in the defensive mitigations for _Standards_ CM-2, CM-6, CM-7(1), SA-3, SA-8, and SA-10; and contributes to the defensive mitigation for _Standard_ CM-7. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-401---establish-and-maintain-a-secure-configuration-process)
 
 **Assessed Elements:**
 
@@ -202,7 +202,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
 
-The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for _Standards_ CM-7 and CM-7(1).
+The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for _Standards_ CM-7 and CM-7(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-403---configure-automatic-session-locking-on-enterprise-assets)
 
 **Assessed Elements:**
 
@@ -312,7 +312,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 ## Safeguard 5.04	(IG1)	Restrict Administrator Privileges to Dedicated Administrator Accounts
 
-The implementation of Safeguard 5.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ AC-6(2) and AC-6(5).
+The implementation of Safeguard 5.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ AC-6(2) and AC-6(5). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-504---restrict-administrator-privileges-to-dedicated-administrator-accounts)
 
 **Assessed Elements:**
 
@@ -354,7 +354,7 @@ The implementation of Safeguard 6.02 contributes to the defensive mitigation for
 
 ## Safeguard 6.04	(IG1)	Require MFA for Remote Network Access
 
-The implementation of Safeguard 6.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-19, IA-2(1), and IA-2(2).
+The implementation of Safeguard 6.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-19, IA-2(1), and IA-2(2). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-604---require-mfa-for-remote-network-access)
 
 **Assessed Elements:**
 
@@ -367,7 +367,7 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 
 ## Safeguard 6.05	(IG1)	Require MFA for Administrative Access
 
-The implementation of Safeguard 6.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-2(1).
+The implementation of Safeguard 6.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-2(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-605---require-mfa-for-administrative-access)
 
 **Assessed Elements:**
 
