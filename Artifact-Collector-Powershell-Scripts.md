@@ -47,14 +47,14 @@ Write-Host "Report saved to $AgencyAcronym-1.02-M4-Unauthorized-Computers.csv"
 ### Safeguard 5.1 Establish and Maintain an Inventory of Accounts
 
 **About:**
-Script to extract Active Directory inventory of 'discovered' Users from Artifact Collector.  User list from Active Directory is exported to [AgencyAcronym]-UserAccounts.csv.
+Script to extract Active Directory inventory of 'discovered' Users from Artifact Collector.  User list from Active Directory is exported to [AgencyAcronym]-UserAccounts.csv. (Includes MFA tags for 6.4 and 6.5)
 
 ```Powershell
     $AgencyAcronym = Read-Host "What is the Agency Acronym?"
     $GV22M7 = Import-Clixml .\ActiveDirectory.xml
     $csvFile = "$AgencyAcronym-UserAccounts.csv"
     $GV22M7.users |
-        Select-Object SamAccountName |
+        Select-Object SamAccountName, SmartcardLogonRequired |
         Export-Csv -Path $csvFile -NoTypeInformation -Encoding UTF8
     Write-Host "Export complete: $csvFile"	
 ```
