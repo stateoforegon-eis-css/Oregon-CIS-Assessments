@@ -358,6 +358,7 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
+- Domain Accounts and MFA tags discovered during Internal Testing (See Safeguard 5.01)
 
 **Assessment Methodology**
 
@@ -371,6 +372,7 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 **Assessed Elements:**
 
 - [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
+- Domain Accounts and MFA tags discovered during Internal Testing (See Safeguard 5.01)
 
 **Assessment Methodology**
 
