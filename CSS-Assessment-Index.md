@@ -159,7 +159,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv01-detailed-hardware-asset-inventory)
-- [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-306)
+- [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-306)
 - Encryption settings observed during Internal Testing
   - [KQL Script to evaluate BitLocker deployment on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-36-encrypt-data-on-end-user-devices)
 
@@ -207,7 +207,7 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Session Locking settings observed during Internal Testing
   - [KQL Script to evaluate Automatic Session Locking on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-43-configure-automatic-session-locking-on-enterprise-assets)
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-403)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-403)
 
 **Assessment Methodology**
 
@@ -238,7 +238,7 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Firewall settings observed during Internal Testing
   - [KQL Script to evaluate the Firewall status for each endpoint using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-45-implement-and-manage-a-firewall-on-end-user-devices)
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-405)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-405)
 
 **Assessment Methodology**
 
@@ -254,8 +254,8 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Default Account and Group Policy settings observed during Internal Testing
   - [KQL Script to enumerate all enabled Default Accounts on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-47-manage-default-accounts-on-enterprise-assets-and-software)
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-407)
-  - [LAPS GPOs evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#laps-settings-related-to-safeguard-407)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-407)
+  - [LAPS GPOs evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#laps-settings-related-to-safeguard-407)
 
 **Assessment Methodology**
 
@@ -286,7 +286,7 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 - [GV20: Unique Password Policy](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv20-unique-password-policy)
 - Password settings observed during Internal Testing
   - [KQL Script to evaluate password complexity elements using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-52-use-unique-passwords)
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-502)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-502)
 
 **Assessment Methodology**
 
@@ -489,7 +489,7 @@ The implementation of Safeguard 8.02 is operationally equivalent to the defensiv
 
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Event Log Storage Locations (CIS L1 Benchmarks) observed during Internal Testing
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-802)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-802)
 
 **Assessment Methodology**
 
@@ -504,7 +504,7 @@ The implementation of Safeguard 8.03 is operationally equivalent to the defensiv
 
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Event Log Storage Space (CIS L1 Benchmarks) observed during Internal Testing
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-803)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-803)
 
 **Assessment Methodology**
 
@@ -539,7 +539,7 @@ The implementation of Safeguard 8.05 is operationally equivalent to the defensiv
 - CIS|SOC SEIM Audit Log Management Process
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Event Log Generation Settings (CIS L1 Benchmarks) observed during Internal Testing
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-805)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-805)
 
 **Assessment Methodology**
 
@@ -665,7 +665,7 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Removable Media Settings observed during Internal Testing
   - [KQL Script to evaluate the status of Autorun/Autoplay using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-103-disable-autorun-and-autoplay-for-removable-media)
-  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md.md#benchmark-group-policy-settings-for-safeguard-1003)
+  - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-1003)
 
 **Assessment Methodology**
 
