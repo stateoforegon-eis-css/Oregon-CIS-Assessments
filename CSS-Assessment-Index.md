@@ -90,8 +90,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv01-detailed-hardware-asset-inventory)
 - [AD05: Policy Documentation That Defines the Timeframe Between Consecutive Active Software Discovery Scans](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad05-policy-documentation-that-defines-the-timeframe-between-consecutive-active-software-discovery-scans)
 - [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
-- Visibility of Hardware Assets in Software Inventory Tools observed during Internal Testing
-  - See Safeguard 1.01
+- Visibility of Hardware Assets in Software Inventory Tools observed during Internal Testing (See Safeguard 1.01)
 
 **Assessment Methodology**
 
@@ -118,7 +117,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 **Assessed Elements:**
 
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process)
-- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv01-detailed-hardware-asset-inventory) - specifically those storing sensitive data
+- [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv01-detailed-hardware-asset-inventory) (Specifically those storing sensitive data)
 
 **Assessment Methodology**
 
@@ -177,7 +176,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process) - Specifically the Data Classification Scheme
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process) (Specifically the Data Classification Scheme)
 - [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv12-sensitive-data-inventory)
 
 **Assessment Methodology**
