@@ -255,7 +255,6 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 - Default Account and Group Policy settings observed during Internal Testing
   - [KQL Script to enumerate all enabled Default Accounts on each system using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-47-manage-default-accounts-on-enterprise-assets-and-software)
   - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-407)
-  - [LAPS GPOs evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#laps-settings-related-to-safeguard-407)
 
 **Assessment Methodology**
 
