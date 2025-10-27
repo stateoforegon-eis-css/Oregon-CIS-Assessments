@@ -74,25 +74,25 @@ _Statewide Standard_ IA-2(1) requires Executive Branch agencies to employ multi-
 
 **Why This Matters:**
 
-_Statewide Standard_ RA-5
+_Statewide Standard_ RA-5 (and enhancements) requires Executive Branch agencies to monitor, scan, and analyze vulnerabilities within their systems and applications, and define te depth and breadth of vulnerability scanning coverage. Safeguard 7.01 aligns to these requirement by evaluating the presence and recency of the agency's Vulnerability Management Process.
 
 ## Safeguard 7.02 - Establish and Maintain a Remediation Process
 
 **Why This Matters:**
 
-_Statewide Standard_ RA-5
+_Statewide Standard_ RA-5 defines a schedule wherein Executive Branch agencies must evaluate and remediate legitimate vulnerabilities. Safeguard 7.02 aligns to this requirment by evaluating the agency's process for determining the legitimacy and criticality of vulnerabilities.
 
 ## Safeguard 8.01 - Establish and Maintain an Audit Log Management Process
 
 **Why This Matters:**
 
-_Statewide Standards_ AU-1, AU-2
+_Statewide Information Security Program Plan_ section 9 describes the purpose and scope for policies and processes developed in accordance with _Statewide Standard_ AU-1. Safeguard 8.01 aligns to these requirements by ensuring the agency's audit and accountability processes include the collection of event logs and the review and retention of audit records. 
 
 ## Safeguard 8.02 - Collect Audit Logs
 
 **Why This Matters:**
 
-_Statewide Standards_ AU-2, AU-12
+_Statewide Standards_ AU-2 and AU-12 require Executive Branch agencies to collect event logs and generate audit records for a number of applications and technologies. Safeguard 8.02 aligns to this requirement by evaluting a sample of local event logging settings.
 
 ## Safeguard 8.03 - Ensure Adequate Audit Log Storage
 
