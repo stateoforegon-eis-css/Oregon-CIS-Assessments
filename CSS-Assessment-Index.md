@@ -436,7 +436,7 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 
 ## Safeguard 7.05	**_(IG2)_**	Perform Automated Vulnerability Scans of Internal Enterprise Assets
 
-_Included in the Assessment as Enterprise Solution (Tenable) enables subscribers to automate vulnerability scanning._
+_Included in the Assessment as an Enterprise Solution (Tenable) enables subscribers to automate vulnerability scanning._
 
 The implementation of Safeguard 7.05 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ RA-5.
 
