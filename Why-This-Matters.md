@@ -28,11 +28,17 @@ _Statewide Standard_ SA-22 requires Executive Branch agencies to "replace system
 
 _Statewide Standard_ CM-8(3) requires Executive Branch agencies to "detect the presence of unauthorized ... software and firmware components within the system ... and remove or quarantine unauthorized components from the network when unauthorized components are detected." Safeguard 2.03 aligns to this requirment by evaluating the effectiveness of the agency's process for addressing unauthorized hardware assets.
 
+## Safeguard 3.01 - Establish and Maintain a Data Management Process
+
+**Why This Matters:**
+
+_Statewide Standard_ SI-12 requires Executive Branch agencies to "manage and retain information within the system and information output from the system in accordance with applicable laws, Executive Orders, directives, regulations, policies, standards, guidelines, and operational requirements." Among the applicable policies and directives is _Statewide Policy 107-004-160_, which describes the necessity of a Data Governance Program that includes "establishing guidance for managing data assets throughout their lifecycle, including creation, preservation, classification, retention, and deletion/disposal." Safeguard 3.01 aligns to these requirements by evaluating the agency's Data Management Process (Governance Program) for critical elements outlined in the _Policy_ and _Standard_.
+
 ## Safeguard 3.02 - Establish and Maintain a Data Inventory
 
 **Why This Matters:**
 
-_Statewide Information Security Plan_ section 9.1.5 and Statewide Policy 107-004-160 reflect Oregon Revised Statute 276A.365(c)(B), which requires Executive Branch agencies to "Strengthen data management and release practices to ensure agency data assets are managed and maintained throughout the assets’ life cycle by creating and maintaining an inventory of agency information resources to be included in the enterprise data inventory." Safeguard 3.02 aligns to this requirement by evaluting the agency's data inventory (including its process for identifying and labeling sensitive data).
+_Statewide Information Security Plan_ section 9.1.5 and _Statewide Policy 107-004-160_ reflect Oregon Revised Statute 276A.365(c)(B), which requires Executive Branch agencies to "Strengthen data management and release practices to ensure agency data assets are managed and maintained throughout the assets’ life cycle by creating and maintaining an inventory of agency information resources to be included in the enterprise data inventory." Safeguard 3.02 aligns to this requirement by evaluting the agency's data inventory (including its process for identifying and labeling sensitive data).
 
 ## Safeguard 4.01 - Establish and Maintain a Secure Configuration Process
 
