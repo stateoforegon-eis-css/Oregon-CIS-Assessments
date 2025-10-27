@@ -6,7 +6,7 @@ This document serves as a high-level index of the CIS Safeguards included in the
 
 ## Safeguard 1.01	(IG1)	Establish and Maintain Detailed Enterprise Asset Inventory
 
-The implementation of Safeguard 1.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ CM-8(1); and contributes to the defensive mitigation for _Standards_ CM-8 and PM-5. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-101---establish-and-maintain-detailed-enterprise-asset-inventory)
+The implementation of Safeguard 1.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ CM-8(1); and contributes to the defensive mitigation for _Standards_ CM-8 and PM-5.
 
 **Assessed Elements:**
 
@@ -23,7 +23,7 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 
 ## Safeguard 1.02	(IG1)	Address Unauthorized Assets
 
-The implementation of Safeguard 1.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CM-8(3). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-102---address-unauthorized-assets)
+The implementation of Safeguard 1.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CM-8(3).
 
 **Assessed Elements:**
 
@@ -38,8 +38,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
 
-The implementation of Safeguard 2.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ MA-3; and contributes to the defensive mitigation for _Standards_ CM-7(1) and CM-8. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-201---establish-and-maintain-a-software-inventory)
-
+The implementation of Safeguard 2.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ MA-3; and contributes to the defensive mitigation for _Standards_ CM-7(1) and CM-8.
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv05-authorized-software-inventory)
@@ -51,8 +50,7 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 
 ## Safeguard 2.02	(IG1)	Ensure Authorized Software is Currently Supported 
 
-The implementation of Safeguard 2.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SA-22. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-202---ensure-authorized-software-is-currently-supported)
-
+The implementation of Safeguard 2.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SA-22.
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv05-authorized-software-inventory)
@@ -67,7 +65,7 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 
 ## Safeguard 2.03	(IG1)	Address Unauthorized Software
 
-The implementation of Safeguard 2.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-7(2), CM-8(3), CM-10, and CM-11. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-203---address-unauthorized-software)
+The implementation of Safeguard 2.03 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-7(2), CM-8(3), CM-10, and CM-11.
 
 **Assessed Elements:**
 
@@ -99,8 +97,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
 
-The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-12; a critical element in the defensive mitigations for _Standard_ AU-11; and contributes to the defensive mitigation for _Standard_ CM-12. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-301---establish-and-maintain-a-data-management-process)
-
+The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-12; a critical element in the defensive mitigations for _Standard_ AU-11; and contributes to the defensive mitigation for _Standard_ CM-12.
 **Assessed Elements:**
 
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process)
@@ -112,7 +109,7 @@ The implementation of Safeguard 3.01 is operationally equivalent to the defensiv
 
 ## Safeguard 3.02	(IG1)	Establish and Maintain a Data Inventory
 
-The implementation of Safeguard 3.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ CM-12 and PM-5(1); and contributes to the defensive mitigation for _Standard_ RA-2. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-302---establish-and-maintain-a-data-inventory)
+The implementation of Safeguard 3.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ CM-12 and PM-5(1); and contributes to the defensive mitigation for _Standard_ RA-2.
 
 **Assessed Elements:**
 
@@ -186,7 +183,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
 
-The implementation of Safeguard 4.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-1 and CM-9; a critical element in the defensive mitigations for _Standards_ CM-2, CM-6, CM-7(1), SA-3, SA-8, and SA-10; and contributes to the defensive mitigation for _Standard_ CM-7. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-401---establish-and-maintain-a-secure-configuration-process)
+The implementation of Safeguard 4.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ CM-1 and CM-9; a critical element in the defensive mitigations for _Standards_ CM-2, CM-6, CM-7(1), SA-3, SA-8, and SA-10; and contributes to the defensive mitigation for _Standard_ CM-7.
 
 **Assessed Elements:**
 
@@ -200,7 +197,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
 
-The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for _Standards_ CM-7 and CM-7(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-403---configure-automatic-session-locking-on-enterprise-assets)
+The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for _Standards_ CM-7 and CM-7(1).
 
 **Assessed Elements:**
 
@@ -309,7 +306,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 ## Safeguard 5.04	(IG1)	Restrict Administrator Privileges to Dedicated Administrator Accounts
 
-The implementation of Safeguard 5.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ AC-6(2) and AC-6(5). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-504---restrict-administrator-privileges-to-dedicated-administrator-accounts)
+The implementation of Safeguard 5.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ AC-6(2) and AC-6(5).
 
 **Assessed Elements:**
 
@@ -351,7 +348,7 @@ The implementation of Safeguard 6.02 contributes to the defensive mitigation for
 
 ## Safeguard 6.04	(IG1)	Require MFA for Remote Network Access
 
-The implementation of Safeguard 6.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-19, IA-2(1), and IA-2(2). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-604---require-mfa-for-remote-network-access)
+The implementation of Safeguard 6.04 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AC-19, IA-2(1), and IA-2(2).
 
 **Assessed Elements:**
 
@@ -365,7 +362,7 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 
 ## Safeguard 6.05	(IG1)	Require MFA for Administrative Access
 
-The implementation of Safeguard 6.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-2(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-605---require-mfa-for-administrative-access)
+The implementation of Safeguard 6.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ IA-2(1).
 
 **Assessed Elements:**
 
@@ -379,7 +376,7 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 
 ## Safeguard 7.01	(IG1)	Establish and Maintain a Vulnerability Management Process
 
-The implementation of Safeguard 7.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ RA-5. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-701---establish-and-maintain-a-vulnerability-management-process)
+The implementation of Safeguard 7.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ RA-5.
 
 **Assessed Elements:**
 
@@ -392,7 +389,7 @@ The implementation of Safeguard 7.01 is a critical element in the defensive miti
 
 ## Safeguard 7.02	(IG1)	Establish and Maintain a Remediation Process
 
-The implementation of Safeguard 7.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ RA-5. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-702---establish-and-maintain-a-remediation-process)
+The implementation of Safeguard 7.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ RA-5.
 
 **Assessed Elements:**
 
@@ -469,7 +466,7 @@ The implementation of Safeguard 7.06 contributes to the defensive mitigation for
 
 ## Safeguard 8.01	(IG1)	Establish and Maintain an Audit Log Management Process
 
-The implementation of Safeguard 8.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-1; and a critical element in the defensive mitigations for _Standard_ AU-2. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-801---establish-and-maintain-an-audit-log-management-process)
+The implementation of Safeguard 8.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-1; and a critical element in the defensive mitigations for _Standard_ AU-2.
 
 **Assessed Elements:**
 
@@ -482,7 +479,7 @@ The implementation of Safeguard 8.01 is operationally equivalent to the defensiv
 
 ## Safeguard 8.02	(IG1)	Collect Audit Logs
 
-The implementation of Safeguard 8.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AU-2 and AU-12; and contributes to the defensive mitigation for _Standards_ AU-7. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-802---collect-audit-logs)
+The implementation of Safeguard 8.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standards_ AU-2 and AU-12; and contributes to the defensive mitigation for _Standards_ AU-7.
 
 **Assessed Elements:**
 
@@ -497,7 +494,7 @@ The implementation of Safeguard 8.02 is operationally equivalent to the defensiv
 
 ## Safeguard 8.03	(IG1)	Ensure Adequate Audit Log Storage
 
-The implementation of Safeguard 8.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-4. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-803---ensure-adequate-audit-log-storage)
+The implementation of Safeguard 8.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-4.
 
 **Assessed Elements:**
 
@@ -531,7 +528,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) enables subscribers to collect audit logs._
 
-The implementation of Safeguard 8.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-3; and contributes to the defensive mitigation for _Standards_ AU-3(1), AU-7, and AU-12. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-805---collect-detailed-audit-logs)
+The implementation of Safeguard 8.05 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-3; and contributes to the defensive mitigation for _Standards_ AU-3(1), AU-7, and AU-12.
 
 **Assessed Elements:**
 
@@ -565,7 +562,7 @@ The implementation of Safeguard 8.09 contributes to the defensive mitigation for
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) enables subscribers to retain audit logs._
 
-The implementation of Safeguard 8.10 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-11. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-810---retain-audit-logs)
+The implementation of Safeguard 8.10 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-11.
 
 **Assessed Elements:**
 
@@ -581,7 +578,7 @@ The implementation of Safeguard 8.10 is operationally equivalent to the defensiv
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) provides subscribers with triage services and review capabilities._
 
-The implementation of Safeguard 8.11 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-6; and contributes to the defensive mitigation for _Standard_ AU-6(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-811---conduct-audit-log-reviews)
+The implementation of Safeguard 8.11 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-6; and contributes to the defensive mitigation for _Standard_ AU-6(1).
 
 **Assessed Elements:**
 
@@ -609,7 +606,7 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
 
-The implementation of Safeguard 9.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ SI-8. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-902---use-dns-filtering-services)
+The implementation of Safeguard 9.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ SI-8.
 
 **Assessed Elements:**
 
@@ -716,7 +713,7 @@ The implementation of Safeguard 11.03 contributes to the defensive mitigation fo
 
 ## Safeguard 11.04	(IG1)	Establish and Maintain an Isolated Instance of Recovery Data 
 
-The implementation of Safeguard 11.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ CP-6 and CP-6(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1104---establish-and-maintain-an-isolated-instance-of-recovery-data)
+The implementation of Safeguard 11.04 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ CP-6 and CP-6(1).
 
 **Assessed Elements:**
 
@@ -732,7 +729,7 @@ The implementation of Safeguard 11.04 is a critical element in the defensive mit
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) provides subscribers with triage services and review capabilities._
 
-The implementation of Safeguard 13.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ IR-4(1) and SI-4(2); and contributes to the defensive mitigation for _Standards_ AU-6(1), AU-7, and SI-4(5). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1301---centralize-security-event-alerting)
+The implementation of Safeguard 13.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standards_ IR-4(1) and SI-4(2); and contributes to the defensive mitigation for _Standards_ AU-6(1), AU-7, and SI-4(5).
 
 **Assessed Elements:**
 
@@ -780,7 +777,7 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 
 ## Safeguard 14.02	(IG1)	Train Workforce Members to Recognize Social Engineering Attacks
 
-The implementation of Safeguard 14.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2(3). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1402---train-workforce-members-to-recognize-social-engineering-attacks)
+The implementation of Safeguard 14.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AT-2(3).
 
 **Assessed Elements:**
 
@@ -876,7 +873,7 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 
 ## Safeguard 15.01	(IG1)	Establish and Maintain an Inventory of Service Providers
 
-The implementation of Safeguard 15.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ PM-30(1). [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1501---establish-and-maintain-an-inventory-of-service-providers)
+The implementation of Safeguard 15.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ PM-30(1).
 
 **Assessed Elements:**
 
@@ -891,7 +888,7 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 
 ## Safeguard 17.01	(IG1)	Designate Personnel to Manage Incident Handling
 
-The implementation of Safeguard 17.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-7; and contributes to the defensive mitigation for _Standards_ IR-1 and IR-8. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1701---designate-personnel-to-manage-incident-handling)
+The implementation of Safeguard 17.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-7; and contributes to the defensive mitigation for _Standards_ IR-1 and IR-8.
 
 **Assessed Elements:**
 
@@ -904,7 +901,7 @@ The implementation of Safeguard 17.01 is a critical element in the defensive mit
 
 ## Safeguard 17.02	(IG1)	Establish and Maintain Contact Information for Reporting Security Incidents
 
-The implementation of Safeguard 17.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-6(3); and contributes to the defensive mitigation for _Standard_ IR-6. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1702---establish-and-maintain-contact-information-for-reporting-security-incidents)
+The implementation of Safeguard 17.02 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-6(3); and contributes to the defensive mitigation for _Standard_ IR-6.
 
 **Assessed Elements:**
 
@@ -917,7 +914,7 @@ The implementation of Safeguard 17.02 is a critical element in the defensive mit
 
 ## Safeguard 17.03	(IG1)	Establish and Maintain an Enterprise Process for Reporting Incidents
 
-The implementation of Safeguard 17.03 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-6(1); and contributes to the defensive mitigation for _Standards_ IR-5, IR-6, and IR-8. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1703---establish-and-maintain-an-enterprise-process-for-reporting-incidents)
+The implementation of Safeguard 17.03 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ IR-6(1); and contributes to the defensive mitigation for _Standards_ IR-5, IR-6, and IR-8.
 
 **Assessed Elements:**
 
@@ -932,7 +929,7 @@ The implementation of Safeguard 17.03 is a critical element in the defensive mit
 
 _Included in the Assessment as an Enterprise Solution (CISA RVA) provides subscribers with external penetration testing._
 
-The implementation of Safeguard 18.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CA-8. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-1802---perform-periodic-external-penetration-tests)
+The implementation of Safeguard 18.02 contributes to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ CA-8.
 
 **Assessed Elements:**
 
