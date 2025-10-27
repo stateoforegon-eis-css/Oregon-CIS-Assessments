@@ -99,7 +99,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
 
-The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-12; a critical element in the defensive mitigations for _Standard_ AU-11; and contributes to the defensive mitigation for _Standard_ CM-12.
+The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-12; a critical element in the defensive mitigations for _Standard_ AU-11; and contributes to the defensive mitigation for _Standard_ CM-12. [Why this matters.](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Why-This-Matters.md#safeguard-301---establish-and-maintain-a-data-management-process)
 
 **Assessed Elements:**
 
