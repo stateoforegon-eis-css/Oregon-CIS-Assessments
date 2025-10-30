@@ -173,13 +173,14 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 **Assessed Elements:**
 
-- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process) (Specifically the Data Classification Scheme)
+- [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process)
+- [AD13: Agency Data Classification Scheme](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad13-agency-data-classification-scheme)
 - [GV12: Sensitive Data Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv12-sensitive-data-inventory)
 
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 3.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#37-establish-and-maintain-a-data-classification-scheme)
-- Score is based on the implementation percentage of _Statewide Policy 107-004-050_.
+- Score is based on the implementation percentage of classification scheme.
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
 
