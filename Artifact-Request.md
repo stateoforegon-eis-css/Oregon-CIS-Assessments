@@ -381,7 +381,11 @@ Organization’s documented and approved process to scope and define critical sy
 
 ### _AD12: Agency Security Awareness Training Program Plan_
 
-Organization’s documented security awareness training program plan for educating organization personnel on how to interact with organization data and assets in a secure manger. Agencies may leverage the Statewide Information Security Plan if they do not maintain their own Awareness Training plan; however, agencies must document that they have adopted the Statewide Awareness Training Plan.
+Organization’s documented security awareness training program plan for educating organization personnel on how to interact with organization data and assets in a secure manner. Agencies may leverage the Statewide Information Security Plan if they do not maintain their own Awareness Training plan; however, agencies must document that they have adopted the Statewide Awareness Training Plan.
+
+### _AD13: Agency Data Classification Scheme_
+
+Organization’s documented data classification scheme for organization data and assets. Agencies may leverage the Statewide Information Asset Classification Policy (107-004-050) if they do not maintain their own Classification Scheme; however, agencies must document that they have adopted the Statewide policy.
 
 ### _AD14: Security Awareness and Training metrics for the prior year_
 
