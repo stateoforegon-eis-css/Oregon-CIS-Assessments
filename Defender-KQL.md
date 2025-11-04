@@ -540,7 +540,10 @@ AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion)
 ### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media
 
 **About:**
-Script to summarize a count of systems with autoplay disabled for non-volume devices (SCID 67)
+Script to summarize a count of systems with:
+- Autoplay disabled for non-volume (MTP) devices (SCID 67)
+- Autoplay disabled for all drives (SCID 69)
+- Autorun disabled (SCID 70)
 
 ```kql
 declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
@@ -555,9 +558,11 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
+or ConfigurationId == 'scid-69' // Limit results to Configuration ID "Disable 'Autoplay' for all drives"
+or ConfigurationId == 'scid-70' // Limit results to Configuration ID "Set default behavior for 'AutoRun' to 'Enabled: Do not execute any autorun commands'"
 | where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), MTPAutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0), AutoplayDisabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 0), AutorunDisabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 1), AutorunEnabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize MTPAutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), MTPAutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0), AutoplayDisabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 0), AutorunDisabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 1), AutorunEnabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 0) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
