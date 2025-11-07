@@ -514,8 +514,9 @@ or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update M
 Script to summarize a count of current and 'out of date' systems from Defender
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
 DeviceInfo
+| where OSPlatform !contains 'iOS'
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
 or RegistryDeviceTag has_any (Acronym1, Acronym2)
