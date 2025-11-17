@@ -18,7 +18,7 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 1.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls1/#11-establish-and-maintain-detailed-enterprise-asset-inventory)
+- [CIS Controls Assessment Specification for CIS Safeguard 1.01](https://cas.docs.cisecurity.org/en/latest/source/Controls1/#11-establish-and-maintain-detailed-enterprise-asset-inventory)
 - Score is based on the accuracy (assets detected/assets authorized) and completeness (presence of required elements) of the Authorized Hardware Asset Inventory.
 
 ## Safeguard 1.02	(IG1)	Address Unauthorized Assets
@@ -33,7 +33,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 1.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls1/#12-address-unauthorized-assets)
+- [CIS Controls Assessment Specification for CIS Safeguard 1.02](https://cas.docs.cisecurity.org/en/latest/source/Controls1/#12-address-unauthorized-assets)
 - Score is based on the unautorized assets (detected but not in Authorized Hardware Asset Inventory) present for more than 1 day.
 
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
@@ -45,7 +45,7 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 2.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#21-establish-and-maintain-a-software-inventory)
+- [CIS Controls Assessment Specification for CIS Safeguard 2.01](https://cas.docs.cisecurity.org/en/latest/source/Controls2/#21-establish-and-maintain-a-software-inventory)
 - Score is based on the presence of required elements in the Authorized Software Inventory.
 
 ## Safeguard 2.02	(IG1)	Ensure Authorized Software is Currently Supported 
@@ -60,7 +60,7 @@ The implementation of Safeguard 2.02 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 2.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#22-ensure-authorized-software-is-currently-supported)
+- [CIS Controls Assessment Specification for CIS Safeguard 2.02](https://cas.docs.cisecurity.org/en/latest/source/Controls2/#22-ensure-authorized-software-is-currently-supported)
 - Score is based on the percentage of authorized software that is not unsupported without an exception.
 
 ## Safeguard 2.03	(IG1)	Address Unauthorized Software
@@ -75,7 +75,7 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
+- [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
 - Score is based on the unautorized software (detected but not in Authorized Software Inventory) present for more than 1 day.
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
 
@@ -92,7 +92,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 2.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls2/#24-utilize-automated-software-inventory-tools)
+- [CIS Controls Assessment Specification for CIS Safeguard 2.04](https://cas.docs.cisecurity.org/en/latest/source/Controls2/#24-utilize-automated-software-inventory-tools)
 - Score is based on the percentage of software capable assets covered by automated software inventory tools.
 
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
@@ -104,7 +104,7 @@ The implementation of Safeguard 3.01 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 3.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#31-establish-and-maintain-a-data-management-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 3.01](https://cas.docs.cisecurity.org/en/latest/source/Controls3/#31-establish-and-maintain-a-data-management-process)
 - Score is based on the completeness of the Data Management Process (presence of required elements).
 
 ## Safeguard 3.02	(IG1)	Establish and Maintain a Data Inventory
@@ -118,7 +118,7 @@ The implementation of Safeguard 3.02 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 3.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#32-establish-and-maintain-a-data-inventory)
+- [CIS Controls Assessment Specification for CIS Safeguard 3.02](https://cas.docs.cisecurity.org/en/latest/source/Controls3/#32-establish-and-maintain-a-data-inventory)
 - Score is based on the percentage of sensitive data mapped to sensitivity designations (defined in Data Management Process) and assets.
 
 ## Safeguard 3.04	(IG1)	Enforce Data Retention
@@ -132,7 +132,7 @@ The implementation of Safeguard 3.04 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 3.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#34-enforce-data-retention)
+- [CIS Controls Assessment Specification for CIS Safeguard 3.04](https://cas.docs.cisecurity.org/en/latest/source/Controls3/#34-enforce-data-retention)
 - Score is based on the percentage of sensitive data types mapped to retention periods.
 
 ## Safeguard 3.05	(IG1)	Securely Dispose of Data
@@ -146,7 +146,7 @@ The implementation of Safeguard 3.05 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 3.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#35-securely-dispose-of-data)
+- [CIS Controls Assessment Specification for CIS Safeguard 3.05](https://cas.docs.cisecurity.org/en/latest/source/Controls3/#35-securely-dispose-of-data)
 - Score is based on the percentage of sensitive data types mapped to secure disposal methods.
 
 ## Safeguard 3.06	(IG1)	Encrypt Data on End-User Devices
@@ -162,7 +162,7 @@ The implementation of Safeguard 3.06 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 3.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#36-encrypt-data-on-end-user-devices)
+- [CIS Controls Assessment Specification for CIS Safeguard 3.06](https://cas.docs.cisecurity.org/en/latest/source/Controls3/#36-encrypt-data-on-end-user-devices)
 - Score is based on the percentage of hardware assets equipped with approved encryption software.
 
 ## Safeguard 3.07	**_(IG2)_**	Establish and Maintain a Data Classification Scheme
@@ -179,7 +179,7 @@ The implementation of Safeguard 3.07 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 3.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls3/#37-establish-and-maintain-a-data-classification-scheme)
+- [CIS Controls Assessment Specification for CIS Safeguard 3.07](https://cas.docs.cisecurity.org/en/latest/source/Controls3/#37-establish-and-maintain-a-data-classification-scheme)
 - Score is based on the implementation percentage of classification scheme.
 
 ## Safeguard 4.01	(IG1)	Establish and Maintain a Secure Configuration Process
@@ -193,7 +193,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 4.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#41-establish-and-maintain-a-secure-configuration-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 4.01](https://cas.docs.cisecurity.org/en/latest/source/Controls4/#41-establish-and-maintain-a-secure-configuration-process)
 - Score is based on the implementation of secure configuration standards for operating systems, web servers, browsers, databases, and office suites.
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
@@ -209,7 +209,7 @@ The implementation of Safeguard 4.03 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 4.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#43-configure-automatic-session-locking-on-enterprise-assets)
+- [CIS Controls Assessment Specification for CIS Safeguard 4.03](https://cas.docs.cisecurity.org/en/latest/source/Controls4/#43-configure-automatic-session-locking-on-enterprise-assets)
 - Score is based on the percentage of agency hardware assets properly configured for automatic session locking.
 
 ## Safeguard 4.04	(IG1)	Implement and Manage a Firewall on Servers
@@ -224,7 +224,7 @@ The implementation of Safeguard 4.04 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 4.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#44-implement-and-manage-a-firewall-on-servers)
+- [CIS Controls Assessment Specification for CIS Safeguard 4.04](https://cas.docs.cisecurity.org/en/latest/source/Controls4/#44-implement-and-manage-a-firewall-on-servers)
 - Score is based on the percentage of agency hardware assets with firewalls configured according to CIS Level 1 Benchmarks.
 
 ## Safeguard 4.05	(IG1)	Implement and Manage a Firewall on End-User Devices
@@ -240,7 +240,7 @@ The implementation of Safeguard 4.05 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 4.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#45-implement-and-manage-a-firewall-on-end-user-devices)
+- [CIS Controls Assessment Specification for CIS Safeguard 4.05](https://cas.docs.cisecurity.org/en/latest/source/Controls4/#45-implement-and-manage-a-firewall-on-end-user-devices)
 - Score is based on the percentage of agency hardware assets with firewalls configured according to CIS Level 1 Benchmarks.
 
 ## Safeguard 4.07	(IG1)	Manage Default Accounts on Enterprise Assets and Software
@@ -256,7 +256,7 @@ The implementation of Safeguard 4.07 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 4.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls4/#47-manage-default-accounts-on-enterprise-assets-and-software)
+- [CIS Controls Assessment Specification for CIS Safeguard 4.07](https://cas.docs.cisecurity.org/en/latest/source/Controls4/#47-manage-default-accounts-on-enterprise-assets-and-software)
 - Score is based on the percentage of agency hardware assets with the default "Guest" account disabled and the default "Administrator" account properly protected.
 
 ## Safeguard 5.01	(IG1)	Establish and Maintain an Inventory of Accounts
@@ -271,7 +271,7 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 5.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#51-establish-and-maintain-an-inventory-of-accounts)
+- [CIS Controls Assessment Specification for CIS Safeguard 5.01](https://cas.docs.cisecurity.org/en/latest/source/Controls5/#51-establish-and-maintain-an-inventory-of-accounts)
 - Score is based on the completeness (presence of required elements) in the Inventory of Accounts.
 
 ## Safeguard 5.02	(IG1)	Use Unique Passwords
@@ -287,7 +287,7 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 5.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#52-use-unique-passwords)
+- [CIS Controls Assessment Specification for CIS Safeguard 5.02](https://cas.docs.cisecurity.org/en/latest/source/Controls5/#52-use-unique-passwords)
 - Score is based on the percentage of accounts configured in accordance to settings defined in the _Statewide Standards_.
 
 ## Safeguard 5.03	(IG1)	Disable Dormant Accounts
@@ -302,7 +302,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 5.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#53-disable-dormant-accounts)
+- [CIS Controls Assessment Specification for CIS Safeguard 5.03](https://cas.docs.cisecurity.org/en/latest/source/Controls5/#53-disable-dormant-accounts)
 - Score is based on the percentage of dormant accounts (last logon more than 90 days prior to sampling) that are still enabled.
 
 ## Safeguard 5.04	(IG1)	Restrict Administrator Privileges to Dedicated Administrator Accounts
@@ -318,7 +318,7 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 5.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls5/#54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
+- [CIS Controls Assessment Specification for CIS Safeguard 5.04](https://cas.docs.cisecurity.org/en/latest/source/Controls5/#54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
 - Score is based on the percentage of discovered administrator accounts listed in the Inventory of Accounts with associated non-administrative credentials.
 
 ## Safeguard 6.01	(IG1)	Establish an Access Granting Process
@@ -331,7 +331,7 @@ The implementation of Safeguard 6.01 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 6.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#61-establish-an-access-granting-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 6.01](https://cas.docs.cisecurity.org/en/latest/source/Controls6/#61-establish-an-access-granting-process)
 - Score is based on the completeness (presence of required elements) in the Access Granting Process.
 
 ## Safeguard 6.02	(IG1)	Establish an Access Revoking Process
@@ -344,7 +344,7 @@ The implementation of Safeguard 6.02 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 6.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#62-establish-an-access-revoking-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 6.02](https://cas.docs.cisecurity.org/en/latest/source/Controls6/#62-establish-an-access-revoking-process)
 - Score is based on the completeness (presence of required elements) in the Access Revoking Process.
 
 ## Safeguard 6.04	(IG1)	Require MFA for Remote Network Access
@@ -358,7 +358,7 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 6.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#64-require-mfa-for-remote-network-access)
+- [CIS Controls Assessment Specification for CIS Safeguard 6.04](https://cas.docs.cisecurity.org/en/latest/source/Controls6/#64-require-mfa-for-remote-network-access)
 - Score is based on the presence of multi-factor authentication methodologies in place for remote access.
 
 ## Safeguard 6.05	(IG1)	Require MFA for Administrative Access
@@ -372,7 +372,7 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 6.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls6/#65-require-mfa-for-administrative-access)
+- [CIS Controls Assessment Specification for CIS Safeguard 6.05](https://cas.docs.cisecurity.org/en/latest/source/Controls6/#65-require-mfa-for-administrative-access)
 - Score is based on the percentage of administrative accounts with multi-factor authentication configured.
 
 ## Safeguard 7.01	(IG1)	Establish and Maintain a Vulnerability Management Process
@@ -385,7 +385,7 @@ The implementation of Safeguard 7.01 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 7.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#71-establish-and-maintain-a-vulnerability-management-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 7.01](https://cas.docs.cisecurity.org/en/latest/source/Controls7/#71-establish-and-maintain-a-vulnerability-management-process)
 - Score is based on the presence of a current Vulnerability Management Process.
 
 ## Safeguard 7.02	(IG1)	Establish and Maintain a Remediation Process
@@ -398,7 +398,7 @@ The implementation of Safeguard 7.02 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 7.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#72-establish-and-maintain-a-remediation-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 7.02](https://cas.docs.cisecurity.org/en/latest/source/Controls7/#72-establish-and-maintain-a-remediation-process)
 - Score is based on the completeness (presence of required elements) of the Vulnerability Remediation Process.
 
 ## Safeguard 7.03	(IG1)	Perform Automated Operating System Patch Management
@@ -413,7 +413,7 @@ The implementation of Safeguard 7.03 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 7.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#73-perform-automated-operating-system-patch-management)
+- [CIS Controls Assessment Specification for CIS Safeguard 7.03](https://cas.docs.cisecurity.org/en/latest/source/Controls7/#73-perform-automated-operating-system-patch-management)
 - Score is based on the percentage of sampled operating systems that are up-to-date or have a documented exception.
 
 ## Safeguard 7.04	(IG1)	Perform Automated Application Patch Management
@@ -429,7 +429,7 @@ The implementation of Safeguard 7.04 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 7.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#74-perform-automated-application-patch-management)
+- [CIS Controls Assessment Specification for CIS Safeguard 7.04](https://cas.docs.cisecurity.org/en/latest/source/Controls7/#74-perform-automated-application-patch-management)
 - Score is based on the percentage of sampled applications that are up-to-date or have a documented exception.
 
 ## Safeguard 7.05	**_(IG2)_**	Perform Automated Vulnerability Scans of Internal Enterprise Assets
@@ -446,7 +446,7 @@ The implementation of Safeguard 7.05 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 7.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#75-perform-automated-vulnerability-scans-of-internal-enterprise-assets)
+- [CIS Controls Assessment Specification for CIS Safeguard 7.05](https://cas.docs.cisecurity.org/en/latest/source/Controls7/#75-perform-automated-vulnerability-scans-of-internal-enterprise-assets)
 - Score is based on the percentage of sampled internal assets covered by an authenticated vulnerbaility scanner.
 
 ## Safeguard 7.06	**_(IG2)_**	Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets
@@ -462,7 +462,7 @@ The implementation of Safeguard 7.06 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 7.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls7/#76-perform-automated-vulnerability-scans-of-externally-exposed-enterprise-assets)
+- [CIS Controls Assessment Specification for CIS Safeguard 7.06](https://cas.docs.cisecurity.org/en/latest/source/Controls7/#76-perform-automated-vulnerability-scans-of-externally-exposed-enterprise-assets)
 - Score is based on the percenatge of sampled externally-exposed assets covered by a vulnerability scanner.
 
 ## Safeguard 8.01	(IG1)	Establish and Maintain an Audit Log Management Process
@@ -475,7 +475,7 @@ The implementation of Safeguard 8.01 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#81-establish-and-maintain-an-audit-log-management-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.01](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#81-establish-and-maintain-an-audit-log-management-process)
 - Score is based on the completeness (presence of required elements) of the Audit Log Management Process.
 
 ## Safeguard 8.02	(IG1)	Collect Audit Logs
@@ -490,7 +490,7 @@ The implementation of Safeguard 8.02 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard (8.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#82-collect-audit-logs)
+- [CIS Controls Assessment Specification for CIS Safeguard (8.02](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#82-collect-audit-logs)
 - Score is based on the percentage of sampled assets with local log storage locations configured in accordance with CIS Level 1 Benchmarks.
 
 ## Safeguard 8.03	(IG1)	Ensure Adequate Audit Log Storage
@@ -505,7 +505,7 @@ The implementation of Safeguard 8.03 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#83-ensure-adequate-audit-log-storage)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.03](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#83-ensure-adequate-audit-log-storage)
 - Score is based on the percentage of sampled assets with local log storage capacity configured in accordance with CIS Level 1 Benchmarks.
 
 ## Safeguard 8.04	**_(IG2)_**	Standardize Time Synchronization
@@ -522,7 +522,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#84-standardize-time-synchronization)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.04](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#84-standardize-time-synchronization)
 - Score is based on the percentage of sampled assets properly configured with at least two approved, synchronized time sources.
 
 ## Safeguard 8.05	**_(IG2)_**	Collect Detailed Audit Logs
@@ -540,7 +540,7 @@ The implementation of Safeguard 8.05 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#85-collect-detailed-audit-logs)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.05](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#85-collect-detailed-audit-logs)
 - Score is based on the percentage of sampled assets with event logging configured in accordance with the _Statewide Standards_.
 
 ## Safeguard 8.09	**_(IG2)_**	Centralize Audit Logs
@@ -556,7 +556,7 @@ The implementation of Safeguard 8.09 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.09](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#89-centralize-audit-logs)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.09](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#89-centralize-audit-logs)
 - Score is based on the percentage of sampled assets configured to centralize event logs in accordance with the _Statewide Standards_.
 
 ## Safeguard 8.10	**_(IG2)_**	Retain Audit Logs
@@ -572,7 +572,7 @@ The implementation of Safeguard 8.10 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.10](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#810-retain-audit-logs)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.10](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#810-retain-audit-logs)
 - Score is based on the percentage of sampled assets configured to retain event logs in accordance with the _Statewide Standards_.
 
 ## Safeguard 8.11	**_(IG2)_**	Conduct Audit Log Reviews
@@ -587,7 +587,7 @@ The implementation of Safeguard 8.11 is operationally equivalent to the defensiv
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 8.11](https://cas8.docs.cisecurity.org/en/latest/source/Controls8/#811-conduct-audit-log-reviews)
+- [CIS Controls Assessment Specification for CIS Safeguard 8.11](https://cas.docs.cisecurity.org/en/latest/source/Controls8/#811-conduct-audit-log-reviews)
 - Score is based on the frequency of audit record reviews.
 
 ## Safeguard 9.01	(IG1)	Ensure Use of Only Fully Supported Browsers and Email Clients
@@ -602,7 +602,7 @@ The implementation of Safeguard 9.01 contributes to the defensive mitigation for
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 9.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
+- [CIS Controls Assessment Specification for CIS Safeguard 9.01](https://cas.docs.cisecurity.org/en/latest/source/Controls9/#91-ensure-use-of-only-fully-supported-browsers-and-email-clients)
 - Score is based on the percentage of sampled web browser and email client software that are supported and correctly labeled as such in the Authorized Software Inventory.
 
 ## Safeguard 9.02	(IG1)	Use DNS Filtering Services
@@ -618,7 +618,7 @@ The implementation of Safeguard 9.02 is a critical element in the defensive miti
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 9.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls9/#92-use-dns-filtering-services)
+- [CIS Controls Assessment Specification for CIS Safeguard 9.02](https://cas.docs.cisecurity.org/en/latest/source/Controls9/#92-use-dns-filtering-services)
 - Score is based on the percentage of sampled hardware assets configured to use authorized DNS filters.
 
 ## Safeguard 10.01	(IG1)	Deploy and Maintain Anti-Malware Software
@@ -634,7 +634,7 @@ The implementation of Safeguard 10.01 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 10.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#101-deploy-and-maintain-anti-malware-software)
+- [CIS Controls Assessment Specification for CIS Safeguard 10.01](https://cas.docs.cisecurity.org/en/latest/source/Controls10/#101-deploy-and-maintain-anti-malware-software)
 - Score is based on the percentage of sampled hardware assets with properly configured and authorized anti-malware software.
 
 ## Safeguard 10.02	(IG1)	Configure Automatic Anti-Malware Signature Updates
@@ -650,7 +650,7 @@ The implementation of Safeguard 10.02 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 10.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#102-configure-automatic-anti-malware-signature-updates)
+- [CIS Controls Assessment Specification for CIS Safeguard 10.02](https://cas.docs.cisecurity.org/en/latest/source/Controls10/#102-configure-automatic-anti-malware-signature-updates)
 - Score is based on the percentage of sampled hardware assets properly configured to automatically update anti-malware signatures.
 
 ## Safeguard 10.03	(IG1)	Disable Autorun and Autoplay for Removable Media
@@ -666,7 +666,7 @@ The implementation of Safeguard 10.03 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 10.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls10/#103-disable-autorun-and-autoplay-for-removable-media)
+- [CIS Controls Assessment Specification for CIS Safeguard 10.03](https://cas.docs.cisecurity.org/en/latest/source/Controls10/#103-disable-autorun-and-autoplay-for-removable-media)
 - Score is based on the percentage of sampled hardware assets properly configured to disable autorun, autoplay, and auto-execute functions.
 
 ## Safeguard 11.01	(IG1)	Establish and Maintain a Data Recovery Process 
@@ -679,7 +679,7 @@ The implementation of Safeguard 11.01 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 11.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#111-establish-and-maintain-a-data-recovery-process)
+- [CIS Controls Assessment Specification for CIS Safeguard 11.01](https://cas.docs.cisecurity.org/en/latest/source/Controls11/#111-establish-and-maintain-a-data-recovery-process)
 - Score is based on the completeness (presence of required elements) of the Data Recovery Process.
 
 ## Safeguard 11.02	(IG1)	Perform Automated Backups 
@@ -695,7 +695,7 @@ The implementation of Safeguard 11.02 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 11.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#112-perform-automated-backups)
+- [CIS Controls Assessment Specification for CIS Safeguard 11.02](https://cas.docs.cisecurity.org/en/latest/source/Controls11/#112-perform-automated-backups)
 - Score is based on the percentage of sampled hardware assets properly configured with a backup solution which have been backed up within one week of sampling.
 
 ## Safeguard 11.03	(IG1)	Protect Recovery Data
@@ -709,7 +709,7 @@ The implementation of Safeguard 11.03 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 11.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#113-protect-recovery-data)
+- [CIS Controls Assessment Specification for CIS Safeguard 11.03](https://cas.docs.cisecurity.org/en/latest/source/Controls11/#113-protect-recovery-data)
 - Score is based on the percentage of sampled backup soutions properly configured to encrypt backup data.
 
 ## Safeguard 11.04	(IG1)	Establish and Maintain an Isolated Instance of Recovery Data 
@@ -723,7 +723,7 @@ The implementation of Safeguard 11.04 is a critical element in the defensive mit
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 11.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls11/#114-establish-and-maintain-an-isolated-instance-of-recovery-data)
+- [CIS Controls Assessment Specification for CIS Safeguard 11.04](https://cas.docs.cisecurity.org/en/latest/source/Controls11/#114-establish-and-maintain-an-isolated-instance-of-recovery-data)
 - Score is based on the percentage of sampled backup soutions properly configured to maintain an isolated instance of recovery data.
 
 ## Safeguard 13.01	**_(IG2)_**	Centralize Security Event Alerting
@@ -740,7 +740,7 @@ The implementation of Safeguard 13.01 is a critical element in the defensive mit
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 13.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls13/#131-centralize-security-event-alerting)
+- [CIS Controls Assessment Specification for CIS Safeguard 13.01](https://cas.docs.cisecurity.org/en/latest/source/Controls13/#131-centralize-security-event-alerting)
 - Score is based on the percentage of sampled assets configured to centralize event logs in accordance with the _Statewide Standards_.
 
 ## Safeguard 13.07	**_(IG3)_**	Deploy a Host-Based Intrusion Prevention Solution
@@ -757,7 +757,7 @@ The implementation of Safeguard 13.07 is not directly related to the defensive m
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 13.07](https://cas8.docs.cisecurity.org/en/latest/source/Controls13/#137-deploy-a-host-based-intrusion-prevention-solution)
+- [CIS Controls Assessment Specification for CIS Safeguard 13.07](https://cas.docs.cisecurity.org/en/latest/source/Controls13/#137-deploy-a-host-based-intrusion-prevention-solution)
 - Score is based on the percentage of sampled assets configured with a Host-Based Intrusion Prevention or Endpoint Detection and Response (EDR) solution.
 
 ## Safeguard 14.01	(IG1)	Establish and Maintain a Security Awareness Program
@@ -773,7 +773,7 @@ The implementation of Safeguard 14.01 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#141-establish-and-maintain-a-security-awareness-program)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.01](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#141-establish-and-maintain-a-security-awareness-program)
 - Score is based on the percentage of personnel who have completed initial training and whose training is up-to-date.
 
 ## Safeguard 14.02	(IG1)	Train Workforce Members to Recognize Social Engineering Attacks
@@ -789,7 +789,7 @@ The implementation of Safeguard 14.02 is operationally equivalent to the defensi
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#142-train-workforce-members-to-recognize-social-engineering-attacks)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.02](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#142-train-workforce-members-to-recognize-social-engineering-attacks)
 - Score is based on the presence of social engineering components in security training.
 
 ## Safeguard 14.03	(IG1)	Train Workforce Members on Authentication Best Practices
@@ -805,7 +805,7 @@ The implementation of Safeguard 14.03 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#143-train-workforce-members-on-authentication-best-practices)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.03](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#143-train-workforce-members-on-authentication-best-practices)
 - Score is based on the presence of authentication components in security training.
 
 ## Safeguard 14.04	(IG1)	Train Workforce on Data Handling Best Practices
@@ -821,7 +821,7 @@ The implementation of Safeguard 14.04 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.04](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#144-train-workforce-on-data-handling-best-practices)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.04](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#144-train-workforce-on-data-handling-best-practices)
 - Score is based on the presence of data handling components in security training.
 
 ## Safeguard 14.05	(IG1)	Train Workforce Members on Causes of Unintentional Data Exposure
@@ -837,7 +837,7 @@ The implementation of Safeguard 14.05 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.05](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#145-train-workforce-members-on-causes-of-unintentional-data-exposure)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.05](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#145-train-workforce-members-on-causes-of-unintentional-data-exposure)
 - Score is based on the presence of data exposure (breach/leakage) components in security training.
 
 ## Safeguard 14.06	(IG1)	Train Workforce Members on Recognizing and Reporting Security Incidents
@@ -853,7 +853,7 @@ The implementation of Safeguard 14.06 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.06](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#146-train-workforce-members-on-recognizing-and-reporting-security-incidents)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.06](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#146-train-workforce-members-on-recognizing-and-reporting-security-incidents)
 - Score is based on the presence of security incident response components in security training.
 
 ## Safeguard 14.08	(IG1)	Train Workforce on the Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks
@@ -869,7 +869,7 @@ The implementation of Safeguard 14.08 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 14.08](https://cas8.docs.cisecurity.org/en/latest/source/Controls14/#148-train-workforce-on-the-dangers-of-connecting-to-and-transmitting-enterprise-data-over-insecure-networks)
+- [CIS Controls Assessment Specification for CIS Safeguard 14.08](https://cas.docs.cisecurity.org/en/latest/source/Controls14/#148-train-workforce-on-the-dangers-of-connecting-to-and-transmitting-enterprise-data-over-insecure-networks)
 - Score is based on the presence of secure networking components in security training.
 
 ## Safeguard 15.01	(IG1)	Establish and Maintain an Inventory of Service Providers
@@ -884,7 +884,7 @@ The implementation of Safeguard 15.01 is a critical element in the defensive mit
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 15.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls15/#151-establish-and-maintain-an-inventory-of-service-providers)
+- [CIS Controls Assessment Specification for CIS Safeguard 15.01](https://cas.docs.cisecurity.org/en/latest/source/Controls15/#151-establish-and-maintain-an-inventory-of-service-providers)
 - Score is based on the completeness (presence of required elements) of the Service Provider Inventory.
 
 ## Safeguard 17.01	(IG1)	Designate Personnel to Manage Incident Handling
@@ -897,7 +897,7 @@ The implementation of Safeguard 17.01 is a critical element in the defensive mit
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 17.01](https://cas8.docs.cisecurity.org/en/latest/source/Controls17/#171-designate-personnel-to-manage-incident-handling)
+- [CIS Controls Assessment Specification for CIS Safeguard 17.01](https://cas.docs.cisecurity.org/en/latest/source/Controls17/#171-designate-personnel-to-manage-incident-handling)
 - Score is based on the completeness (presence of required elements) of the Incident Handling Documentation.
 
 ## Safeguard 17.02	(IG1)	Establish and Maintain Contact Information for Reporting Security Incidents
@@ -910,7 +910,7 @@ The implementation of Safeguard 17.02 is a critical element in the defensive mit
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 17.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls17/#172-establish-and-maintain-contact-information-for-reporting-security-incidents)
+- [CIS Controls Assessment Specification for CIS Safeguard 17.02](https://cas.docs.cisecurity.org/en/latest/source/Controls17/#172-establish-and-maintain-contact-information-for-reporting-security-incidents)
 - Score is based on the presence and currentness of contact information in the Incident Handling Documentation.
 
 ## Safeguard 17.03	(IG1)	Establish and Maintain an Enterprise Process for Reporting Incidents
@@ -923,7 +923,7 @@ The implementation of Safeguard 17.03 is a critical element in the defensive mit
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 17.03](https://cas8.docs.cisecurity.org/en/latest/source/Controls17/#173-establish-and-maintain-an-enterprise-process-for-reporting-incidents)
+- [CIS Controls Assessment Specification for CIS Safeguard 17.03](https://cas.docs.cisecurity.org/en/latest/source/Controls17/#173-establish-and-maintain-an-enterprise-process-for-reporting-incidents)
 - Score is based on the completeness (presence of required elements) of the Incident Reporting Process.
 
 ## Safeguard 18.02	**_(IG2)_**	Perform Periodic External Penetration Tests
@@ -938,5 +938,5 @@ The implementation of Safeguard 18.02 contributes to the defensive mitigation fo
 
 **Assessment Methodology**
 
-- [CIS Controls Assessment Specification for CIS Safeguard 18.02](https://cas8.docs.cisecurity.org/en/latest/source/Controls18/#182-perform-periodic-external-penetration-tests)
+- [CIS Controls Assessment Specification for CIS Safeguard 18.02](https://cas.docs.cisecurity.org/en/latest/source/Controls18/#182-perform-periodic-external-penetration-tests)
 - Score is based on the performance of annula penetration testing in accordance with _Statewide Standards_.
