@@ -39,6 +39,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 ## Safeguard 2.01	(IG1)	Establish and Maintain a Software Inventory
 
 The implementation of Safeguard 2.01 is a critical element in the defensive mitigations for _2023 Statewide Information Technology Control Standard_ MA-3; and contributes to the defensive mitigation for _Standards_ CM-7(1) and CM-8.
+
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv05-authorized-software-inventory)
@@ -51,6 +52,7 @@ The implementation of Safeguard 2.01 is a critical element in the defensive miti
 ## Safeguard 2.02	(IG1)	Ensure Authorized Software is Currently Supported 
 
 The implementation of Safeguard 2.02 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SA-22.
+
 **Assessed Elements:**
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv05-authorized-software-inventory)
@@ -98,6 +100,7 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 ## Safeguard 3.01	(IG1)	Establish and Maintain a Data Management Process
 
 The implementation of Safeguard 3.01 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ SI-12; a critical element in the defensive mitigations for _Standard_ AU-11; and contributes to the defensive mitigation for _Standard_ CM-12.
+
 **Assessed Elements:**
 
 - [GV10: Organization's Data Management Process](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv10-organizations-data-management-process)
