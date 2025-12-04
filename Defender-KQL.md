@@ -1,5 +1,7 @@
 # **CIS v8.0 Controls Assessment Specification Defender Measurement Scripts**
 
+**NOTE:** Scripts are written to accomodate a single-tenant, multiple entity environment. For entities utilizing a dedicated tenant, comment out lines 1, 4-7 of each query.
+
 ## CIS Control #1: Inventory and Control of Enterprise Assets
 
 ### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
@@ -8,7 +10,7 @@
 Script to extract an inventory of 'discovered' assets from Defender
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -32,7 +34,7 @@ by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceNa
 Script to extract "Covered Vendors" from an Agency's software inventory
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -54,7 +56,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to extract an inventory of 'discovered' software from Defender with "EOS" tags
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -78,7 +80,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to extract software list based on CPE data
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -107,7 +109,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to summarize a count of devices where supported drives are Bitlocker encrypted (SCID 2090)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -131,7 +133,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to identify the storage or modification of PII on enterprise devices
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -158,7 +160,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to summarize a count of devices where session locks after 15 minutes of inactivity (SCID 28)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -182,7 +184,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to summarize a count of server devices where Defender Firewall is turned on (SCID 2070) and properly secured (SCID 2071, 2072, 2073)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where OSPlatform contains "server"
@@ -207,7 +209,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to summarize a count of end-user devices where Defender Firewall is turned on (SCID 2070) and properly secured (SCID 2071, 2072, 2073)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where OSPlatform !contains "server"
@@ -232,7 +234,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to list all devices and whether the default administrator (SCID 3010) or guest (SCID 3011) accounts are disabled (indicated by "1").  Also indicates whether the LAPS is being utilized during login (indicated by "1").
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -272,7 +274,7 @@ Script to summarize a count of systems with the following password settings:
 - Minimum password age = 1 day (SCID 35)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -299,7 +301,7 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 Script to list local administrator logons and summarize the systems accessed
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -337,7 +339,7 @@ or LogonType == "RemoteInteractive"
 Script to extract a list of installed Windows operating systems (including patches over 30 days) and number of systems for each
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -372,7 +374,7 @@ DeviceTvmSoftwareVulnerabilities
 Script to extract a list of applications (including patches more than 30 days old) and number of systems for each
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -411,7 +413,7 @@ Script to summarize a count of systems with Browsers or Email Clients listed as 
 Listed by Device
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -433,7 +435,7 @@ or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "
 Listed by Software
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -461,7 +463,7 @@ Script to sample network events and extract most recent DNS information for each
 Note that the results are sorted by Network Adapter by default
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -489,7 +491,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 Script to summarize a count of systems with Defender installed (SCID 2010) and updates are enabled (SCID 2011)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -514,7 +516,7 @@ or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update M
 Script to summarize a count of current and 'out of date' systems from Defender
 
 ```kql
-declare query_parameters (Acronym1:string = "ABCD", Acronym2:string = "WXYZ");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where OSPlatform !contains 'iOS'
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
@@ -547,7 +549,7 @@ Script to summarize a count of systems with:
 - Autorun disabled (SCID 70)
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -575,7 +577,7 @@ or ConfigurationId == 'scid-70' // Limit results to Configuration ID "Set defaul
 Script to summarize a count of systems with CommVault Agent installed
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
@@ -598,7 +600,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ### Summary Data for Safeguards 3.6, 4.3, 4.4, 4.5, 4.7, 5.2, 10.1, 10.3
 
 ```kql
-declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2");
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where MachineGroup has_any (Acronym1, Acronym2)
