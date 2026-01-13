@@ -152,10 +152,10 @@ The Group Policy settings below can be assessed using a number of methods; howev
 - System Access | EnableAdminAccount | 0 (alternative to LAPS settings, below)
 
 **_(L1) Configure 'Accounts: Rename guest account'_**
-- System Access | NewGuestName | "CISGUEST"
+- System Access | NewGuestName | "CISGUEST" (or other custom name)
 
 **_(L1) Configure 'Accounts: Rename administrator account'_**
-- System Access | NewAdministratorName | "CISADMIN"
+- System Access | NewAdministratorName | "CISADMIN" (or other custom name)
 
 **_(L1) Ensure 'Configure password backup directory' is set to 'Enabled: Active Directory' or 'Enabled: Azure Active Directory'_**
 - SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\LAPS | BackupDirectory | 2
@@ -203,13 +203,13 @@ The Group Policy settings below can be assessed using a number of methods; howev
 ### _Benchmark Group Policy Settings for Safeguard 8.02_
 
 **_(L1) Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SystemRoot%\System32\logfiles\firewall\domainfw.log'_**
-- SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\domainfw.log
+- SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\domainfw.log (or some other unique *.log name)
 
 **_(L1) Ensure 'Windows Firewall: Private: Logging: Name' is set to '%SystemRoot%\System32\logfiles\firewall\privatefw.log'_**
-- SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\privatefw.log
+- SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\privatefw.log (or some other unique *.log name)
 
 **_(L1) Ensure 'Windows Firewall: Public: Logging: Name' is set to '%SystemRoot%\System32\logfiles\firewall\publicfw.log'_**
-- SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\publicfw.log
+- SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging | LogFilePath | %systemroot%\system32\logfiles\firewall\publicfw.log (or some other unique *.log name)
 
 ------
 ### _Benchmark Group Policy Settings for Safeguard 8.03_
