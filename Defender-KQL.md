@@ -121,9 +121,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2090' // Limit results to Configuration ID "Encrypt all BitLocker-supported drives"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1), BitlockerOff = countif(ConfigurationId == 'scid-2090' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == 1), BitlockerOff = countif(ConfigurationId == 'scid-2090' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == true), BitlockerOff = countif(ConfigurationId == 'scid-2090' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize BitlockerOn = countif(ConfigurationId == 'scid-2090' and IsCompliant == true), BitlockerOff = countif(ConfigurationId == 'scid-2090' and IsCompliant == false) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc
 ```
 
@@ -172,9 +172,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-28' // Limit results to Configuration ID "Set 'Interactive logon: Machine inactivity limit' to '1-900 seconds'"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == 1), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == true), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize MinLock15 = countif(ConfigurationId == 'scid-28' and IsCompliant == true), No15MinLock = countif(ConfigurationId == 'scid-28' and IsCompliant == false) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -197,9 +197,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == true), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == true), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == false) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -222,9 +222,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2070' // Limit results to Configuration ID "Turn on Microsoft Defender Firewall"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == 1), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == true), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize FirewallOn = countif(ConfigurationId == 'scid-2070' and IsCompliant == true), FirewallOff = countif(ConfigurationId == 'scid-2070' and IsCompliant == false) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -247,14 +247,14 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-3010' // Limit results to Configuration ID "Disable the built-in Administrator account"
 or ConfigurationId == 'scid-3011' // Limit results to Configuration ID "Disable the built-in Guest account" 
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize AdminAcctOff = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), AdminAcctOn = countif(ConfigurationId == 'scid-3010' and IsCompliant == 0), GuestAcctOff = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1), GuestAcctOn = countif(ConfigurationId == 'scid-3011' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
-| summarize AdminAcctOff = countif(ConfigurationId == 'scid-3010' and IsCompliant == 1), AdminAcctOn = countif(ConfigurationId == 'scid-3010' and IsCompliant == 0), GuestAcctOff = countif(ConfigurationId == 'scid-3011' and IsCompliant == 1), GuestAcctOn = countif(ConfigurationId == 'scid-3011' and IsCompliant == 0) by DeviceName
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize AdminAcctOff = countif(ConfigurationId == 'scid-3010' and IsCompliant == true), AdminAcctOn = countif(ConfigurationId == 'scid-3010' and IsCompliant == false), GuestAcctOff = countif(ConfigurationId == 'scid-3011' and IsCompliant == true), GuestAcctOn = countif(ConfigurationId == 'scid-3011' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize AdminAcctOff = countif(ConfigurationId == 'scid-3010' and IsCompliant == true), AdminAcctOn = countif(ConfigurationId == 'scid-3010' and IsCompliant == false), GuestAcctOff = countif(ConfigurationId == 'scid-3011' and IsCompliant == true), GuestAcctOn = countif(ConfigurationId == 'scid-3011' and IsCompliant == false) by DeviceName
 | join kind = leftouter (
 DeviceEvents
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where InitiatingProcessFileName contains "lsass.exe" and AdditionalFields has "LAPS"
-| extend LAPS = iff(AdditionalFields has "LAPS", 1, 0)
+| extend LAPS = iff(AdditionalFields has "LAPS", true, false)
 | summarize arg_max(Timestamp, LAPS) by DeviceName)
 on DeviceName
 //| project DeviceName, MachineGroup, RegistryDeviceTag, GuestAcctOff, GuestAcctOn, AdminAcctOff, AdminAcctOn, LAPS
@@ -289,9 +289,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 or ConfigurationId == 'scid-33' // Limit results to Configuration ID "Set 'Enforce password history' to '24 or more password(s)'"
 or ConfigurationId == 'scid-34' // Limit results to Configuration ID "Set 'Maximum password age' to '60 or fewer days, but not 0'"
 or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minimum password age' to '1 or more day(s)'"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 0), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 0), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 0), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
-| summarize Length14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 1), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == 0), Hist24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 1), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == 0), Max60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 1), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == 0), Min01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 1), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == 0) by DeviceName
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize Length14 = countif(ConfigurationId == 'scid-32' and ), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == false), Hist24 = countif(ConfigurationId == 'scid-33' and ), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == false), Max60 = countif(ConfigurationId == 'scid-34' and ), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == false), Min01 = countif(ConfigurationId == 'scid-35' and ), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize Length14 = countif(ConfigurationId == 'scid-32' and ), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == false), Hist24 = countif(ConfigurationId == 'scid-33' and ), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == false), Max60 = countif(ConfigurationId == 'scid-34' and ), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == false), Min01 = countif(ConfigurationId == 'scid-35' and ), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == false) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -315,7 +315,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where LogonType == "Interactive"
 or LogonType == "RemoteInteractive"
 | where AccountName !contains "lenovo" // Filter to remove local administrators created during OS setup
-| where IsLocalAdmin == 1 
+| where IsLocalAdmin == true 
 //| join kind = leftouter (
 //   IdentityInfo
 //    | project AccountName, AccountDisplayName) on AccountName // Extract display name from Idenity Info and link to Account Name
@@ -504,9 +504,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == 0), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
-| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == 0), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == 0) by DeviceName
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and ), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == false), UpdatesOn = countif(ConfigurationId == 'scid-2011' and ), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and ), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == false), UpdatesOn = countif(ConfigurationId == 'scid-2011' and ), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == false) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -563,9 +563,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | where ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
 or ConfigurationId == 'scid-69' // Limit results to Configuration ID "Disable 'Autoplay' for all drives"
 or ConfigurationId == 'scid-70' // Limit results to Configuration ID "Set default behavior for 'AutoRun' to 'Enabled: Do not execute any autorun commands'"
-| where IsApplicable == 1 // Limit results to systems for which the configuration is applicable
-//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), MTPAutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0), AutoplayDisabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 0), AutorunDisabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 1), AutorunEnabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
-| summarize MTPAutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 1), MTPAutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == 0), AutoplayDisabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 1), AutoplayEnabled = countif(ConfigurationId == 'scid-69' and IsCompliant == 0), AutorunDisabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 1), AutorunEnabled = countif(ConfigurationId == 'scid-70' and IsCompliant == 0) by DeviceName // Select relevant fields for output
+| where IsApplicable == true // Limit results to systems for which the configuration is applicable
+//| summarize AutoplayDisabled = countif(ConfigurationId == 'scid-67' and ), MTPAutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == false), AutoplayDisabled = countif(ConfigurationId == 'scid-69' and ), AutoplayEnabled = countif(ConfigurationId == 'scid-69' and IsCompliant == false), AutorunDisabled = countif(ConfigurationId == 'scid-70' and ), AutorunEnabled = countif(ConfigurationId == 'scid-70' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag // Select relevant fields for output
+| summarize MTPAutoplayDisabled = countif(ConfigurationId == 'scid-67' and IsCompliant == true), MTPAutoplayEnabled = countif(ConfigurationId == 'scid-67' and IsCompliant == false), AutoplayDisabled = countif(ConfigurationId == 'scid-69' and IsCompliant == true), AutoplayEnabled = countif(ConfigurationId == 'scid-69' and IsCompliant == false), AutorunDisabled = countif(ConfigurationId == 'scid-70' and IsCompliant == true), AutorunEnabled = countif(ConfigurationId == 'scid-70' and IsCompliant == false) by DeviceName // Select relevant fields for output
 | sort by DeviceName asc // Sort device list
 ```
 
@@ -623,7 +623,7 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 or ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
 or ConfigurationId == 'scid-67' // Limit results to Configuration ID "Disable 'Autoplay for non-volume devices'"
-| where IsApplicable == 1
+| where IsApplicable == true
 | extend ConfigurationId = case(
 ConfigurationId == "scid-2090", "03.06 - Bitlocker Encryption Enabled",
 ConfigurationId == "scid-28", "04.03 - Machine Inactivity Limit 1-900 seconds",
@@ -638,6 +638,6 @@ ConfigurationId == "scid-35", "05.02d - Minimum Password Age 1 or More Days",
 ConfigurationId == "scid-2010", "10.01a - Microsoft Defender Antivirus On",
 ConfigurationId == "scid-2011", "10.01b - Microsoft Defender Antivirus Definition Updates On",
 "10.03 - Disable Autoplay for Non-Volume Devices")
-| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == 1), NonCompliantSystems = countif(IsCompliant == 0) by ConfigurationId
+| summarize DeviceCount = count(), CompliantSystems = countif(IsCompliant == true), NonCompliantSystems = countif(IsCompliant == false) by ConfigurationId
 | sort by ConfigurationId asc
 ```
