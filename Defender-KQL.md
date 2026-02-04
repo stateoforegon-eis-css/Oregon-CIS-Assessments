@@ -295,6 +295,22 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 | sort by DeviceName asc // Sort device list
 ```
 
+### Safeguard 5.3 Disable Dormant Accounts
+
+**About:**
+Script to identify non-interactive logins which indicate an account is not dormant, although it's "Last Logon Date" in AD may be outside the target date range
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Domains
+AADNonInteractiveUserSignInLogs
+| where TimeGenerated > ago(90d) // Filter for events within the last 90 days
+| where UserPrincipalName has_any (Acronym1, Acronym2)
+| where ResultSignature contains "success"
+| project TimeGenerated, UserPrincipalName, Identity, AuthenticationRequirement
+| summarize arg_max(TimeGenerated, *) by UserPrincipalName
+| sort by Identity asc
+```
+
 ### Safeguard 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts
 
 **About:**
