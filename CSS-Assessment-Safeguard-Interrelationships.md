@@ -1,6 +1,14 @@
 # Interrelationship of CIS Safeguards & MITRE ATT&CK (Sub)Techniques
 
-For each Safeguard assessed within the CSS IG1+ Assessment Framework, the list below provides the Safeguard's **dependencies** (those Safeguards upon which the referenced Safeguard depends), **dependents** (those Safeguards which depend upon the referenced Safeguard), and those (Sub)Techniques present in all five of the top MITRE ATT&CK Framework v8.2 attack types (Malware, Ransomware, Web Application Hacking, Insider Privilege and Misuse, and Targeted Intrusions) mitigated by the referenced Safeguard.
+For each Safeguard assessed within the CSS IG1+ Assessment Framework, the list below provides the Safeguard's:
+
+**Dependencies:** Those Safeguards upon which the referenced Safeguard depends (according to the CIS Controls Assessment Specification)
+
+**Dependents:** Those Safeguards which depend upon the referenced Safeguard (according to the CIS Controls Assessment Specification)
+
+**"Top 5 (Sub)Techniques Mitigated:** Those MITRE ATT&CK (Sub)Techniques present in all five of the top attack types (Malware, Ransomware, Web Application Hacking, Insider Privilege and Misuse, and Targeted Intrusions) mitigated by the referenced Safeguard (according to the CIS Community Defense Model)
+
+___
 
 ## Safeguard 1.01: Establish and Maintain a Detailed Enterprise Asset Inventory
 
