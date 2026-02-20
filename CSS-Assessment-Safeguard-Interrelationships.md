@@ -8,7 +8,7 @@ For each Safeguard assessed within the CSS IG1+ Assessment Framework, the list b
 
 **Dependents** 1.02, 2.03, 2.04, 3.02, 3.06, 4.03, 4.04, 4.05, 4.07, 6.04, 7.03, 7.04, 7.05, 7.06, 8.02, 8.03, 8.04, 8.05, 8.09, 9.02, 10.01, 10.03, 11.02, 11.03, 11.04, 13.01, 13.07
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -18,7 +18,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 **Dependents:** 2.02, 2.03, 3.06, 4.01, 4.03, 4.04, 4.05, 4.07, 5.01, 7.03, 7.04, 7.05, 7.06, 8.09, 9.01, 10.01, 11.02, 11.03, 13.01, 13.07
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - VNC (T1021.005)
  - Python (T1059.006)
@@ -53,7 +53,7 @@ ___
 
 **Dependents:** 2.04
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Remote Desktop Protocol (T1021.001)
  - Command and Scripting Interpreter (T1059)
@@ -67,7 +67,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 **Dependents:** 3.04, 3.05, 3.07
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 **Dependents:** 3.04, 3.05, 3.07
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Account Manipulation (T1098)
  - Indicator Removal on Host (T1070)
@@ -110,7 +110,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Indicator Removal on Host (T1070)
 
@@ -122,7 +122,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 **Dependents:** 3.06, 4.03, 4.04, 4.05, 6.04, 6.05, 7.03, 7.04, 7.05, 7.06, 8.02, 8.10, 9.02, 10.01, 10.03, 11.02, 11.03, 11.04
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Remote Desktop Protocol (T1021-001)
@@ -173,7 +173,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Remote Desktop Protocol (T1021.001)
@@ -214,7 +214,7 @@ ___
 
 **Dependents:** 5.03, 5.04, 6.05
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Valid Accounts (T1078)
  - Domain Accounts (T1078.002)  
@@ -227,7 +227,7 @@ ___
 
 **Dependents:** 4.07
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Valid Accounts (T1078)
@@ -243,7 +243,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Remote Desktop Protocol (T1021.001)
@@ -263,7 +263,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Command and Scripting Interpreter (T1059)
@@ -282,7 +282,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Remote Desktop Protocol (T1021.001)
@@ -302,7 +302,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Remote Desktop Protocol (T1021.001)
@@ -322,7 +322,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Remote Services: Remote Desktop Protocol (T1021.001)
  - Valid Accounts: Domain Accounts (T1078.002)
@@ -338,7 +338,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Remote Desktop Protocol (T1021.001)
  - Domain Accounts (T1078.002)
@@ -354,7 +354,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -364,7 +364,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -384,7 +384,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -404,7 +404,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Remote Desktop Protocol (T1021.001)
 
@@ -416,7 +416,7 @@ ___
 
 **Dependents:** 8.02
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Indicator Removal on Host (T1070)
 
@@ -428,7 +428,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Indicator Removal on Host (T1070)
 
@@ -440,7 +440,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Indicator Removal on Host (T1070)
 
@@ -452,7 +452,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -462,7 +462,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -482,7 +482,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -492,7 +492,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Obfuscated Files or Information (T1027)
  - Command and Scripting Interpreter (T1059)
@@ -506,7 +506,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -516,7 +516,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -526,7 +526,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -536,7 +536,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - OS Credential Dumping (T1003)
  - Account Manipulation (T1098)
@@ -550,7 +550,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":**
+**"Top 5" (Sub)Techniques Mitigated:**
 
  - Account Manipulation (T1098)
  - Create Account (T1136) 
@@ -563,7 +563,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -573,7 +573,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** 
+**"Top 5" (Sub)Techniques Mitigated:** 
 
  - Obfuscated Files or Information (T1027)
  - Command and Scripting Interpreter (T1059)
@@ -586,7 +586,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -596,7 +596,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -606,7 +606,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -616,7 +616,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -626,7 +626,7 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
 
@@ -636,6 +636,6 @@ ___
 
 **Dependents:** None
 
-**(Sub)Techniques Mitigated across the "Top 5 MITRE ATT&CK Categories":** None
+**"Top 5" (Sub)Techniques Mitigated:** None
 
 ___
