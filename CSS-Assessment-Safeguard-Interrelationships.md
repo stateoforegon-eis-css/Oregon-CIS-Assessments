@@ -2,7 +2,7 @@
 
 For each Safeguard assessed within the CSS IG1+ Assessment Framework, the list below provides the Safeguard's **dependencies** (those Safeguards upon which the referenced Safeguard depends), **dependents** (those Safeguards which depend upon the referenced Safeguard), and those (Sub)Techniques present in all five of the top MITRE ATT&CK Framework v8.2 attack types (Malware, Ransomware, Web Application Hacking, Insider Privilege and Misuse, and Targeted Intrusions) mitigated by the referenced Safeguard.
 
-## CIS v8.0 Safeguard 1.1: Establish and Maintain a Detailed Enterprise Asset Inventory
+## Safeguard 1.1: Establish and Maintain a Detailed Enterprise Asset Inventory
 
 **Dependencies:** None
 
@@ -12,7 +12,7 @@ For each Safeguard assessed within the CSS IG1+ Assessment Framework, the list b
 
 ___
 
-## CIS v8.0 Safeguard 1.2: Address Unauthorized Assets
+## Safeguard 1.2: Address Unauthorized Assets
 
 **Dependencies:** 1.01
 
@@ -22,7 +22,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 2.1: Establish and Maintain a Software Inventory
+## Safeguard 2.1: Establish and Maintain a Software Inventory
 
 **Dependencies:** None
 
@@ -32,7 +32,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 2.2: Ensure Authorized Software is Currently Supported
+## Safeguard 2.2: Ensure Authorized Software is Currently Supported
 
 **Dependencies:** 2.01
 
@@ -47,7 +47,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 2.3: Address Unauthorized Software
+## Safeguard 2.3: Address Unauthorized Software
 
 **Dependencies:** 1.01, 2.01
 
@@ -61,7 +61,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 2.4: Utilize Automated Software Inventory Tools
+## Safeguard 2.4: Utilize Automated Software Inventory Tools
 
 **Dependencies:** 1.01, 2.03
 
@@ -71,7 +71,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.1: Establish and Maintain a Data Management Process
+## Safeguard 3.1: Establish and Maintain a Data Management Process
 
 **Dependencies:** None
 
@@ -81,7 +81,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.2: Establish and Maintain a Data Inventory
+## Safeguard 3.2: Establish and Maintain a Data Inventory
 
 **Dependencies:** 1.01
 
@@ -91,7 +91,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.3: Configure Data Access Control Lists
+## Safeguard 3.3: Configure Data Access Control Lists
 
 **Dependencies:** 3.02, 4.01, 5.01
 
@@ -104,7 +104,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.4: Enforce Data Retention
+## Safeguard 3.4: Enforce Data Retention
 
 **Dependencies:** 3.01, 3.02
 
@@ -116,7 +116,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.5: Securely Dispose of Data
+## Safeguard 3.5: Securely Dispose of Data
 
 **Dependencies:** 3.01, 3.02
 
@@ -126,7 +126,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.6: Encrypt Data on End-User Devices
+## Safeguard 3.6: Encrypt Data on End-User Devices
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -136,7 +136,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 3.7: Establish and Maintain a Data Classification Scheme
+## Safeguard 3.7: Establish and Maintain a Data Classification Scheme
 
 **Dependencies:** 3.01, 3.02
 
@@ -146,7 +146,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 4.1: Establish and Maintain a Secure Configuration Process
+## Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 **Dependencies:** 2.01
 
@@ -167,7 +167,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 4.3: Configure Automatic Session Locking on Enterprise Assets
+## Safeguard 4.3: Configure Automatic Session Locking on Enterprise Assets
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -177,7 +177,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 4.5: Implement and Manage a Firewall on End-User Devices
+## Safeguard 4.5: Implement and Manage a Firewall on End-User Devices
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -187,7 +187,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 4.7: Manage Default Accounts on Enterprise Assets and Software
+## Safeguard 4.7: Manage Default Accounts on Enterprise Assets and Software
 
 **Dependencies:** 1.01, 2.01, 5.02
 
@@ -208,7 +208,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 5.1: Establish and Maintain an Inventory of Accounts
+## Safeguard 5.1: Establish and Maintain an Inventory of Accounts
 
 **Dependencies:** 2.01
 
@@ -221,7 +221,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 5.2: Use Unique Passwords (Option for finding of insufficient password length)
+## Safeguard 5.2: Use Unique Passwords (Option for finding of insufficient password length)
 
 **Dependencies:** None
 
@@ -237,7 +237,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 5.3: Disable Dormant Accounts
+## Safeguard 5.3: Disable Dormant Accounts
 
 **Dependencies:** 5.01
 
@@ -257,7 +257,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
+## Safeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
 
 **Dependencies:** 5.01
 
@@ -276,7 +276,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 6.1: Establish an Access Granting Process
+## Safeguard 6.1: Establish an Access Granting Process
 
 **Dependencies:** None
 
@@ -296,7 +296,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 6.2: Establish an Access Revocation Process
+## Safeguard 6.2: Establish an Access Revocation Process
 
 **Dependencies:** None
 
@@ -316,7 +316,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 6.4: Require MFA For Remote Network Access
+## Safeguard 6.4: Require MFA For Remote Network Access
 
 **Dependencies:** 1.01, 4.01
 
@@ -332,7 +332,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 6.5: Require MFA For Administrative Access
+## Safeguard 6.5: Require MFA For Administrative Access
 
 **Dependencies:** 4.01, 5.01
 
@@ -348,7 +348,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 7.1: Establish and Maintain a Vulnerability Management Process
+## Safeguard 7.1: Establish and Maintain a Vulnerability Management Process
 
 **Dependencies:** None
 
@@ -358,7 +358,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 7.2: Establish and Maintain a Remediation Process
+## Safeguard 7.2: Establish and Maintain a Remediation Process
 
 **Dependencies:** None
 
@@ -368,7 +368,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 7.3: Perform Automated Operating System Patch Management
+## Safeguard 7.3: Perform Automated Operating System Patch Management
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -378,7 +378,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 7.4: Perform Automated Application Patch Management
+## Safeguard 7.4: Perform Automated Application Patch Management
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -388,7 +388,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 7.5: Perform Automated Vulnerability Scans of Internal Enterprise Assets
+## Safeguard 7.5: Perform Automated Vulnerability Scans of Internal Enterprise Assets
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -398,7 +398,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 7.6: Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets
+## Safeguard 7.6: Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -410,7 +410,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 8.1: Establish and Maintain an Audit Log Management Process
+## Safeguard 8.1: Establish and Maintain an Audit Log Management Process
 
 **Dependencies:** None
 
@@ -422,7 +422,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 8.2: Collect Audit Logs
+## Safeguard 8.2: Collect Audit Logs
 
 **Dependencies:** 1.01, 4.01, 8.01
 
@@ -434,7 +434,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 8.3: Ensure Adequate Log Storage 
+## Safeguard 8.3: Ensure Adequate Log Storage 
 
 **Dependencies:** 1.01
 
@@ -446,7 +446,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 8.9: Centralize Audit Logs
+## Safeguard 8.9: Centralize Audit Logs
 
 **Dependencies:** 1.01, 2.01
 
@@ -456,7 +456,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 8.11: Conduct Audit Log Reviews
+## Safeguard 8.11: Conduct Audit Log Reviews
 
 **Dependencies:** None
 
@@ -466,7 +466,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 9.1: Ensure Use of Only Fully Supported Browsers and Email Clients
+## Safeguard 9.1: Ensure Use of Only Fully Supported Browsers and Email Clients
 
 **Dependencies:** 2.01
 
@@ -476,7 +476,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 9.2: Use DNS Filtering Services
+## Safeguard 9.2: Use DNS Filtering Services
 
 **Dependencies:** 1.01, 4.01
 
@@ -486,7 +486,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 10.2: Configure Automatic Anti-Malware Signature Updates
+## Safeguard 10.2: Configure Automatic Anti-Malware Signature Updates
 
 **Dependencies:** 10.01
 
@@ -500,7 +500,7 @@ ___
 ___
 
 
-## CIS v8.0 Safeguard 10.3: Disable Autorun and Autoplay for Removable Media
+## Safeguard 10.3: Disable Autorun and Autoplay for Removable Media
 
 **Dependencies:** 1.01, 4.01
 
@@ -510,7 +510,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 11.1: Establish and Maintain a Data Recovery Process
+## Safeguard 11.1: Establish and Maintain a Data Recovery Process
 
 **Dependencies:** None
 
@@ -520,7 +520,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 11.2: Perform Automated Backups
+## Safeguard 11.2: Perform Automated Backups
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -530,7 +530,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 11.3: Protect Recovery Data
+## Safeguard 11.3: Protect Recovery Data
 
 **Dependencies:** 1.01, 2.01, 4.01
 
@@ -544,7 +544,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 11.4: Establish and Maintain an Isolated Instance of Recovery Data
+## Safeguard 11.4: Establish and Maintain an Isolated Instance of Recovery Data
 
 **Dependencies:** 1.01, 4.01
 
@@ -557,7 +557,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 13.01: Centralize Security Event Alerting
+## Safeguard 13.01: Centralize Security Event Alerting
 
 **Dependencies:** 1.01, 2.01
 
@@ -567,7 +567,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 13.07: Deploy a Host-Based Intrusion Prevention Solution
+## Safeguard 13.07: Deploy a Host-Based Intrusion Prevention Solution
 
 **Dependencies:** 1.01, 2.01
 
@@ -580,7 +580,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 14.01: Establish and Maintain a Security Awareness Program
+## Safeguard 14.01: Establish and Maintain a Security Awareness Program
 
 **Dependencies:** None
 
@@ -590,7 +590,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 15.1: Establish and Maintain an Inventory of Service Providers
+## Safeguard 15.1: Establish and Maintain an Inventory of Service Providers
 
 **Dependencies:** None
 
@@ -600,7 +600,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 17.1: Designate Personnel to Manage Incident Handling
+## Safeguard 17.1: Designate Personnel to Manage Incident Handling
 
 **Dependencies:** None
 
@@ -610,7 +610,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 17.2: Establish and Maintain Contact Information for Reporting Security Incidents
+## Safeguard 17.2: Establish and Maintain Contact Information for Reporting Security Incidents
 
 **Dependencies:** None
 
@@ -620,7 +620,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 17.3: Establish and Maintain an Enterprise Process for Reporting Incidents
+## Safeguard 17.3: Establish and Maintain an Enterprise Process for Reporting Incidents
 
 **Dependencies:** None
 
@@ -630,7 +630,7 @@ ___
 
 ___
 
-## CIS v8.0 Safeguard 18.2: Perform Periodic External Penetration Tests
+## Safeguard 18.2: Perform Periodic External Penetration Tests
 
 **Dependencies:** None
 
