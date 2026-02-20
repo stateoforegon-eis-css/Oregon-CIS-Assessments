@@ -6,7 +6,7 @@ For each Safeguard assessed within the CSS IG1+ Assessment Framework, the list b
 
 **Dependents:** Those Safeguards which depend upon the referenced Safeguard (according to the CIS Controls Assessment Specification)
 
-**"Top 5 (Sub)Techniques Mitigated:** Those MITRE ATT&CK (Sub)Techniques present in all five of the top attack types (Malware, Ransomware, Web Application Hacking, Insider Privilege and Misuse, and Targeted Intrusions) mitigated by the referenced Safeguard (according to the CIS Community Defense Model)
+**"Top 5" (Sub)Techniques Mitigated:** Those MITRE ATT&CK (Sub)Techniques present in all five of the top attack types (Malware, Ransomware, Web Application Hacking, Insider Privilege and Misuse, and Targeted Intrusions) mitigated by the referenced Safeguard (according to the CIS Community Defense Model)
 
 ___
 
