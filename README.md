@@ -6,7 +6,7 @@ This repository is created and maintained by the State of Oregon Enterprise Info
 
 A high-level index of the CIS Safeguards included in the CSS Cybersecurity Assessment Team "IG1+" review baseline with brief explanations of how each included Safeguard aligns to the 2023 Statewide Information Technology Control Standards and, where applicable, ratonale for included "IG2" and "IG3" Safeguards. Included under each Safeguard are links to the relevant items from the Artifact Request, Internal Testing, and Methodology.
 
-**[Interrelationships Index](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/CSS-Assessment-Safeguard-Interrelationships.md)
+**[Interrelationships Index](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/CSS-Assessment-Safeguard-Interrelationships.md)**
 
 A list of all assessed Safeguards and their "dependencies," "dependents," and MITRE ATT&CK "mitigations." Information is gleaned from the CIS [Community Defense Model](https://www.cisecurity.org/insights/white-papers/cis-community-defense-model-2-0) and [Controls Assessment Specification](https://cas.docs.cisecurity.org/en/latest/).
 
