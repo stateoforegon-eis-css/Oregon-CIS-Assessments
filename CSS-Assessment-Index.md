@@ -942,4 +942,4 @@ The implementation of Safeguard 18.02 contributes to the defensive mitigation fo
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 18.02](https://cas.docs.cisecurity.org/en/latest/source/Controls18/#182-perform-periodic-external-penetration-tests)
-- Score is based on the performance of annula penetration testing in accordance with _Statewide Standards_.
+- Score is based on the performance of annual penetration testing in accordance with _Statewide Standards_.
