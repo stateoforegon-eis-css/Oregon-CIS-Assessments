@@ -2,7 +2,7 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 
 # Introduction
 
-The purpose of this document is to assist the BSA team when providing post-assessment guidance to agencies on failed CIS Safeguards.  The Safeguards included in this document have a dependency on an agency documented policy, standard, procedure or process to be in place.
+The purpose of this document is to assist the CSS Business Security Advisor Team when providing post-assessment guidance to agencies on failed CIS Safeguards.  The Safeguards included in this document have a dependency on an agency documented policy, standard, procedure or process to be in place.
 
 Each Safeguard documented contains the following elements:
 
