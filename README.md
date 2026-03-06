@@ -10,6 +10,10 @@ This repository is created and maintained by the State of Oregon Enterprise Info
 
 >A list of all assessed Safeguards and their "dependencies," "dependents," and MITRE ATT&CK "mitigations." Information is gleaned from the CIS [Community Defense Model](https://www.cisecurity.org/insights/white-papers/cis-community-defense-model-2-0) and [Controls Assessment Specification](https://cas.docs.cisecurity.org/en/latest/).
 
+**[Implementation Recommendations](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Implementation-Recommendations.md)**
+
+>A list of recommended actions for the implementation of the Safeguards included in a CSS Cybersecurity Assessment.
+
 **[Artifact Request](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md)**
 
 >The standardized list of artifacts requested at the outset of an assessment for evaluating the implementation of the Center for Internet Security’s (CIS) Critical Security Controls, in accordance with the [Controls Assessment Specification](https://cas.docs.cisecurity.org/en/latest/).
