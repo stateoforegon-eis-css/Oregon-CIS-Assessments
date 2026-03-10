@@ -201,7 +201,7 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 ## Safeguard 4.03	(IG1)	Configure Automatic Session Locking on Enterprise Assets
 
-The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-18, AC-18(1), AC-18(3), CM-2, and CM-6; and contributes to the defensive mitigation for _Standards_ CM-7 and CM-7(1).
+The implementation of Safeguard 4.03 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AC-11; a critical element in the defensive mitigations for _Standards_ AC-11 and AC-12; and contributes to the defensive mitigation for _Standard_ AC-2(5).
 
 **Assessed Elements:**
 
@@ -582,7 +582,7 @@ The implementation of Safeguard 8.10 is operationally equivalent to the defensiv
 
 _Included in the Assessment as an Enterprise Solution (Sentinel SIEM) provides subscribers with triage services and review capabilities._
 
-The implementation of Safeguard 8.11 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-6; and contributes to the defensive mitigation for _Standard_ AU-6(1).
+The implementation of Safeguard 8.11 is operationally equivalent to the defensive mitigation for _2023 Statewide Information Technology Control Standard_ AU-6; and contributes to the defensive mitigation for _Standards_ AU-6(1) and AU-7(1).
 
 **Assessed Elements:**
 
