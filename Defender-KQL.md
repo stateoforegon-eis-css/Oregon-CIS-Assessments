@@ -2,9 +2,9 @@
 
 **NOTE:** Scripts are written to accomodate a single-tenant, multiple entity environment. For entities utilizing a dedicated tenant, comment out lines 1, 4-7 of each query.
 
-## CIS Control #1: Inventory and Control of Enterprise Assets
+## CIS Control 1: Inventory and Control of Enterprise Assets
 
-### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
+### Safeguard 1.01 Establish and Maintain a Detailed Asset Inventory
 
 **About:**
 Script to extract an inventory of 'discovered' assets from Defender
@@ -26,7 +26,7 @@ by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceNa
 | sort by DeviceName asc // Sort device list
 ```
 
-## CIS Control #2: Inventory and Control of Software Assets
+## CIS Control 2: Inventory and Control of Software Assets
 
 ### Covered Vendor Compliance
 
@@ -50,7 +50,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
-### Safeguard 2.2 Ensure Authorized Software is Currently Supported
+### Safeguard 2.02 Ensure Authorized Software is Currently Supported
 
 **About:**
 Script to extract an inventory of 'discovered' software from Defender with "EOS" tags
@@ -74,7 +74,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
-### Safeguard 2.3 Software Present on Enterprise Assets
+### Safeguard 2.03 Software Present on Enterprise Assets
 
 **About:**
 Script to extract software list based on CPE data
@@ -101,9 +101,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by Product asc // Sort software list
 ```
 
-## CIS Control #3: Data Protection
+## CIS Control 3: Data Protection
 
-### Safeguard 3.6 Encrypt Data on End-User Devices
+### Safeguard 3.06 Encrypt Data on End-User Devices
 
 **About:**
 Script to summarize a count of devices where supported drives are Bitlocker encrypted (SCID 2090)
@@ -152,9 +152,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by DeviceName asc, FileName asc, ActionType asc // Multi-column sort
 ```
 
-## CIS Control #4: Secure Configuration of Enterprise Assets and Software
+## CIS Control 4: Secure Configuration of Enterprise Assets and Software
 
-### Safeguard 4.3 Configure Automatic Session Locking on Enterprise Assets
+### Safeguard 4.03 Configure Automatic Session Locking on Enterprise Assets
 
 **About:**
 Script to summarize a count of devices where session locks after 15 minutes of inactivity (SCID 28)
@@ -178,7 +178,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by DeviceName asc // Sort device list
 ```
 
-### Safeguard 4.4 Implement and Manage a Firewall on Servers
+### Safeguard 4.04 Implement and Manage a Firewall on Servers
 
 **About:**
 Script to summarize a count of server devices where Defender Firewall is turned on (SCID 2070) and properly secured (SCID 2071, 2072, 2073)
@@ -203,7 +203,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by DeviceName asc // Sort device list
 ```
 
-### Safeguard 4.5 Implement and Manage a Firewall on End-User Devices
+### Safeguard 4.05 Implement and Manage a Firewall on End-User Devices
 
 **About:**
 Script to summarize a count of end-user devices where Defender Firewall is turned on (SCID 2070) and properly secured (SCID 2071, 2072, 2073)
@@ -228,7 +228,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by DeviceName asc // Sort device list
 ```
 
-### Safeguard 4.7 Manage Default Accounts on Enterprise Assets and Software
+### Safeguard 4.07 Manage Default Accounts on Enterprise Assets and Software
 
 **About:**
 Script to list all devices and whether the default administrator (SCID 3010) or guest (SCID 3011) accounts are disabled (indicated by "1").  Also indicates whether the LAPS is being utilized during login (indicated by "1").
@@ -262,9 +262,9 @@ on DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
-## CIS Control #5: Account Management
+## CIS Control 5: Account Management
 
-### Safeguard 5.2 Use Unique Passwords
+### Safeguard 5.02 Use Unique Passwords
 
 **About:**
 Script to summarize a count of systems with the following password settings:
@@ -295,7 +295,7 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 | sort by DeviceName asc // Sort device list
 ```
 
-### Safeguard 5.3 Disable Dormant Accounts
+### Safeguard 5.03 Disable Dormant Accounts
 
 **About:**
 Script to identify non-interactive logins which indicate an account is not dormant, although it's "Last Logon Date" in AD may be outside the target date range
@@ -311,7 +311,7 @@ AADNonInteractiveUserSignInLogs
 | sort by Identity asc
 ```
 
-### Safeguard 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts
+### Safeguard 5.04 Restrict Administrator Privileges to Dedicated Administrator Accounts
 
 **About:**
 Script to list local administrator logons and summarize the systems accessed
@@ -347,9 +347,9 @@ or LogonType == "RemoteInteractive"
 | sort by AccountName asc // Sort by Account Name
 ```
 
-## CIS Control #7: Continuous Vulnerability Management
+## CIS Control 7: Continuous Vulnerability Management
 
-### Safeguard 7.3 Perform Automated Operating System Patch Management
+### Safeguard 7.03 Perform Automated Operating System Patch Management
 
 **About:**
 Script to extract a list of installed Windows operating systems (including patches over 30 days) and number of systems for each
@@ -384,7 +384,7 @@ DeviceTvmSoftwareVulnerabilities
 | sort by OperatingSystem asc // Sort OperatingSystem list
 ```
 
-### Safeguard 7.4 Perform Automated Application Patch Management
+### Safeguard 7.04 Perform Automated Application Patch Management
 
 **About:**
 Script to extract a list of applications (including patches more than 30 days old) and number of systems for each
@@ -419,9 +419,9 @@ DeviceTvmSoftwareVulnerabilities
 | sort by Software asc // Sort software list
 ```
 
-## CIS Control #9: Email and Web Browser Protections
+## CIS Control 9: Email and Web Browser Protections
 
-### Safeguard 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients
+### Safeguard 9.01 Ensure Use of Only Fully Supported Browsers and Email Clients
 
 **About:**
 Script to summarize a count of systems with Browsers or Email Clients listed as "Unsupported"
@@ -471,7 +471,7 @@ or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "
 | sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
 ```
 
-### Safeguard 9.2 Use DNS Filtering Services
+### Safeguard 9.02 Use DNS Filtering Services
 
 **About:**
 Script to sample network events and extract most recent DNS information for each connected device
@@ -499,9 +499,9 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by DeviceName asc
 ```
 
-## CIS Control #10: Malware Defenses
+## CIS Control 10: Malware Defenses
 
-### Safeguard 10.1 Deploy and Maintain Anti-Malware Software
+### Safeguard 10.01 Deploy and Maintain Anti-Malware Software
 
 **About:**
 Script to summarize a count of systems with Defender installed (SCID 2010) and updates are enabled (SCID 2011)
@@ -526,7 +526,7 @@ or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update M
 | sort by DeviceName asc // Sort device list
 ```
 
-### Safeguard 10.2 Configure Automatic Anti-Malware Signature Updates
+### Safeguard 10.02 Configure Automatic Anti-Malware Signature Updates
 
 **About:**
 Script to summarize a count of current and 'out of date' systems from Defender
@@ -556,7 +556,7 @@ AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion)
 | sort by DeviceName asc // Sort device list
 ```
 
-### Safeguard 10.3 Disable Autorun and Autoplay for Removable Media
+### Safeguard 10.03 Disable Autorun and Autoplay for Removable Media
 
 **About:**
 Script to summarize a count of systems with:
@@ -585,9 +585,9 @@ or ConfigurationId == 'scid-70' // Limit results to Configuration ID "Set defaul
 | sort by DeviceName asc // Sort device list
 ```
 
-## CIS Control #11: Data Recovery
+## CIS Control 11: Data Recovery
 
-### Safeguard 11.2 Perform Automated Backups
+### Safeguard 11.02 Perform Automated Backups
 
 **About:**
 Script to summarize a count of systems with CommVault Agent installed
@@ -613,7 +613,7 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 
 ## CIS Control Summary
 
-### Summary Data for Safeguards 3.6, 4.3, 4.4, 4.5, 4.7, 5.2, 10.1, 10.3
+### Summary Data for Safeguards 3.06, 4.03, 4.04, 4.05, 4.07, 5.02, 10.01, 10.03
 
 ```kql
 declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
