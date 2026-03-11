@@ -2,7 +2,7 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 
 # **IG1+ Artifact Collector Powershell scripts**
 
-## CIS Control #1: Inventory and Control of Enterprise Assets
+## CIS Control 1: Inventory and Control of Enterprise Assets
 Note - You will need to run each of these PowerShell scripts in the same directory/folder where your Artifact Collector result files are saved.
 
 ### Safeguard 1.01 Establish and Maintain a Detailed Asset Inventory
@@ -22,7 +22,7 @@ Write-Host 'Disabled Computers found in AD' - $DisabledComputers.count
 Write-Host 'Total Computers found in AD' - $AD.Computers.count
 
 ```
-### Safeguard 1.2 Address Unauthorized Assets
+### Safeguard 1.02 Address Unauthorized Assets
 
 **About:**
 Script to extract the Count of Assets in GV02 with a "First Seen" date greater than M3 days prior to the Assessment.  Script will output one file listing all unauthorized Computers from A/D: [AgencyAcronym]-1.02-M4-Unauthorized-Computers.csv
@@ -42,9 +42,9 @@ Write-Output "Safeguard 1.02, M4 = Number of enabled assets with 'first seen' (w
 $M4 |  Export-Csv -NoTypeinformation .\$AgencyAcronym-1.02-M4-Unauthorized-Computers.csv
 Write-Host "Report saved to $AgencyAcronym-1.02-M4-Unauthorized-Computers.csv"
 ```
-## CIS Control #5: Account Management
+## CIS Control 5: Account Management
 
-### Safeguard 5.1 Establish and Maintain an Inventory of Accounts
+### Safeguard 5.01 Establish and Maintain an Inventory of Accounts
 
 **About:**
 Script to extract Active Directory inventory of 'discovered' Users from Artifact Collector.  User list from Active Directory is exported to [AgencyAcronym]-UserAccounts.csv. (Includes MFA tags for 6.4 and 6.5)
@@ -58,7 +58,7 @@ Script to extract Active Directory inventory of 'discovered' Users from Artifact
         Export-Csv -Path $csvFile -NoTypeInformation -Encoding UTF8
     Write-Host "Export complete: $csvFile"	
 ```
-### Safeguard 5.3 Disable Dormant Accounts
+### Safeguard 5.03 Disable Dormant Accounts
 
 **About:**
 Save Script as a .ps1 file, then execute from the same directory/folder where your Artifact Collector result files are saved.  This Script will extract Active Directory inventory of 'dormant accounts' from Artifact Collector and export two files: [AgencyAcronym]-cis-5.3-M6-dormant-accts-enabled.csv and [AgencyAcronym]+CIS_CAS_5.3_Measures.txt.
@@ -113,7 +113,7 @@ $GV22 = Import-Clixml .\ActiveDirectory.xml |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv
 	Write-Host "Report saved to $AgencyAcronym-cis-5.3-M6-dormant-accts-enabled.csv"
 ```
-### Safeguard 5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
+### Safeguard 5.04: Restrict Administrator Privileges to Dedicated Administrator Accounts
 
 **About:**
 Save Script as a .ps1 file, then execute from the same directory/folder where your Artifact Collector result files are saved.  This Script will extract Active Directory Groups that are likely to contain or be configured with Administrative permissions and exports one file: [AgencyAcronym]-admin_groups_report.xlsx.
@@ -177,9 +177,9 @@ $adminGroupMembers = Get-AdminGroups -groups $clixmlData.groups -users $clixmlDa
 $adminGroupMembers | Export-Csv -NoTypeinformation .\$Acy-admin-groups-report.csv
 Write-Host "Report saved to $Acy-admin-groups-report.csv"
 ```
-## CIS Control #8: Audit Log Management
+## CIS Control 8: Audit Log Management
 
-### Safeguard 8.4 Standardize Time Synchronization
+### Safeguard 8.04 Standardize Time Synchronization
 
 **About:**
 Script to extract NTP configuration from Artifact Collector.  The NTP configuration is exported to [AgencyAcronym]-8.04-M2-NTP-Config.txt.
