@@ -5,7 +5,7 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 ## CIS Control #1: Inventory and Control of Enterprise Assets
 Note - You will need to run each of these PowerShell scripts in the same directory/folder where your Artifact Collector result files are saved.
 
-### Safeguard 1.1 Establish and Maintain a Detailed Asset Inventory
+### Safeguard 1.01 Establish and Maintain a Detailed Asset Inventory
 
 **About:**
 Script to extract Active Directory inventory of 'discovered' assets from Artifact Collector. Script will output one file listing all enabled computers from A/D: [AgencyAcronym]-1-01-M2-enabled-AD-Computers.csv
