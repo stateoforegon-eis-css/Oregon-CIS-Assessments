@@ -29,7 +29,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
-  - [Powershell Script to enumerate Hardware Assets from Artifact Collector with a "First Seen" date exceeding enterprise time frame](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-12-address-unauthorized-assets)
+  - [Powershell Script to enumerate Hardware Assets from Artifact Collector with a "First Seen" date exceeding enterprise time frame](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-102-address-unauthorized-assets)
 
 **Assessment Methodology**
 
@@ -270,7 +270,7 @@ The implementation of Safeguard 5.01 contributes to the defensive mitigation for
 
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv22-inventory-of-accounts)
 - Domain Accounts discovered during Internal Testing
-  - [Powershell Script to enumerate Domain Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-51-establish-and-maintain-an-inventory-of-accounts)
+  - [Powershell Script to enumerate Domain Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-501-establish-and-maintain-an-inventory-of-accounts)
 
 **Assessment Methodology**
 
@@ -301,7 +301,7 @@ The implementation of Safeguard 5.03 contributes to the defensive mitigation for
 
 - Domain Accounts discovered during Internal Testing (See Safeguard 5.01)
 - Domain Account status observed during Internal Testing
-  - [Powershell Script to enumerate Dormant Accounts and Status from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-53-disable-dormant-accounts)
+  - [Powershell Script to enumerate Dormant Accounts and Status from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-503-disable-dormant-accounts)
 
 **Assessment Methodology**
 
@@ -317,7 +317,7 @@ The implementation of Safeguard 5.04 is a critical element in the defensive miti
 - [GV22: Inventory of Accounts](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv22-inventory-of-accounts)
 - Domain and Local Administrator Accounts discovered during Internal Testing
   - [KQL Script to enumerate all Local Administrative logons using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
-  - [Powershell Script to enumerate Administrative Active Directory Groups and member Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-54-restrict-administrator-privileges-to-dedicated-administrator-accounts)
+  - [Powershell Script to enumerate Administrative Active Directory Groups and member Accounts from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-504-restrict-administrator-privileges-to-dedicated-administrator-accounts)
 
 **Assessment Methodology**
 
@@ -521,7 +521,7 @@ The implementation of Safeguard 8.04 contributes to the defensive mitigation for
 
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
 - Network Time Protocol Settings observed during Internal Testing
-  - [Powershell Script to extract NTP settings from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#cis-control-8-audit-log-management)
+  - [Powershell Script to extract NTP settings from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-804-standardize-time-synchronization)
 
 **Assessment Methodology**
 
