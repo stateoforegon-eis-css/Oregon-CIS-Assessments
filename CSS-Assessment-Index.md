@@ -12,7 +12,7 @@ The implementation of Safeguard 1.01 is a critical element in the defensive miti
 
 - [GV01: Detailed Hardware Asset Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv01-detailed-hardware-asset-inventory)
 - Hardware Assets discovered during Internal Testing
-  - [Powershell Script to enumerate Hardware Assets from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#cis-control-1-inventory-and-control-of-enterprise-assets)
+  - [Powershell Script to enumerate Hardware Assets from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-101-establish-and-maintain-a-detailed-asset-inventory))
   - [KQL Script to enumerate Hardware Assets using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#cis-control-1-inventory-and-control-of-enterprise-assets)
   - Both [Defender](https://security.microsoft.com/machines) and [Tenable](https://cloud.tenable.com/tio/app.html#/assets-uw/all-assets/) have a pre-built report to list Agency Hardware Assets
 
