@@ -273,7 +273,6 @@ Script to summarize a count of systems with the following password settings:
 - Maximum password age = 60 days (SCID 34)
 - Minimum password age = 1 day (SCID 35)
 
-```kql
 declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
 DeviceInfo
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
@@ -293,7 +292,6 @@ or ConfigurationId == 'scid-35' // Limit results to Configuration ID "Set 'Minim
 //| summarize Length14 = countif(ConfigurationId == 'scid-32' and ), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == false), Hist24 = countif(ConfigurationId == 'scid-33' and ), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == false), Max60 = countif(ConfigurationId == 'scid-34' and ), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == false), Min01 = countif(ConfigurationId == 'scid-35' and ), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag
 | summarize Length14 = countif(ConfigurationId == 'scid-32' and ), LengthNot14 = countif(ConfigurationId == 'scid-32' and IsCompliant == false), Hist24 = countif(ConfigurationId == 'scid-33' and ), HistNot24 = countif(ConfigurationId == 'scid-33' and IsCompliant == false), Max60 = countif(ConfigurationId == 'scid-34' and ), MaxNot60 = countif(ConfigurationId == 'scid-34' and IsCompliant == false), Min01 = countif(ConfigurationId == 'scid-35' and ), MinNot01 = countif(ConfigurationId == 'scid-35' and IsCompliant == false) by DeviceName
 | sort by DeviceName asc // Sort device list
-```
 
 ### Safeguard 5.03 Disable Dormant Accounts
 
