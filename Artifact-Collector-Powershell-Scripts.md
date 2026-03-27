@@ -2,7 +2,7 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 
 # **IG1+ Artifact Collector Powershell scripts**
 
-**Note** The scripts provided below are designed to utilize the output from [Artifact Collector](https://github.com/stateoforegon-eis-css/ArtifactCollector). You will need to run each of these PowerShell scripts in the same directory/folder where your Artifact Collector result files are saved.
+**Note:** The scripts provided below are designed to utilize the output from [Artifact Collector](https://github.com/stateoforegon-eis-css/ArtifactCollector). You will need to run each of these PowerShell scripts in the same directory/folder where your Artifact Collector result files are saved.
 
 ## CIS Control 1: Inventory and Control of Enterprise Assets
 
