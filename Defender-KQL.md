@@ -11,18 +11,31 @@ Script to extract an inventory of 'discovered' assets from Defender
 
 
 > declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
+
 > DeviceInfo
+
 > | where Timestamp > ago(90d) // Filter for events within the last 90 days
+
 > | where MachineGroup has_any (Acronym1, Acronym2)
+
 > or RegistryDeviceTag has_any (Acronym1, Acronym2)
+
 > or DeviceDynamicTags has_any (Acronym1, Acronym2)
+
 > or DeviceManualTags has_any (Acronym1, Acronym2)
+
 > | summarize
+
 >     FirstSeen = min(Timestamp), // Get the first event timestamp
+
 >     LastSeen = max(Timestamp)   // Get the last event timestamp
+
 > by DeviceName, MachineGroup, RegistryDeviceTag // Group by DeviceId and DeviceName
+
 > | project DeviceName, MachineGroup, RegistryDeviceTag, FirstSeen, LastSeen // Select relevant fields for output
+
 > | summarize arg_max(LastSeen, *) by DeviceName // De-duplicate results to a single row for each DeviceName based on the most recent record
+
 > | sort by DeviceName asc // Sort device list
 
 
