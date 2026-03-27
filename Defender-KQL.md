@@ -10,7 +10,7 @@
 Script to extract an inventory of 'discovered' assets from Defender
 
 ###### declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
-###### DeviceInfo
+DeviceInfo
 ###### | where Timestamp > ago(90d) // Filter for events within the last 90 days
 ###### | where MachineGroup has_any (Acronym1, Acronym2)
 ###### or RegistryDeviceTag has_any (Acronym1, Acronym2)
