@@ -184,6 +184,6 @@ Script to extract an inventory of 'discovered' accounts from Active Directory. U
 
 ### Safeguard 8.04 Standardize Time Synchronization
 
-**About: **
+**About:** 
 Script to extract NTP configuration for Domain Controllers.  The NTP configuration is exported to [AgencyAcronym]-08.04.M2-NTPConfig.txt.
 
