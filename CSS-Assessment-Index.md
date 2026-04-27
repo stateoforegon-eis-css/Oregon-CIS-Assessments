@@ -29,7 +29,7 @@ The implementation of Safeguard 1.02 contributes to the defensive mitigation for
 
 - [AD02: Agency policy documentation that defines the timeframe for removing unauthorized devices](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad02-agency-policy-documentation-that-defines-the-timeframe-for-removing-unauthorized-devices)
 - Hardware Assets discovered during Internal Testing (See Safeguard 1.01)
-  - [Powershell Script to enumerate Hardware Assets from Artifact Collector with a "First Seen" date exceeding enterprise time frame](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-102-address-unauthorized-assets)
+  - [Powershell Script to enumerate Hardware Assets from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-101-establish-and-maintain-a-detailed-asset-inventory)
 
 **Assessment Methodology**
 
@@ -285,6 +285,7 @@ The implementation of Safeguard 5.02 contributes to the defensive mitigation for
 
 - [GV20: Unique Password Policy](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv20-unique-password-policy)
 - Password settings observed during Internal Testing
+  - [Powershell Script to extract Fine-Grained Password Policy from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-502-use-unique-passwords)
   - [KQL Script to evaluate password complexity elements using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-502-use-unique-passwords)
   - [Group Policy Objects evaluated](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Group-Policy-Settings.md#benchmark-group-policy-settings-for-safeguard-502)
 
@@ -357,7 +358,8 @@ The implementation of Safeguard 6.04 contributes to the defensive mitigation for
 **Assessed Elements:**
 
 - [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
-- Domain Accounts and MFA tags discovered during Internal Testing (See Safeguard 5.01)
+- Domain Accounts and MFA tags discovered during Internal Testing
+  - [Powershell Script to enumerate Domain Accounts and MFA Tags from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-604-require-mfa-for-remote-network-access--605-require-mfa-for-administrative-access)
 
 **Assessment Methodology**
 
@@ -371,7 +373,8 @@ The implementation of Safeguard 6.05 is operationally equivalent to the defensiv
 **Assessed Elements:**
 
 - [GV03.h - Configuration Standards: MFA Mechanisms for Admin Accounts & Remote Access](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv03h---configuration-standards-mfa-mechanisms-for-admin-accounts--remote-access)
-- Domain Accounts and MFA tags discovered during Internal Testing (See Safeguard 5.01)
+- Domain Accounts and MFA tags discovered during Internal Testing
+  - [Powershell Script to enumerate Domain Accounts and MFA Tags from Artifact Collector](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Collector-Powershell-Scripts.md#safeguard-604-require-mfa-for-remote-network-access--605-require-mfa-for-administrative-access)
 
 **Assessment Methodology**
 
