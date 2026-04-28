@@ -2,7 +2,7 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 
 # **IG1+ Artifact Collector Powershell scripts**
 
-**Note:** The powershell module below is designed to utilize the output from [Artifact Collector](https://github.com/stateoforegon-eis-css/ArtifactCollector). The module can be run from any directory, and will ask for the directory of your unzipped ArtifactCollector output. Detailed information about each of the extracts can be found below the script.
+**Note:** The powershell module below is designed to utilize the output from [Artifact Collector](https://github.com/stateoforegon-eis-css/ArtifactCollector). The module can be run from any directory, and will ask for the directory of your unzipped ArtifactCollector output (the folder containing the "ActiveDirectory.xml" file). Detailed information about each of the extracts can be found below the script.
 
 ```powershell
 function Measure-ArtifactCollector {
