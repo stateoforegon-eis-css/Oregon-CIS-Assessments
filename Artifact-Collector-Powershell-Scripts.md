@@ -2,7 +2,9 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 
 # **IG1+ Artifact Collector Powershell scripts**
 
-**Note:** The powershell module below is designed to utilize the output from [Artifact Collector](https://github.com/stateoforegon-eis-css/ArtifactCollector). The module can be run from any directory, and will ask for the directory of your unzipped ArtifactCollector output (the folder containing the "ActiveDirectory.xml" file). Detailed information about each of the extracts can be found below the script.
+**Note:** The powershell module below is designed to utilize the output from [Artifact Collector](https://github.com/stateoforegon-eis-css/ArtifactCollector). The module can be run from any directory, and will ask for the directory of your unzipped ArtifactCollector output (the folder containing the "ActiveDirectory.xml" file). Each segement (individual extract) can be run independently of the others, ***IF*** the first three variables (lines beginning with $dir, $AgencyAgronym, and $ad) are inserted at the start of the segment.
+
+Detailed information about each of the extracts can be found below the script. 
 
 ```powershell
 function Measure-ArtifactCollector {
@@ -16,6 +18,7 @@ function Measure-ArtifactCollector {
 	Select-Object ComputerName, OperatingSystem, OSVersion, Description, WhenCreated, Enabled |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-01.01.M2-Computers.csv
 	Write-Host "     Export complete: 01.01.M2-Computers (You'll also use this for 01.02)."
+# End 01.01
 
 # CIS Control 05, Safeguard 01
 	Write-Host "Extracting User Accounts ..."
@@ -23,11 +26,13 @@ function Measure-ArtifactCollector {
     Select-Object UserPrincipalName, SamAccountName, Name, Description, WhenCreated, Enabled |
     Export-Csv -NoTypeinformation .\$AgencyAcronym-05.01.M6-UserAccounts.csv
 	Write-Host "     Export complete: 05.01.M6-UserAccounts."
+# End 05.01
 
 # CIS Control 05, Safeguard 02
 	Write-Host "Copying Fine-Grained Password Policy ..."
 	Copy-Item -Path $dir\PasswordPolicies\FineGrainedPasswordPolicies.txt -Destination .\$AgencyAcronym-05.02-FGPasswordPolicy.txt
 	Write-Host "     Copy complete: 05.02-FGPasswordPolicy."
+# End 05.02
 
 # CIS Control 05, Safeguard 03
 	Write-Host "Extracting Dormant Accounts ..."
@@ -83,6 +88,7 @@ function Measure-ArtifactCollector {
 		} | Sort-Object -Descending -Property LastLogon |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-05.03.M6-DormantAccounts.csv
 	Write-Host "     Export complete: 05.03.M6-DormantAccounts."
+# End 05.03
 
 # CIS Control 05, Safeguard 04 
 	Write-Host "Extracting Admin Group Memberships. This might take a bit; please be patient ..."
@@ -118,6 +124,7 @@ function Measure-ArtifactCollector {
 	$adminGroupMembers = Get-AdminGroups -groups $ad.groups -users $ad.users
 	$adminGroupMembers | Export-Csv -NoTypeinformation .\$AgencyAcronym-05.04-AdminGroupMembers.csv
 	Write-Host "     Export complete: 05.04-AdminGroupMembers."
+# End 05.04
 
 # CIS Control 06, Safeguard 04
 	Write-Host "Extracting Enabled User Accounts with MFA Info..."
@@ -126,6 +133,7 @@ function Measure-ArtifactCollector {
 	    Where-Object { $_.Enabled -eq "true" } |
     Export-Csv -NoTypeinformation .\$AgencyAcronym-06.04.M2-UserAccountsMFA.csv
 	Write-Host "     Export complete: 06.04.M2-UserAccountsMFA (You'll also use this for 06.05)."
+# End 06.04
 
 # CIS Control 08, Safeguard 04
 	Write-Host "Extracting NTP Configuration ..."
@@ -139,10 +147,9 @@ function Measure-ArtifactCollector {
 	$finalOutput = $filteredOutput + $regNtpServerLine
 	$finalOutput | Out-File -FilePath ".\$AgencyAcronym-08.04.M2-NTPConfig.txt"
 	Write-Host "     Export complete: 08.04.M2-NTPConfig."
+# End 08.04
 }
 ```
-
-
 
 ## CIS Control 1: Inventory and Control of Enterprise Assets
 
