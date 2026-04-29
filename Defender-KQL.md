@@ -384,6 +384,39 @@ DeviceTvmSoftwareVulnerabilities
 | sort by OperatingSystem asc // Sort OperatingSystem list
 ```
 
+### Safeguard 7.03 Perform Automated Operating System Patch Management (Detail)
+
+**About:**
+Script to extract a list of installed Windows operating systems (including patches over 30 days)
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where SoftwareName has_any ("windows_10", "windows_11", "windows_server_2016",  "windows_server_2019", "windows_server_2022", "windows_server_2025") // limit results to Windows operating systems
+//| distinct Device=strcat(DeviceName,"|",MachineGroup,"|",RegistryDeviceTag), OperatingSystem=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+| distinct Device=DeviceName, OperatingSystem=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion) // Select relevant fields for output
+| join kind = leftouter (
+DeviceTvmSoftwareVulnerabilities
+| join kind = leftouter (
+    DeviceTvmSoftwareVulnerabilitiesKB)
+      on CveId // Extract published date from KB and link to Software Name
+| where PublishedDate < ago(30d)
+| project CveId, OperatingSystem=strcat(SoftwareVendor, ': ',SoftwareName,'-',SoftwareVersion)
+| summarize CVEPatchList=tostring(make_set(CveId)) by OperatingSystem) // Summarize all CVE records to a single field
+ on OperatingSystem
+| project Device, OperatingSystem, CVEPatchList
+| sort by OperatingSystem asc
+```
+
 ### Safeguard 7.04 Perform Automated Application Patch Management
 
 **About:**
