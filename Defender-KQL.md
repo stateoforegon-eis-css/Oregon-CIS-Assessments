@@ -552,10 +552,11 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmSecureConfigurationAssessment) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | where ConfigurationId == 'scid-2010' // Limit results to Configuration ID "Turn on Microsoft defender Antivirus"
+or ConfigurationId == 'scid-6090'
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
+or ConfigurationId == 'scid-6095'
 | where IsApplicable == true // Limit results to systems for which the configuration is applicable
-//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and ), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == false), UpdatesOn = countif(ConfigurationId == 'scid-2011' and ), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == false) by DeviceName, MachineGroup, RegistryDeviceTag
-| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and ), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == false), UpdatesOn = countif(ConfigurationId == 'scid-2011' and ), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == false) by DeviceName
+| summarize DefenderOn = countif((ConfigurationId == 'scid-2010' and IsCompliant == true) or (ConfigurationId == 'scid-6090' and IsCompliant == true)), DefenderOff = countif((ConfigurationId == 'scid-2010' and IsCompliant == false) or (ConfigurationId == 'scid-6090' and IsCompliant == false)), UpdatesOn = countif((ConfigurationId == 'scid-2011' and IsCompliant == true) or (ConfigurationId == 'scid-6095' and IsCompliant == true)), UpdatesOff = countif((ConfigurationId == 'scid-2011' and IsCompliant == false) or (ConfigurationId == 'scid-6095' and IsCompliant == false)) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
