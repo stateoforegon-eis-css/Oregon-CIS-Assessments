@@ -214,7 +214,7 @@ The unique password policy must address, at a minimum:
 
 The purpose of the inventory of accounts is to serve as the authoritative, single source of truth as the baseline against which output from account inventory and management tools (e.g. Active Directory, PowerShell, etc.) can be compared to look for deltas and to be able to efficiently identify accounts that are not authorized, accounts that are no longer necessary, and accounts that are no longer in use. Account inventory and management tools enumerate accounts that are in the environment. The account inventory defines what should be in the environment. 
 
-Documented inventory of all accounts authorized to access agency systems and components. 
+Documented inventory of all accounts (active and disabled) managed by the organization.
 
 The organization’s inventory of accounts must contain, at a minimum, all standard, service, and administrator accounts:
 
