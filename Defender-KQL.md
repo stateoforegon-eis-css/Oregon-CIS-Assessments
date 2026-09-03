@@ -101,6 +101,29 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | sort by Product asc // Sort software list
 ```
 
+### Safeguard 2.04 Utilize Automated Software Inventory Tools
+
+**About**
+Script to check systems for the presence of Microsoft SCCM and installed version.
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind = leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where SoftwareVendor == "microsoft"
+| where SoftwareName contains "configuration_manager"
+| project DeviceName, MachineGroup, RegistryDeviceTag, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
+| sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
+```
+
 ## CIS Control 3: Data Protection
 
 ### Safeguard 3.06 Encrypt Data on End-User Devices
@@ -153,6 +176,74 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 ```
 
 ## CIS Control 4: Secure Configuration of Enterprise Assets and Software
+
+### Safeguard 4.01 Establish and Maintain a Secure Configuration Process
+
+**About:**
+Script to enumerate and (optionally) summarize installed Operating Systems.
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| summarize
+    FirstSeen = min(Timestamp), // Get the first event timestamp
+    LastSeen = max(Timestamp)   // Get the last event timestamp
+by DeviceName, OSPlatform // Group by DeviceId and DeviceName
+| project DeviceName, OSPlatform, FirstSeen, LastSeen // Select relevant fields for output
+| summarize arg_max(LastSeen, *) by DeviceName // De-duplicate results to a single row for each DeviceName based on the most recent record
+//| summarize DeviceName = count() by OSPlatform
+| sort by OSPlatform asc // Sort device list
+```
+
+**About**
+Script to enumerate and (optionally) summarize installed Office Suites and Databases (watch for false positives).
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind=leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d)
+| where SoftwareName contains "office"
+or SoftwareName contains_cs "SQL"
+or SoftwareName has_any ("mysql", "mongodb", "mariadb", "filemaker_pro", "smartsheet")
+| project DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion
+//| summarize DeviceName = count() by SoftwareVendor, SoftwareName, SoftwareVersion
+| sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc
+```
+
+**About**
+Script to enumerate and (optionally) summarize installed Web Browsers and Email Clients (watch for false positives).
+
+```kql
+declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
+DeviceInfo
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where MachineGroup has_any (Acronym1, Acronym2)
+or RegistryDeviceTag has_any (Acronym1, Acronym2)
+or DeviceDynamicTags has_any (Acronym1, Acronym2)
+or DeviceManualTags has_any (Acronym1, Acronym2)
+| project Timestamp, DeviceId, DeviceName, MachineGroup, RegistryDeviceTag
+| summarize arg_max(Timestamp, *) by DeviceName
+| join kind=leftouter (DeviceTvmSoftwareInventory) on DeviceName
+| where Timestamp > ago(90d) // Filter for events within the last 90 days
+| where SoftwareName has_any ("Adapt", "Brave", "Chrome", "Chromium", "Edge", "Firefox", "IE", "Opera", "PaleMoon", "Safari", "SeaMonkey", "Vivaldi", "Waterfox") //Search for Browsers
+or SoftwareName has_any ("Apple Mail", "Claws Mail", "eM Client", "Evolution", "Kmail", "Mailbird", "Mailspring", "Outlook", "Postbox", "Sylpheed", "Thunderbird",  "Windows Mail") //Search for Email Clients
+| project DeviceName, SoftwareVendor, SoftwareName, SoftwareVersion // Select relevant fields for output
+//| summarize DeviceName = count() by SoftwareVendor, SoftwareName, SoftwareVersion
+| sort by SoftwareVendor asc, SoftwareName asc, SoftwareVersion asc // Multi-column sort
+```
 
 ### Safeguard 4.03 Configure Automatic Session Locking on Enterprise Assets
 
@@ -556,14 +647,15 @@ or ConfigurationId == 'scid-6090'
 or ConfigurationId == 'scid-2011' // Limit results to Configuration ID "Update Microsoft Defender Antivirus definitions"
 or ConfigurationId == 'scid-6095'
 | where IsApplicable == true // Limit results to systems for which the configuration is applicable
-| summarize DefenderOn = countif((ConfigurationId == 'scid-2010' and IsCompliant == true) or (ConfigurationId == 'scid-6090' and IsCompliant == true)), DefenderOff = countif((ConfigurationId == 'scid-2010' and IsCompliant == false) or (ConfigurationId == 'scid-6090' and IsCompliant == false)), UpdatesOn = countif((ConfigurationId == 'scid-2011' and IsCompliant == true) or (ConfigurationId == 'scid-6095' and IsCompliant == true)), UpdatesOff = countif((ConfigurationId == 'scid-2011' and IsCompliant == false) or (ConfigurationId == 'scid-6095' and IsCompliant == false)) by DeviceName
+//| summarize DefenderOn = countif(ConfigurationId == 'scid-2010' and IsCompliant == 1), DefenderOff = countif(ConfigurationId == 'scid-2010' and IsCompliant == 0), UpdatesOn = countif(ConfigurationId == 'scid-2011' and IsCompliant == 1), UpdatesOff = countif(ConfigurationId == 'scid-2011' and IsCompliant == 0) by DeviceName, MachineGroup, RegistryDeviceTag
+| summarize DefenderOn = countif((ConfigurationId == 'scid-2010' and IsCompliant == 1) or (ConfigurationId == 'scid-6090' and IsCompliant == 1)), DefenderOff = countif((ConfigurationId == 'scid-2010' and IsCompliant == 0) or (ConfigurationId == 'scid-6090' and IsCompliant == 0)), UpdatesOn = countif((ConfigurationId == 'scid-2011' and IsCompliant == 1) or (ConfigurationId == 'scid-6095' and IsCompliant == 1)), UpdatesOff = countif((ConfigurationId == 'scid-2011' and IsCompliant == 0) or (ConfigurationId == 'scid-6095' and IsCompliant == 0)) by DeviceName
 | sort by DeviceName asc // Sort device list
 ```
 
 ### Safeguard 10.02 Configure Automatic Anti-Malware Signature Updates
 
 **About:**
-Script to summarize a count of current and 'out of date' systems from Defender
+Script to validate Defender for Windows installations for 1) current version and 2) check for updates within the last 24 hours.
 
 ```kql
 declare query_parameters (Acronym1:string = "ACR1", Acronym2:string = "ACR2"); // Limit query to one or two Machine or Device tags
@@ -579,14 +671,15 @@ or DeviceManualTags has_any (Acronym1, Acronym2)
 | join kind = leftouter (DeviceTvmInfoGathering) on DeviceName
 | where Timestamp > ago(90d) // Filter for events within the last 90 days
 | extend DataRefreshTimestamp = Timestamp, 
-AvIsPlatformUpToDateTemp = tostring(AdditionalFields.AvIsPlatformUptodate),
 AvSignatureDataRefreshTime = todatetime(AdditionalFields.AvSignatureDataRefreshTime), 
-AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
-AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion) 
+AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion),
+AvSignature = tostring(AdditionalFields.AvSignatureVersion),
+AvSignatureUpToDate = tostring(AdditionalFields.AvIsSignatureUptoDate)
 | extend AvPlatformVersion = iif(AvPlatformVersion == "", "Unknown", AvPlatformVersion)
+| extend AvSignatureCheck24 = iif(AvSignatureDataRefreshTime > ago(24h), "true", "false")
+| extend AvSignaturePass = iif((AvSignatureUpToDate == "true") and (AvSignatureCheck24 == "true"), "true", "false")
 | summarize arg_max (Timestamp, *) by DeviceName
-//| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, MachineGroup, RegistryDeviceTag, AvPlatformVersion
-| summarize DataRefreshTimestamp = max(DataRefreshTimestamp), PlatformUpToDate = countif(datetime_diff('hour',AvSignatureDataRefreshTime,AvSignaturePublishTime) <= 24), NoData = countif(isnull(AvSignaturePublishTime)) by DeviceName, AvPlatformVersion
+| project DeviceName, AvPlatformVersion, AvSignature, AvSignatureUpToDate, AvSignatureCheck24, AvSignaturePass
 | sort by DeviceName asc // Sort device list
 ```
 
