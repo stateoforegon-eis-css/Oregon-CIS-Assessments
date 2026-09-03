@@ -78,7 +78,8 @@ The implementation of Safeguard 2.03 contributes to the defensive mitigation for
 **Assessment Methodology**
 
 - [CIS Controls Assessment Specification for CIS Safeguard 2.03](https://cas.docs.cisecurity.org/en/latest/source/Controls2/#23-address-unauthorized-software)
-- Score is based on the unautorized software (detected but not in Authorized Software Inventory) present for more than 1 day.
+- Score is based on the unauthorized software (detected but not in Authorized Software Inventory) present for more than 1 day.
+
 ## Safeguard 2.04	**_(IG2)_**	Utilize Automated Software Inventory Tools
 
 _Included in the Assessment as Enterprise Solutions (Tenable/Defender) enable subscribers to automate software discovery._
@@ -91,6 +92,8 @@ The implementation of Safeguard 2.04 contributes to the defensive mitigation for
 - [AD05: Policy Documentation That Defines the Timeframe Between Consecutive Active Software Discovery Scans](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad05-policy-documentation-that-defines-the-timeframe-between-consecutive-active-software-discovery-scans)
 - [AD06: List of Software Inventory Tools in use by the Organization](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#ad06-list-of-software-inventory-tools-in-use-by-the-organization)
 - Visibility of Hardware Assets in Software Inventory Tools observed during Internal Testing (See Safeguard 1.01)
+- Instances of Software Inventory Tools discovered during Internal Testing
+  - [KQL Script to enumerate instances of SCCM using Advanced Hunting in Defender](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-204-utilize-automated-software-inventory-tools)
 
 **Assessment Methodology**
 
@@ -193,6 +196,8 @@ The implementation of Safeguard 4.01 is operationally equivalent to the defensiv
 
 - [GV05: Authorized Software Inventory](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv05-authorized-software-inventory)
 - [GV03.a Configuration Standards: Operating Systems & Software](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Artifact-Request.md#gv03a-configuration-standards-operating-systems--software)
+- Installed versions of Operating Systems, Office Suites, Databases, Email Clients, and Web Browsers discovered during Internal Testing
+  - [KQL Scripts to enumerate Operating Systems, Office Suites, Databases, Email Clients, and Web Browsers](https://github.com/stateoforegon-eis-css/Oregon-CIS-Assessments/blob/main/Defender-KQL.md#safeguard-401-establish-and-maintain-a-secure-configuration-process)
 
 **Assessment Methodology**
 
