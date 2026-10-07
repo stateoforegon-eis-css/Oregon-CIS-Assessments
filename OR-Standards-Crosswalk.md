@@ -2,7 +2,7 @@ Browser Notes: To open the any of the hyperlinks found on this page in a new tab
 
 # **Narrative Crosswalk for Aligning the CIS Safeguards to the Oregon Statewide Standards and Plan**
 
-**Note:** throughout this document, all page references to "Statewide Standards" refer to the [2023 Statewide Information Technology Control Standards](https://www.oregon.gov/eis/cyber-security-services/Documents/eis-css-statewide-information-technology%28IT%29-control-standards.pdf); page references to the "Statewide Plan" refer to the [2023 Statewide Information Security Program Plan](https://www.oregon.gov/eis/cyber-security-services/Documents/eis-css-statewide-information-security-program-plan.pdf).
+**Note:** throughout this document, all page references to "Statewide Standards" refer to the [2023 Statewide Information Technology Control Standards](https://www.oregon.gov/eis/cyber-security-services/Documents/eis-css-statewide-information-technology%28IT%29-control-standards.pdf); page references to the "Statewide Plan" refer to the [2023 Statewide Information Security Program Plan](https://www.oregon.gov/eis/cyber-security-services/Documents/eis-css-statewide-information-security-program-plan.pdf). Not all Safeguards listed below are currently assessed, and not all assessed Safeguards have a direct correlation with the Statewide Standards.
 
 # CIS Control 1
 
