@@ -15,7 +15,7 @@ function Measure-ArtifactCollector {
 # CIS Control 01, Safeguard 01
 	Write-Host "Extracting Computers ..."
 	$ad.computers |
-	Select-Object ComputerName, OperatingSystem, OSVersion, Description, WhenCreated, Enabled |
+	Select-Object ComputerName, OperatingSystem, OSVersion, Description, DistinguishedName, WhenCreated, Enabled |
 	Export-Csv -NoTypeinformation .\$AgencyAcronym-01.01.M2-Computers.csv
 	Write-Host "     Export complete: 01.01.M2-Computers (You'll also use this for 01.02)."
 # End 01.01
