@@ -275,7 +275,7 @@ The service provider inventory list should include, at a minimum, the following 
 
 ### _GV51: Agency Incident Response Documentation_
 
-Organization’s approved, documented incident response plan or other incident response documentation that provides direction to organization personnel for incident response and recovery efforts.
+Organization’s approved, documented incident response plan or other incident response documentation that provides direction to organization personnel for reporting potential security incidents, agency incident response, and recovery efforts.
 Incident response documentation should include, at a minimum, the following information:
 
 -	Documents dedicated personnel to manage incident handling:
@@ -288,7 +288,7 @@ Incident response documentation should include, at a minimum, the following info
      -	Reporting timeframe
      -	Personnel to report to
      -	Mechanism for reporting
-     -	Minimum information to be reported in the event of a security incident
+     -	Minimum information to be reported in the event of a potential or actual security incident
 -	Date of last review & update to the incident response documentation
 
 ### _GV54: Most recent external penetration test report for the organization_
