@@ -10,7 +10,7 @@ Agency-owned information and systems, whether on-premises, in the cloud, or admi
 
 # Applicability
 
-The following requested artifacts are applicable to the CIS Version 8.0 Critical Security Controls, Implementation Group 1 (IG1), and constituent safeguards, as well as a select subset of controls and constituent safeguards from Implementation Group 2 (IG2) and Group 3 (IG3) for which there are Enterprise service offerings.
+The following requested artifacts are applicable to the CIS Version 8 Critical Security Controls, Implementation Group 1 (IG1), and constituent safeguards, as well as a select subset of controls and constituent safeguards from Implementation Group 2 (IG2) and Group 3 (IG3) for which there are Enterprise service offerings.
 
 The artifacts listed below follow the guidance set forth by and applicable to the CIS CAS. The CIS CAS is intended to provide a common understanding of what should be measured to verify that CIS Safeguards are properly implemented.
 
