@@ -1,4 +1,4 @@
-# **CIS v8.0 Controls Assessment Specification Defender Measurement Scripts**
+# **CIS v8 Controls Assessment Specification Defender Measurement Scripts**
 
 **NOTE:** Scripts are written to accomodate a single-tenant, multiple entity environment. For entities utilizing a dedicated tenant, comment out lines 1, 4-7 of each query.
 
